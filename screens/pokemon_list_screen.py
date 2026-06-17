@@ -183,7 +183,14 @@ class PokemonListScreen:
     def load_sprite(self, pokemon):
         sprite_path = pokemon.get("sprite_path")
 
+        if sprite_path is not None:
+            sprite_path = sprite_path.replace("\\", "/")
+
         if sprite_path is None or not os.path.exists(sprite_path):
+            pokemon_name = pokemon["name"].lower().replace(" ", "-")
+            sprite_path = "assets/sprites/" + pokemon_name + ".png"
+
+        if not os.path.exists(sprite_path):
             sprite_path = "assets/sprites/unknown.png"
 
         if not os.path.exists(sprite_path):

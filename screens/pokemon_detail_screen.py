@@ -39,6 +39,17 @@ class PokemonDetailScreen:
         self.type_icons = {}
 
         sprite_path = self.pokemon.get("sprite_path")
+
+        if sprite_path is not None:
+            sprite_path = sprite_path.replace("\\", "/")
+
+        if sprite_path is None or not os.path.exists(sprite_path):
+            pokemon_file_name = self.pokemon["name"].lower().replace(" ", "-")
+            sprite_path = "assets/sprites/" + pokemon_file_name + ".png"
+
+        if not os.path.exists(sprite_path):
+            sprite_path = "assets/sprites/unknown.png"
+
         human_path = "assets/sprites/human.png"
 
         if os.path.exists(human_path):
