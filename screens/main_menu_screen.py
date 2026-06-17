@@ -63,6 +63,9 @@ class MainMenuScreen:
                 self.state = "menu"
                 continue
 
+            if event.key == pygame.K_ESCAPE:
+                self.app.running = False
+            
             if event.key == pygame.K_RIGHT:
                 self.selected_index += 1
 
