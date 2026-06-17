@@ -266,7 +266,7 @@ class PokemonDetailScreen:
         dark_text = self.get_dark_text_color()
 
         y = 78
-        max_stat_value = 150
+        max_stat_value = 255
         bar_max_width = 105
 
         stat_font = pygame.font.Font(None, 18)
