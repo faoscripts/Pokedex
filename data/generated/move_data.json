@@ -978,17 +978,6 @@
         "priority": "0",
         "description": "Un terremoto que afecta a los Pokémon de alrededor en combate."
     },
-    "Scary Face": {
-        "name": "Cara Susto",
-        "internal_name": "Scary Face",
-        "type": "Normal",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "100",
-        "pp": "10",
-        "priority": "0",
-        "description": "Asusta al objetivo para reducir mucho su Velocidad."
-    },
     "Block": {
         "name": "Bloqueo",
         "internal_name": "Block",
@@ -1011,28 +1000,6 @@
         "priority": "0",
         "description": "Golpea con una enorme planta. Quien lo usa no puede moverse en el siguiente turno."
     },
-    "Poison Jab": {
-        "name": "Puya Nociva",
-        "internal_name": "Poison Jab",
-        "type": "Poison",
-        "category": "Physical",
-        "power": "80",
-        "accuracy": "100",
-        "pp": "20",
-        "priority": "0",
-        "description": "Pincha al objetivo con un tentáculo o brazo envenenado. Puede llegar a envenenar al objetivo."
-    },
-    "Earth Power": {
-        "name": "Tierra Viva",
-        "internal_name": "Earth Power",
-        "type": "Ground",
-        "category": "Special",
-        "power": "90",
-        "accuracy": "100",
-        "pp": "10",
-        "priority": "0",
-        "description": "La tierra a los pies del objetivo erupciona violentamente. Puede disminuir la Defensa Especial del objetivo."
-    },
     "Giga Impact": {
         "name": "Gigaimpacto",
         "internal_name": "Giga Impact",
@@ -1043,17 +1010,6 @@
         "pp": "5",
         "priority": "0",
         "description": "Carga contra el objetivo usando toda la fuerza que tiene. El Pokémon descansa el turno siguiente."
-    },
-    "Rock Climb": {
-        "name": "Treparrocas",
-        "internal_name": "Rock Climb",
-        "type": "Normal",
-        "category": "Physical",
-        "power": "90",
-        "accuracy": "85",
-        "pp": "20",
-        "priority": "0",
-        "description": "Ataca con una gran embestida. Puede confundir al objetivo."
     },
     "Bulldoze": {
         "name": "Terratemblor",
@@ -1087,6 +1043,50 @@
         "pp": "10",
         "priority": "0",
         "description": "Usa la frustración como revulsivo para atacar. La potencia de Pataleta se duplica si el usuario ha fallado el último movimiento usado."
+    },
+    "Scary Face": {
+        "name": "Cara Susto",
+        "internal_name": "Scary Face",
+        "type": "Normal",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "0",
+        "description": "Asusta al objetivo para reducir mucho su Velocidad."
+    },
+    "Poison Jab": {
+        "name": "Puya Nociva",
+        "internal_name": "Poison Jab",
+        "type": "Poison",
+        "category": "Physical",
+        "power": "80",
+        "accuracy": "100",
+        "pp": "20",
+        "priority": "0",
+        "description": "Pincha al objetivo con un tentáculo o brazo envenenado. Puede llegar a envenenar al objetivo."
+    },
+    "Earth Power": {
+        "name": "Tierra Viva",
+        "internal_name": "Earth Power",
+        "type": "Ground",
+        "category": "Special",
+        "power": "90",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "0",
+        "description": "La tierra a los pies del objetivo erupciona violentamente. Puede disminuir la Defensa Especial del objetivo."
+    },
+    "Rock Climb": {
+        "name": "Treparrocas",
+        "internal_name": "Rock Climb",
+        "type": "Normal",
+        "category": "Physical",
+        "power": "90",
+        "accuracy": "85",
+        "pp": "20",
+        "priority": "0",
+        "description": "Ataca con una gran embestida. Puede confundir al objetivo."
     },
     "Terrain Pulse": {
         "name": "Pulso de Campo",
@@ -1748,28 +1748,6 @@
         "priority": "0",
         "description": "Primer turno: vuela. Segundo turno: ataca. Fuera de combate, permite ir a sitios ya conocidos."
     },
-    "Fissure": {
-        "name": "Fisura",
-        "internal_name": "Fissure",
-        "type": "Ground",
-        "category": "Physical",
-        "power": "-",
-        "accuracy": "30",
-        "pp": "5",
-        "priority": "0",
-        "description": "Abre una grieta en el suelo y mete al objetivo en ella. Fulmina en un golpe."
-    },
-    "Sandstorm": {
-        "name": "Tormenta Arena",
-        "internal_name": "Sandstorm",
-        "type": "Rock",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
-        "pp": "10",
-        "priority": "0",
-        "description": "Tormenta de arena que dura cinco turnos y hiere a todos, excepto a los de tipo Roca, Tierra y Acero."
-    },
     "Steel Wing": {
         "name": "Ala de Acero",
         "internal_name": "Steel Wing",
@@ -1780,28 +1758,6 @@
         "pp": "25",
         "priority": "0",
         "description": "Alas macizas que golpean al objetivo y pueden subir la Defensa del usuario."
-    },
-    "Twister": {
-        "name": "Ciclón",
-        "internal_name": "Twister",
-        "type": "Dragon",
-        "category": "Special",
-        "power": "40",
-        "accuracy": "100",
-        "pp": "20",
-        "priority": "0",
-        "description": "Crea un violento tornado para hacer trizas al enemigo. Puede hacerlo retroceder."
-    },
-    "Blaze Kick": {
-        "name": "Patada Ígnea",
-        "internal_name": "Blaze Kick",
-        "type": "Fire",
-        "category": "Physical",
-        "power": "85",
-        "accuracy": "90",
-        "pp": "10",
-        "priority": "0",
-        "description": "Patada que suele ser un golpe crítico y puede causar quemaduras."
     },
     "Blast Burn": {
         "name": "Anillo Ígneo",
@@ -1858,17 +1814,6 @@
         "priority": "0",
         "description": "Potente viento que barre el Reflejo o Pantalla de Luz del objetivo y puede reducir su Evasión."
     },
-    "Ominous Wind": {
-        "name": "Viento Aciago",
-        "internal_name": "Ominous Wind",
-        "type": "Ghost",
-        "category": "Special",
-        "power": "60",
-        "accuracy": "100",
-        "pp": "5",
-        "priority": "0",
-        "description": "Produce un viento horripilante. Puede subir de golpe todas las características del usuario."
-    },
     "Sky Drop": {
         "name": "Caída Libre",
         "internal_name": "Sky Drop",
@@ -1879,6 +1824,72 @@
         "pp": "10",
         "priority": "0",
         "description": "Primer turno: lanza al objetivo al aire. Segundo turno: lo hace caer. Mientras está en el aire, no lo deja moverse."
+    },
+    "Brutal Swing": {
+        "name": "Giro Vil",
+        "internal_name": "Brutal Swing",
+        "type": "Dark",
+        "category": "Physical",
+        "power": "60",
+        "accuracy": "100",
+        "pp": "20",
+        "priority": "0",
+        "description": "Hace pivotar su cuerpo para infligir daño a su rival."
+    },
+    "Fissure": {
+        "name": "Fisura",
+        "internal_name": "Fissure",
+        "type": "Ground",
+        "category": "Physical",
+        "power": "-",
+        "accuracy": "30",
+        "pp": "5",
+        "priority": "0",
+        "description": "Abre una grieta en el suelo y mete al objetivo en ella. Fulmina en un golpe."
+    },
+    "Sandstorm": {
+        "name": "Tormenta Arena",
+        "internal_name": "Sandstorm",
+        "type": "Rock",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "10",
+        "priority": "0",
+        "description": "Tormenta de arena que dura cinco turnos y hiere a todos, excepto a los de tipo Roca, Tierra y Acero."
+    },
+    "Twister": {
+        "name": "Ciclón",
+        "internal_name": "Twister",
+        "type": "Dragon",
+        "category": "Special",
+        "power": "40",
+        "accuracy": "100",
+        "pp": "20",
+        "priority": "0",
+        "description": "Crea un violento tornado para hacer trizas al enemigo. Puede hacerlo retroceder."
+    },
+    "Blaze Kick": {
+        "name": "Patada Ígnea",
+        "internal_name": "Blaze Kick",
+        "type": "Fire",
+        "category": "Physical",
+        "power": "85",
+        "accuracy": "90",
+        "pp": "10",
+        "priority": "0",
+        "description": "Patada que suele ser un golpe crítico y puede causar quemaduras."
+    },
+    "Ominous Wind": {
+        "name": "Viento Aciago",
+        "internal_name": "Ominous Wind",
+        "type": "Ghost",
+        "category": "Special",
+        "power": "60",
+        "accuracy": "100",
+        "pp": "5",
+        "priority": "0",
+        "description": "Produce un viento horripilante. Puede subir de golpe todas las características del usuario."
     },
     "Heat Crash": {
         "name": "Golpe Calor",
@@ -1912,17 +1923,6 @@
         "pp": "10",
         "priority": "0",
         "description": "Lanza por su boca una singular llama a gran temperatura con la que ataca a su oponente y baja su Ataque Especial."
-    },
-    "Brutal Swing": {
-        "name": "Giro Vil",
-        "internal_name": "Brutal Swing",
-        "type": "Dark",
-        "category": "Physical",
-        "power": "60",
-        "accuracy": "100",
-        "pp": "20",
-        "priority": "0",
-        "description": "Hace pivotar su cuerpo para infligir daño a su rival."
     },
     "Scale Shot": {
         "name": "Ráfaga Escamas",
@@ -2540,17 +2540,6 @@
         "priority": "0",
         "description": "Libera una horrible aura llena de malos pensamientos y puede hacer retroceder al objetivo."
     },
-    "Avalanche": {
-        "name": "Alud",
-        "internal_name": "Avalanche",
-        "type": "Ice",
-        "category": "Physical",
-        "power": "60",
-        "accuracy": "100",
-        "pp": "10",
-        "priority": "-4",
-        "description": "Este ataque inflige el doble de daño a un objetivo que haya golpeado al usuario en ese mismo turno."
-    },
     "Flash Cannon": {
         "name": "Foco Resplandor",
         "internal_name": "Flash Cannon",
@@ -2572,6 +2561,17 @@
         "pp": "15",
         "priority": "0",
         "description": "El usuario ataca lanzando una piedra o un proyectil. Puede estrellar contra el suelo al objetivo si vuela."
+    },
+    "Avalanche": {
+        "name": "Alud",
+        "internal_name": "Avalanche",
+        "type": "Ice",
+        "category": "Physical",
+        "power": "60",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "-4",
+        "description": "Este ataque inflige el doble de daño a un objetivo que haya golpeado al usuario en ese mismo turno."
     },
     "Body Press": {
         "name": "Plancha Corporal",
@@ -3189,6 +3189,215 @@
         "priority": "0",
         "description": "Pliega sus alas y ataca con un vuelo rasante. El Pokémon que lo usa también resulta seriamente dañado."
     },
+    "Hyper Fang": {
+        "name": "Hipercolmillo",
+        "internal_name": "Hyper Fang",
+        "type": "Normal",
+        "category": "Physical",
+        "power": "80",
+        "accuracy": "90",
+        "pp": "15",
+        "priority": "0",
+        "description": "Ataque con finos colmillos. Puede hacer retroceder al objetivo."
+    },
+    "Super Fang": {
+        "name": "Superdiente",
+        "internal_name": "Super Fang",
+        "type": "Normal",
+        "category": "Physical",
+        "power": "-",
+        "accuracy": "90",
+        "pp": "10",
+        "priority": "0",
+        "description": "Finos colmillos que reducen a la mitad los PS del objetivo."
+    },
+    "Reversal": {
+        "name": "Inversión",
+        "internal_name": "Reversal",
+        "type": "Fighting",
+        "category": "Physical",
+        "power": "-",
+        "accuracy": "100",
+        "pp": "15",
+        "priority": "0",
+        "description": "Ataque desesperado que causa más daño cuantos menos PS tenga el usuario."
+    },
+    "Stockpile": {
+        "name": "Reserva",
+        "internal_name": "Stockpile",
+        "type": "Normal",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "20",
+        "priority": "0",
+        "description": "Acumula energía y sube la Defensa y la Defensa Especial. Puede utilizarse hasta tres veces."
+    },
+    "Swallow": {
+        "name": "Tragar",
+        "internal_name": "Swallow",
+        "type": "Normal",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "10",
+        "priority": "0",
+        "description": "Absorbe la energía acumulada con Reserva y restaura PS."
+    },
+    "Torment": {
+        "name": "Tormento",
+        "internal_name": "Torment",
+        "type": "Dark",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "100",
+        "pp": "15",
+        "priority": "0",
+        "description": "Atormenta y enfurece al objetivo, que no puede usar dos veces seguidas el mismo movimiento."
+    },
+    "Taunt": {
+        "name": "Mofa",
+        "internal_name": "Taunt",
+        "type": "Dark",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "100",
+        "pp": "20",
+        "priority": "0",
+        "description": "Enfurece al objetivo para que solo use movimientos de ataque durante tres turnos."
+    },
+    "Revenge": {
+        "name": "Desquite",
+        "internal_name": "Revenge",
+        "type": "Fighting",
+        "category": "Physical",
+        "power": "60",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "-4",
+        "description": "Ataque que produce el doble de daño si el usuario es herido en el mismo turno."
+    },
+    "Snatch": {
+        "name": "Robo",
+        "internal_name": "Snatch",
+        "type": "Dark",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "10",
+        "priority": "4",
+        "description": "Roba el efecto de los movimientos de curación o de cambio de características que se usen."
+    },
+    "Covet": {
+        "name": "Antojo",
+        "internal_name": "Covet",
+        "type": "Normal",
+        "category": "Physical",
+        "power": "60",
+        "accuracy": "100",
+        "pp": "25",
+        "priority": "0",
+        "description": "Se acerca con ternura al objetivo, pero le ataca y le roba el objeto que lleve."
+    },
+    "Shock Wave": {
+        "name": "Onda Voltio",
+        "internal_name": "Shock Wave",
+        "type": "Electric",
+        "category": "Special",
+        "power": "60",
+        "accuracy": "-",
+        "pp": "20",
+        "priority": "0",
+        "description": "Ataque eléctrico muy rápido e ineludible."
+    },
+    "Embargo": {
+        "name": "Embargo",
+        "internal_name": "Embargo",
+        "type": "Dark",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "100",
+        "pp": "15",
+        "priority": "0",
+        "description": "Impide al objetivo usar el objeto que lleva. Su Entrenador tampoco puede usar objetos con él."
+    },
+    "Me First": {
+        "name": "Yo Primero",
+        "internal_name": "Me First",
+        "type": "Normal",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "20",
+        "priority": "0",
+        "description": "Se adelanta al movimiento que pretende usar el objetivo y lo lanza antes con más fuerza. Si el usuario es más lento, falla."
+    },
+    "Last Resort": {
+        "name": "Última Baza",
+        "internal_name": "Last Resort",
+        "type": "Normal",
+        "category": "Physical",
+        "power": "140",
+        "accuracy": "100",
+        "pp": "5",
+        "priority": "0",
+        "description": "Este movimiento solo puede utilizarse tras haber usado al menos una vez todos los demás conocidos por el Pokémon."
+    },
+    "Sucker Punch": {
+        "name": "Golpe Bajo",
+        "internal_name": "Sucker Punch",
+        "type": "Dark",
+        "category": "Physical",
+        "power": "70",
+        "accuracy": "100",
+        "pp": "5",
+        "priority": "1",
+        "description": "Permite atacar primero. Falla si el objetivo no está preparando ningún ataque."
+    },
+    "Switcheroo": {
+        "name": "Trapicheo",
+        "internal_name": "Switcheroo",
+        "type": "Dark",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "0",
+        "description": "Intercambia con el objetivo los objetos que llevan tan rápido que es imposible verlo a simple vista."
+    },
+    "Quash": {
+        "name": "Último Lugar",
+        "internal_name": "Quash",
+        "type": "Dark",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "100",
+        "pp": "15",
+        "priority": "0",
+        "description": "Consigue que el objetivo sea el último en moverse."
+    },
+    "Final Gambit": {
+        "name": "Sacrificio",
+        "internal_name": "Final Gambit",
+        "type": "Fighting",
+        "category": "Special",
+        "power": "-",
+        "accuracy": "100",
+        "pp": "5",
+        "priority": "0",
+        "description": "El usuario se sacrifica causándole un daño al objetivo equivalente a sus propios PS perdidos."
+    },
+    "Snarl": {
+        "name": "Alarido",
+        "internal_name": "Snarl",
+        "type": "Dark",
+        "category": "Special",
+        "power": "55",
+        "accuracy": "95",
+        "pp": "15",
+        "priority": "0",
+        "description": "Ataca con un chillido desagradable que baja el Ataque Especial del rival."
+    },
     "Thunderbolt": {
         "name": "Rayo",
         "internal_name": "Thunderbolt",
@@ -3233,28 +3442,6 @@
         "priority": "0",
         "description": "Alarido agudo que reduce mucho la Defensa del objetivo."
     },
-    "Hyper Fang": {
-        "name": "Hipercolmillo",
-        "internal_name": "Hyper Fang",
-        "type": "Normal",
-        "category": "Physical",
-        "power": "80",
-        "accuracy": "90",
-        "pp": "15",
-        "priority": "0",
-        "description": "Ataque con finos colmillos. Puede hacer retroceder al objetivo."
-    },
-    "Super Fang": {
-        "name": "Superdiente",
-        "internal_name": "Super Fang",
-        "type": "Normal",
-        "category": "Physical",
-        "power": "-",
-        "accuracy": "90",
-        "pp": "10",
-        "priority": "0",
-        "description": "Finos colmillos que reducen a la mitad los PS del objetivo."
-    },
     "Flame Wheel": {
         "name": "Rueda Fuego",
         "internal_name": "Flame Wheel",
@@ -3265,94 +3452,6 @@
         "pp": "25",
         "priority": "0",
         "description": "Ataca envuelto en fuego. Puede causar quemaduras."
-    },
-    "Reversal": {
-        "name": "Inversión",
-        "internal_name": "Reversal",
-        "type": "Fighting",
-        "category": "Physical",
-        "power": "-",
-        "accuracy": "100",
-        "pp": "15",
-        "priority": "0",
-        "description": "Ataque desesperado que causa más daño cuantos menos PS tenga el usuario."
-    },
-    "Taunt": {
-        "name": "Mofa",
-        "internal_name": "Taunt",
-        "type": "Dark",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "100",
-        "pp": "20",
-        "priority": "0",
-        "description": "Enfurece al objetivo para que solo use movimientos de ataque durante tres turnos."
-    },
-    "Revenge": {
-        "name": "Desquite",
-        "internal_name": "Revenge",
-        "type": "Fighting",
-        "category": "Physical",
-        "power": "60",
-        "accuracy": "100",
-        "pp": "10",
-        "priority": "-4",
-        "description": "Ataque que produce el doble de daño si el usuario es herido en el mismo turno."
-    },
-    "Covet": {
-        "name": "Antojo",
-        "internal_name": "Covet",
-        "type": "Normal",
-        "category": "Physical",
-        "power": "60",
-        "accuracy": "100",
-        "pp": "25",
-        "priority": "0",
-        "description": "Se acerca con ternura al objetivo, pero le ataca y le roba el objeto que lleve."
-    },
-    "Shock Wave": {
-        "name": "Onda Voltio",
-        "internal_name": "Shock Wave",
-        "type": "Electric",
-        "category": "Special",
-        "power": "60",
-        "accuracy": "-",
-        "pp": "20",
-        "priority": "0",
-        "description": "Ataque eléctrico muy rápido e ineludible."
-    },
-    "Me First": {
-        "name": "Yo Primero",
-        "internal_name": "Me First",
-        "type": "Normal",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
-        "pp": "20",
-        "priority": "0",
-        "description": "Se adelanta al movimiento que pretende usar el objetivo y lo lanza antes con más fuerza. Si el usuario es más lento, falla."
-    },
-    "Last Resort": {
-        "name": "Última Baza",
-        "internal_name": "Last Resort",
-        "type": "Normal",
-        "category": "Physical",
-        "power": "140",
-        "accuracy": "100",
-        "pp": "5",
-        "priority": "0",
-        "description": "Este movimiento solo puede utilizarse tras haber usado al menos una vez todos los demás conocidos por el Pokémon."
-    },
-    "Sucker Punch": {
-        "name": "Golpe Bajo",
-        "internal_name": "Sucker Punch",
-        "type": "Dark",
-        "category": "Physical",
-        "power": "70",
-        "accuracy": "100",
-        "pp": "5",
-        "priority": "1",
-        "description": "Permite atacar primero. Falla si el objetivo no está preparando ningún ataque."
     },
     "Charge Beam": {
         "name": "Rayo Carga",
@@ -3376,17 +3475,6 @@
         "priority": "0",
         "description": "Venga a los amigos derrotados. Si en el turno anterior han derrotado a uno, la potencia del ataque aumentará."
     },
-    "Final Gambit": {
-        "name": "Sacrificio",
-        "internal_name": "Final Gambit",
-        "type": "Fighting",
-        "category": "Special",
-        "power": "-",
-        "accuracy": "100",
-        "pp": "5",
-        "priority": "0",
-        "description": "El usuario se sacrifica causándole un daño al objetivo equivalente a sus propios PS perdidos."
-    },
     "Wild Charge": {
         "name": "Voltio Cruel",
         "internal_name": "Wild Charge",
@@ -3397,6 +3485,28 @@
         "pp": "15",
         "priority": "0",
         "description": "Carga eléctrica muy potente que también hiere ligeramente a quien la usa."
+    },
+    "Bulk Up": {
+        "name": "Corpulencia",
+        "internal_name": "Bulk Up",
+        "type": "Fighting",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "20",
+        "priority": "0",
+        "description": "Robustece el cuerpo para subir el Ataque y la Defensa."
+    },
+    "Sludge Wave": {
+        "name": "Onda Tóxica",
+        "internal_name": "Sludge Wave",
+        "type": "Poison",
+        "category": "Special",
+        "power": "95",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "0",
+        "description": "Una onda tóxica que daña a los Pokémon de alrededor. Puede envenenar."
     },
     "Drill Peck": {
         "name": "Pico Taladro",
@@ -3508,17 +3618,6 @@
         "priority": "0",
         "description": "Da rienda suelta a su rencor para reducir cuatro PP del último movimiento usado por el objetivo."
     },
-    "Stockpile": {
-        "name": "Reserva",
-        "internal_name": "Stockpile",
-        "type": "Normal",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
-        "pp": "20",
-        "priority": "0",
-        "description": "Acumula energía y sube la Defensa y la Defensa Especial. Puede utilizarse hasta tres veces."
-    },
     "Spit Up": {
         "name": "Escupir",
         "internal_name": "Spit Up",
@@ -3529,39 +3628,6 @@
         "pp": "10",
         "priority": "0",
         "description": "Libera de una vez la energía acumulada con Reserva."
-    },
-    "Swallow": {
-        "name": "Tragar",
-        "internal_name": "Swallow",
-        "type": "Normal",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
-        "pp": "10",
-        "priority": "0",
-        "description": "Absorbe la energía acumulada con Reserva y restaura PS."
-    },
-    "Torment": {
-        "name": "Tormento",
-        "internal_name": "Torment",
-        "type": "Dark",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "100",
-        "pp": "15",
-        "priority": "0",
-        "description": "Atormenta y enfurece al objetivo, que no puede usar dos veces seguidas el mismo movimiento."
-    },
-    "Snatch": {
-        "name": "Robo",
-        "internal_name": "Snatch",
-        "type": "Dark",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
-        "pp": "10",
-        "priority": "4",
-        "description": "Roba el efecto de los movimientos de curación o de cambio de características que se usen."
     },
     "Poison Fang": {
         "name": "Colmillo Veneno",
@@ -3596,17 +3662,6 @@
         "priority": "0",
         "description": "El usuario arroja sus jugos biliares al objetivo, lo que anula el efecto de la habilidad en uso."
     },
-    "Switcheroo": {
-        "name": "Trapicheo",
-        "internal_name": "Switcheroo",
-        "type": "Dark",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "100",
-        "pp": "10",
-        "priority": "0",
-        "description": "Intercambia con el objetivo los objetos que llevan tan rápido que es imposible verlo a simple vista."
-    },
     "Mud Bomb": {
         "name": "Bomba Fango",
         "internal_name": "Mud Bomb",
@@ -3629,17 +3684,6 @@
         "priority": "0",
         "description": "Lanza contra el objetivo basura asquerosa. Puede envenenar al objetivo."
     },
-    "Sludge Wave": {
-        "name": "Onda Tóxica",
-        "internal_name": "Sludge Wave",
-        "type": "Poison",
-        "category": "Special",
-        "power": "95",
-        "accuracy": "100",
-        "pp": "10",
-        "priority": "0",
-        "description": "Una onda tóxica que daña a los Pokémon de alrededor. Puede envenenar."
-    },
     "Coil": {
         "name": "Enrosque",
         "internal_name": "Coil",
@@ -3650,17 +3694,6 @@
         "pp": "20",
         "priority": "0",
         "description": "El usuario se concentra, lo que le permite aumentar su Ataque, Defensa y Precisión."
-    },
-    "Snarl": {
-        "name": "Alarido",
-        "internal_name": "Snarl",
-        "type": "Dark",
-        "category": "Special",
-        "power": "55",
-        "accuracy": "95",
-        "pp": "15",
-        "priority": "0",
-        "description": "Ataca con un chillido desagradable que baja el Ataque Especial del rival."
     },
     "Belch": {
         "name": "Eructo",
@@ -3772,6 +3805,50 @@
         "priority": "0",
         "description": "Ataque eléctrico que puede paralizar al objetivo."
     },
+    "Calm Mind": {
+        "name": "Paz Mental",
+        "internal_name": "Calm Mind",
+        "type": "Psychic",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "20",
+        "priority": "0",
+        "description": "Aumenta la concentración y calma el espíritu para subir el Ataque Especial y la Defensa Especial."
+    },
+    "Zippy Zap": {
+        "name": "Pikaturbo",
+        "internal_name": "Zippy Zap",
+        "type": "Electric",
+        "category": "Physical",
+        "power": "80",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "2",
+        "description": "Ataque eléctrico a la velocidad del rayo. Este movimiento tiene prioridad alta y propina golpes críticos."
+    },
+    "Splishy Splash": {
+        "name": "Salpikasurf",
+        "internal_name": "Splishy Splash",
+        "type": "Water",
+        "category": "Special",
+        "power": "90",
+        "accuracy": "100",
+        "pp": "15",
+        "priority": "0",
+        "description": "Golpea al adversario con una ola gigante electrificada, que también puede paralizarlo."
+    },
+    "Floaty Fall": {
+        "name": "Pikapicado",
+        "internal_name": "Floaty Fall",
+        "type": "Flying",
+        "category": "Physical",
+        "power": "90",
+        "accuracy": "95",
+        "pp": "15",
+        "priority": "0",
+        "description": "El usuario se suspende en el aire para, a continuación, abalanzarse súbitamente sobre el rival. Puede hacer retroceder al objetivo."
+    },
     "Sweet Kiss": {
         "name": "Beso Dulce",
         "internal_name": "Sweet Kiss",
@@ -3848,17 +3925,6 @@
         "pp": "15",
         "priority": "0",
         "description": "Quien lo usa electrifica su cuerpo para luego atacar. Se hiere mucho a sí mismo, pero puede paralizar al objetivo."
-    },
-    "Calm Mind": {
-        "name": "Paz Mental",
-        "internal_name": "Calm Mind",
-        "type": "Psychic",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
-        "pp": "20",
-        "priority": "0",
-        "description": "Aumenta la concentración y calma el espíritu para subir el Ataque Especial y la Defensa Especial."
     },
     "Feint": {
         "name": "Amago",
@@ -4025,6 +4091,105 @@
         "priority": "3",
         "description": "The user reacts to the target's movement and strikes with the heel of its palm, making the target flinch. This move fails if the target is not readying a priority move."
     },
+    "Future Sight": {
+        "name": "Premonición",
+        "internal_name": "Future Sight",
+        "type": "Psychic",
+        "category": "Special",
+        "power": "120",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "0",
+        "description": "Concentra energía psíquica para golpear al objetivo dos turnos después."
+    },
+    "Magic Coat": {
+        "name": "Capa Mágica",
+        "internal_name": "Magic Coat",
+        "type": "Psychic",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "15",
+        "priority": "4",
+        "description": "Barrera capaz de devolver al agresor movimientos como Drenadoras y otros que alteran el estado o las características."
+    },
+    "Recycle": {
+        "name": "Reciclaje",
+        "internal_name": "Recycle",
+        "type": "Normal",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "10",
+        "priority": "0",
+        "description": "Recicla y así recupera un objeto equipado de un solo uso que ya haya sido empleado durante el combate."
+    },
+    "Psyshock": {
+        "name": "Psicocarga",
+        "internal_name": "Psyshock",
+        "type": "Psychic",
+        "category": "Special",
+        "power": "80",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "0",
+        "description": "Crea una onda psíquica que causa daño físico al objetivo."
+    },
+    "Telekinesis": {
+        "name": "Telequinesis",
+        "internal_name": "Telekinesis",
+        "type": "Psychic",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "15",
+        "priority": "0",
+        "description": "El usuario emplea su poder mental para hacer flotar al objetivo, y lo convierte en un blanco fácil durante tres turnos."
+    },
+    "Magic Room": {
+        "name": "Zona Mágica",
+        "internal_name": "Magic Room",
+        "type": "Psychic",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "10",
+        "priority": "0",
+        "description": "Crea un espacio misterioso que inutiliza todos los objetos de los Pokémon durante cinco turnos."
+    },
+    "Stored Power": {
+        "name": "Poder Reserva",
+        "internal_name": "Stored Power",
+        "type": "Psychic",
+        "category": "Special",
+        "power": "20",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "0",
+        "description": "Acumula poder para golpear. Cuanto más suban las características del usuario, mayor será el daño."
+    },
+    "Ally Switch": {
+        "name": "Cambio de Banda",
+        "internal_name": "Ally Switch",
+        "type": "Psychic",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "15",
+        "priority": "2",
+        "description": "Extraño poder que intercambia la posición del usuario con la de un aliado sobre el terreno de combate."
+    },
+    "Psychic Terrain": {
+        "name": "Campo Psíquico",
+        "internal_name": "Psychic Terrain",
+        "type": "Psychic",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "10",
+        "priority": "0",
+        "description": "Durante cinco turnos, se potencian los movimientos de tipo Psíquico y los Pokémon que están en el suelo quedan protegidos contra movimientos con prioridad."
+    },
     "Speed Swap": {
         "name": "Cambiavelocidad",
         "internal_name": "Speed Swap",
@@ -4035,6 +4200,28 @@
         "pp": "10",
         "priority": "0",
         "description": "Intercambia su Velocidad por la del oponente."
+    },
+    "Expanding Force": {
+        "name": "Vasta Fuerza",
+        "internal_name": "Expanding Force",
+        "type": "Psychic",
+        "category": "Special",
+        "power": "80",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "0",
+        "description": "El usuario ataca al objetivo con sus poderes psíquicos. Cuando se usa en conjunción con un campo psíquico, aumenta su potencia e inflige daño a todos los rivales."
+    },
+    "Psychic Noise": {
+        "name": "Psicorruido",
+        "internal_name": "Psychic Noise",
+        "type": "Psychic",
+        "category": "Special",
+        "power": "75",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "0",
+        "description": "The user attacks the target with unpleasant sound waves. For two turns, the target is prevented from recovering HP through moves, Abilities, or held items."
     },
     "Low Kick": {
         "name": "Patada Baja",
@@ -4047,27 +4234,27 @@
         "priority": "0",
         "description": "Patada baja. Cuanto más pesa el objetivo, más daño causa."
     },
-    "Spikes": {
-        "name": "Púas",
-        "internal_name": "Spikes",
-        "type": "Ground",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
+    "Powder Snow": {
+        "name": "Nieve Polvo",
+        "internal_name": "Powder Snow",
+        "type": "Ice",
+        "category": "Special",
+        "power": "40",
+        "accuracy": "100",
+        "pp": "25",
+        "priority": "0",
+        "description": "Lanza nieve que puede llegar a congelar."
+    },
+    "Ice Ball": {
+        "name": "Bola Hielo",
+        "internal_name": "Ice Ball",
+        "type": "Ice",
+        "category": "Physical",
+        "power": "30",
+        "accuracy": "90",
         "pp": "20",
         "priority": "0",
-        "description": "Esparce púas en el equipo rival. Las púas hieren a los Pokémon rivales que entran en combate."
-    },
-    "Magnitude": {
-        "name": "Magnitud",
-        "internal_name": "Magnitude",
-        "type": "Ground",
-        "category": "Physical",
-        "power": "-",
-        "accuracy": "100",
-        "pp": "30",
-        "priority": "0",
-        "description": "Sacudida sísmica de intensidad variable que afecta a todos los Pokémon a su alrededor."
+        "description": "El atacante rueda contra el objetivo durante cinco turnos, cada vez con mayor fuerza."
     },
     "Crush Claw": {
         "name": "Garra Brutal",
@@ -4080,16 +4267,16 @@
         "priority": "0",
         "description": "Hace trizas al objetivo con garras afiladas y puede bajar su Defensa."
     },
-    "Sand Tomb": {
-        "name": "Bucle Arena",
-        "internal_name": "Sand Tomb",
-        "type": "Ground",
+    "Icicle Spear": {
+        "name": "Carámbano",
+        "internal_name": "Icicle Spear",
+        "type": "Ice",
         "category": "Physical",
-        "power": "35",
-        "accuracy": "85",
-        "pp": "15",
+        "power": "25",
+        "accuracy": "100",
+        "pp": "30",
         "priority": "0",
-        "description": "Enreda al objetivo en un remolino de arena de cuatro a cinco turnos."
+        "description": "Ataca lanzando de dos a cinco ráfagas consecutivas de carámbanos."
     },
     "Night Slash": {
         "name": "Tajo Umbrío",
@@ -4102,16 +4289,27 @@
         "priority": "0",
         "description": "Ataca al objetivo a la primera oportunidad. Suele ser crítico."
     },
-    "Stone Edge": {
-        "name": "Roca Afilada",
-        "internal_name": "Stone Edge",
-        "type": "Rock",
+    "Ice Shard": {
+        "name": "Canto Helado",
+        "internal_name": "Ice Shard",
+        "type": "Ice",
         "category": "Physical",
-        "power": "100",
-        "accuracy": "80",
-        "pp": "5",
+        "power": "40",
+        "accuracy": "100",
+        "pp": "30",
+        "priority": "1",
+        "description": "Crea bolas de hielo y las lanza a gran velocidad. Este movimiento siempre va primero."
+    },
+    "Iron Head": {
+        "name": "Cabeza de Hierro",
+        "internal_name": "Iron Head",
+        "type": "Steel",
+        "category": "Physical",
+        "power": "80",
+        "accuracy": "100",
+        "pp": "15",
         "priority": "0",
-        "description": "Clava piedras muy afiladas al objetivo. Suele ser crítico."
+        "description": "Ataca con su dura cabeza de hierro. Puede hacer que el objetivo retroceda."
     },
     "Stealth Rock": {
         "name": "Trampa Rocas",
@@ -4135,6 +4333,127 @@
         "priority": "0",
         "description": "Un ataque que busca los puntos débiles del objetivo y puede causarle daño aunque cambien sus características."
     },
+    "Frost Breath": {
+        "name": "Vaho Gélido",
+        "internal_name": "Frost Breath",
+        "type": "Ice",
+        "category": "Special",
+        "power": "60",
+        "accuracy": "90",
+        "pp": "10",
+        "priority": "0",
+        "description": "Quien lo usa ataca lanzando un aliento gélido. Siempre resulta en un golpe crítico."
+    },
+    "Icicle Crash": {
+        "name": "Chuzos",
+        "internal_name": "Icicle Crash",
+        "type": "Ice",
+        "category": "Physical",
+        "power": "85",
+        "accuracy": "90",
+        "pp": "10",
+        "priority": "0",
+        "description": "Lanza grandes carámbanos. Puede hacer retroceder al objetivo."
+    },
+    "Aurora Veil": {
+        "name": "Velo Aurora",
+        "internal_name": "Aurora Veil",
+        "type": "Ice",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "20",
+        "priority": "0",
+        "description": "Reduce el daño de los ataques físicos y especiales que ejecuta el rival durante cinco turnos. Solo puede usarse cuando está granizando."
+    },
+    "Steel Beam": {
+        "name": "Metaláser",
+        "internal_name": "Steel Beam",
+        "type": "Steel",
+        "category": "Special",
+        "power": "140",
+        "accuracy": "95",
+        "pp": "5",
+        "priority": "0",
+        "description": "Utiliza el acero de su cuerpo para disparar un potente rayo. También hiere al agresor."
+    },
+    "Steel Roller": {
+        "name": "Allanador Férreo",
+        "internal_name": "Steel Roller",
+        "type": "Steel",
+        "category": "Physical",
+        "power": "130",
+        "accuracy": "100",
+        "pp": "5",
+        "priority": "0",
+        "description": "El usuario lanza su ataque y destruye el campo activo en el terreno de combate, y falla si no hay ninguno en ese momento."
+    },
+    "Triple Axel": {
+        "name": "Triple Axel",
+        "internal_name": "Triple Axel",
+        "type": "Ice",
+        "category": "Physical",
+        "power": "20",
+        "accuracy": "90",
+        "pp": "10",
+        "priority": "0",
+        "description": "Patea hasta tres veces seguidas y cada vez más fuerte."
+    },
+    "Snowscape": {
+        "name": "Snowscape",
+        "internal_name": "Snowscape",
+        "type": "Ice",
+        "category": "Status",
+        "power": "0",
+        "accuracy": "-",
+        "pp": "10",
+        "priority": "0",
+        "description": "The user summons a snowstorm lasting five turns. This boosts the Defense stats of Ice types."
+    },
+    "Spikes": {
+        "name": "Púas",
+        "internal_name": "Spikes",
+        "type": "Ground",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "20",
+        "priority": "0",
+        "description": "Esparce púas en el equipo rival. Las púas hieren a los Pokémon rivales que entran en combate."
+    },
+    "Magnitude": {
+        "name": "Magnitud",
+        "internal_name": "Magnitude",
+        "type": "Ground",
+        "category": "Physical",
+        "power": "-",
+        "accuracy": "100",
+        "pp": "30",
+        "priority": "0",
+        "description": "Sacudida sísmica de intensidad variable que afecta a todos los Pokémon a su alrededor."
+    },
+    "Sand Tomb": {
+        "name": "Bucle Arena",
+        "internal_name": "Sand Tomb",
+        "type": "Ground",
+        "category": "Physical",
+        "power": "35",
+        "accuracy": "85",
+        "pp": "15",
+        "priority": "0",
+        "description": "Enreda al objetivo en un remolino de arena de cuatro a cinco turnos."
+    },
+    "Stone Edge": {
+        "name": "Roca Afilada",
+        "internal_name": "Stone Edge",
+        "type": "Rock",
+        "category": "Physical",
+        "power": "100",
+        "accuracy": "80",
+        "pp": "5",
+        "priority": "0",
+        "description": "Clava piedras muy afiladas al objetivo. Suele ser crítico."
+    },
     "Rototiller": {
         "name": "Fertilizante",
         "internal_name": "Rototiller",
@@ -4157,16 +4476,16 @@
         "priority": "0",
         "description": "Asesta un golpe devastador usando todo su cuerpo."
     },
-    "Steel Roller": {
-        "name": "Allanador Férreo",
-        "internal_name": "Steel Roller",
+    "Metal Burst": {
+        "name": "Represión Metal",
+        "internal_name": "Metal Burst",
         "type": "Steel",
         "category": "Physical",
-        "power": "130",
+        "power": "-",
         "accuracy": "100",
-        "pp": "5",
+        "pp": "10",
         "priority": "0",
-        "description": "El usuario lanza su ataque y destruye el campo activo en el terreno de combate, y falla si no hay ninguno en ese momento."
+        "description": "Devuelve al objetivo el último ataque recibido, pero con mucha más fuerza."
     },
     "Flatter": {
         "name": "Camelo",
@@ -4233,17 +4552,6 @@
         "pp": "10",
         "priority": "0",
         "description": "Ataque que causa un gran daño a los objetivos que  sufren problemas de estado."
-    },
-    "Quash": {
-        "name": "Último Lugar",
-        "internal_name": "Quash",
-        "type": "Dark",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "100",
-        "pp": "15",
-        "priority": "0",
-        "description": "Consigue que el objetivo sea el último en moverse."
     },
     "Horn Attack": {
         "name": "Cornada",
@@ -4465,28 +4773,6 @@
         "priority": "0",
         "description": "Restaura la mitad de los PS máximos en el siguiente turno."
     },
-    "Magic Coat": {
-        "name": "Capa Mágica",
-        "internal_name": "Magic Coat",
-        "type": "Psychic",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
-        "pp": "15",
-        "priority": "4",
-        "description": "Barrera capaz de devolver al agresor movimientos como Drenadoras y otros que alteran el estado o las características."
-    },
-    "Recycle": {
-        "name": "Reciclaje",
-        "internal_name": "Recycle",
-        "type": "Normal",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
-        "pp": "10",
-        "priority": "0",
-        "description": "Recicla y así recupera un objeto equipado de un solo uso que ya haya sido empleado durante el combate."
-    },
     "Imprison": {
         "name": "Sellar",
         "internal_name": "Imprison",
@@ -4630,28 +4916,6 @@
         "priority": "0",
         "description": "Crea una zona misteriosa donde se intercambian la Defensa y la Defensa Especial de todos los Pokémon durante cinco turnos."
     },
-    "Psyshock": {
-        "name": "Psicocarga",
-        "internal_name": "Psyshock",
-        "type": "Psychic",
-        "category": "Special",
-        "power": "80",
-        "accuracy": "100",
-        "pp": "10",
-        "priority": "0",
-        "description": "Crea una onda psíquica que causa daño físico al objetivo."
-    },
-    "Telekinesis": {
-        "name": "Telequinesis",
-        "internal_name": "Telekinesis",
-        "type": "Psychic",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
-        "pp": "15",
-        "priority": "0",
-        "description": "El usuario emplea su poder mental para hacer flotar al objetivo, y lo convierte en un blanco fácil durante tres turnos."
-    },
     "After You": {
         "name": "Cede Paso",
         "internal_name": "After You",
@@ -4662,28 +4926,6 @@
         "pp": "15",
         "priority": "0",
         "description": "Si el usuario es el más rápido, permite al objetivo usar un movimiento justo tras él, adelantándose a Pokémon más rápidos."
-    },
-    "Stored Power": {
-        "name": "Poder Reserva",
-        "internal_name": "Stored Power",
-        "type": "Psychic",
-        "category": "Special",
-        "power": "20",
-        "accuracy": "100",
-        "pp": "10",
-        "priority": "0",
-        "description": "Acumula poder para golpear. Cuanto más suban las características del usuario, mayor será el daño."
-    },
-    "Ally Switch": {
-        "name": "Cambio de Banda",
-        "internal_name": "Ally Switch",
-        "type": "Psychic",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
-        "pp": "15",
-        "priority": "2",
-        "description": "Extraño poder que intercambia la posición del usuario con la de un aliado sobre el terreno de combate."
     },
     "Heal Pulse": {
         "name": "Pulso Cura",
@@ -4795,16 +5037,16 @@
         "priority": "0",
         "description": "El usuario ataca a todos a su alrededor, pero se debilita de inmediato. La potencia del movimiento aumenta si el terreno está cubierto por un campo de niebla."
     },
-    "Future Sight": {
-        "name": "Premonición",
-        "internal_name": "Future Sight",
-        "type": "Psychic",
+    "Aurora Beam": {
+        "name": "Rayo Aurora",
+        "internal_name": "Aurora Beam",
+        "type": "Ice",
         "category": "Special",
-        "power": "120",
+        "power": "65",
         "accuracy": "100",
-        "pp": "10",
+        "pp": "20",
         "priority": "0",
-        "description": "Concentra energía psíquica para golpear al objetivo dos turnos después."
+        "description": "Rayo multicolor que puede reducir el Ataque."
     },
     "Hypnosis": {
         "name": "Hipnosis",
@@ -4828,17 +5070,6 @@
         "priority": "0",
         "description": "Rayo siniestro que confunde al objetivo."
     },
-    "Memento": {
-        "name": "Legado",
-        "internal_name": "Memento",
-        "type": "Dark",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "100",
-        "pp": "10",
-        "priority": "0",
-        "description": "El usuario se debilita, pero baja mucho tanto el Ataque como el Ataque Especial del objetivo."
-    },
     "Grudge": {
         "name": "Rabia",
         "internal_name": "Grudge",
@@ -4860,6 +5091,17 @@
         "pp": "20",
         "priority": "0",
         "description": "Energía muy extraña que puede hacer retroceder al objetivo."
+    },
+    "Sheer Cold": {
+        "name": "Frío Polar",
+        "internal_name": "Sheer Cold",
+        "type": "Ice",
+        "category": "Special",
+        "power": "-",
+        "accuracy": "30",
+        "pp": "5",
+        "priority": "0",
+        "description": "Ataque de frío polar que debilita al objetivo si le alcanza."
     },
     "Howl": {
         "name": "Aullido",
@@ -4905,6 +5147,28 @@
         "priority": "0",
         "description": "Golpea con la cola u otras partes de su cuerpo de dos a cinco veces seguidas."
     },
+    "Freeze Dry": {
+        "name": "Liofilización",
+        "internal_name": "Freeze Dry",
+        "type": "Ice",
+        "category": "Special",
+        "power": "70",
+        "accuracy": "100",
+        "pp": "20",
+        "priority": "0",
+        "description": "Enfría súbitamente al objetivo e incluso puede congelarlo. Es supereficaz contra Pokémon de tipo Agua."
+    },
+    "Memento": {
+        "name": "Legado",
+        "internal_name": "Memento",
+        "type": "Dark",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "0",
+        "description": "El usuario se debilita, pero baja mucho tanto el Ataque como el Ataque Especial del objetivo."
+    },
     "Burning Jealousy": {
         "name": "Envidia Ardiente",
         "internal_name": "Burning Jealousy",
@@ -4926,39 +5190,6 @@
         "pp": "5",
         "priority": "0",
         "description": "El atacante explota y hiere a todos a su alrededor. El usuario se debilita de inmediato."
-    },
-    "Psychic Noise": {
-        "name": "Psicorruido",
-        "internal_name": "Psychic Noise",
-        "type": "Psychic",
-        "category": "Special",
-        "power": "75",
-        "accuracy": "100",
-        "pp": "10",
-        "priority": "0",
-        "description": "The user attacks the target with unpleasant sound waves. For two turns, the target is prevented from recovering HP through moves, Abilities, or held items."
-    },
-    "Magic Room": {
-        "name": "Zona Mágica",
-        "internal_name": "Magic Room",
-        "type": "Psychic",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
-        "pp": "10",
-        "priority": "0",
-        "description": "Crea un espacio misterioso que inutiliza todos los objetos de los Pokémon durante cinco turnos."
-    },
-    "Expanding Force": {
-        "name": "Vasta Fuerza",
-        "internal_name": "Expanding Force",
-        "type": "Psychic",
-        "category": "Special",
-        "power": "80",
-        "accuracy": "100",
-        "pp": "10",
-        "priority": "0",
-        "description": "El usuario ataca al objetivo con sus poderes psíquicos. Cuando se usa en conjunción con un campo psíquico, aumenta su potencia e inflige daño a todos los rivales."
     },
     "Absorb": {
         "name": "Absorber",
@@ -5103,6 +5334,17 @@
         "priority": "0",
         "description": "The user attacks by pouncing on the target. This also lowers the target's Speed stat."
     },
+    "Metal Sound": {
+        "name": "Eco Metálico",
+        "internal_name": "Metal Sound",
+        "type": "Steel",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "85",
+        "pp": "40",
+        "priority": "0",
+        "description": "Horrible chirrido metálico que baja mucho la Defensa Especial del objetivo."
+    },
     "Assist": {
         "name": "Ayuda",
         "internal_name": "Assist",
@@ -5113,17 +5355,6 @@
         "pp": "20",
         "priority": "0",
         "description": "Usa un movimiento de un miembro del equipo elegido al azar."
-    },
-    "Odor Sleuth": {
-        "name": "Rastreo",
-        "internal_name": "Odor Sleuth",
-        "type": "Normal",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
-        "pp": "40",
-        "priority": "0",
-        "description": "Permite atacar con cualquier movimiento a objetivos de tipo Fantasma y golpear a Pokémon evasivos."
     },
     "Punishment": {
         "name": "Castigo",
@@ -5147,16 +5378,27 @@
         "priority": "0",
         "description": "Ataca con un rayo de luz que centellea como si lo formaran miles de joyas."
     },
-    "Embargo": {
-        "name": "Embargo",
-        "internal_name": "Embargo",
+    "Parting Shot": {
+        "name": "Última Palabra",
+        "internal_name": "Parting Shot",
         "type": "Dark",
         "category": "Status",
         "power": "-",
         "accuracy": "100",
-        "pp": "15",
+        "pp": "20",
         "priority": "0",
-        "description": "Impide al objetivo usar el objeto que lleva. Su Entrenador tampoco puede usar objetos con él."
+        "description": "El usuario se cambia por otro Pokémon de su equipo, pero antes amedrenta a su oponente y hace que disminuyan su Ataque y Ataque Especial."
+    },
+    "Odor Sleuth": {
+        "name": "Rastreo",
+        "internal_name": "Odor Sleuth",
+        "type": "Normal",
+        "category": "Status",
+        "power": "-",
+        "accuracy": "-",
+        "pp": "40",
+        "priority": "0",
+        "description": "Permite atacar con cualquier movimiento a objetivos de tipo Fantasma y golpear a Pokémon evasivos."
     },
     "Cross Chop": {
         "name": "Tajo Cruzado",
@@ -5279,17 +5521,6 @@
         "priority": "0",
         "description": "Hace el doble de daño a objetivos paralizados, pero también cura la parálisis."
     },
-    "Bulk Up": {
-        "name": "Corpulencia",
-        "internal_name": "Bulk Up",
-        "type": "Fighting",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
-        "pp": "20",
-        "priority": "0",
-        "description": "Robustece el cuerpo para subir el Ataque y la Defensa."
-    },
     "Close Combat": {
         "name": "A Bocajarro",
         "internal_name": "Close Combat",
@@ -5356,6 +5587,17 @@
         "priority": "0",
         "description": "The user rampages and spews vicious flames to inflict damage on the target, then becomes fixated on using this move."
     },
+    "Rock Throw": {
+        "name": "Lanzarrocas",
+        "internal_name": "Rock Throw",
+        "type": "Rock",
+        "category": "Physical",
+        "power": "50",
+        "accuracy": "90",
+        "pp": "15",
+        "priority": "0",
+        "description": "Tira una pequeña roca al objetivo."
+    },
     "Extreme Speed": {
         "name": "Veloc. Extrema",
         "internal_name": "Extreme Speed",
@@ -5367,17 +5609,6 @@
         "priority": "2",
         "description": "Ataque muy rápido que siempre se realiza el primero."
     },
-    "Iron Head": {
-        "name": "Cabeza de Hierro",
-        "internal_name": "Iron Head",
-        "type": "Steel",
-        "category": "Physical",
-        "power": "80",
-        "accuracy": "100",
-        "pp": "15",
-        "priority": "0",
-        "description": "Ataca con su dura cabeza de hierro. Puede hacer que el objetivo retroceda."
-    },
     "Mind Reader": {
         "name": "Telépata",
         "internal_name": "Mind Reader",
@@ -5388,17 +5619,6 @@
         "pp": "5",
         "priority": "0",
         "description": "El usuario adivina los movimientos del objetivo para hacer que su siguiente ataque no falle."
-    },
-    "Ice Ball": {
-        "name": "Bola Hielo",
-        "internal_name": "Ice Ball",
-        "type": "Ice",
-        "category": "Physical",
-        "power": "30",
-        "accuracy": "90",
-        "pp": "20",
-        "priority": "0",
-        "description": "El atacante rueda contra el objetivo durante cinco turnos, cada vez con mayor fuerza."
     },
     "Circle Throw": {
         "name": "Llave Giro",
@@ -5498,17 +5718,6 @@
         "pp": "10",
         "priority": "0",
         "description": "El usuario emplea sus poderes para hacer la media de su Defensa y Defensa Especial con las de su objetivo y compartirlas."
-    },
-    "Psychic Terrain": {
-        "name": "Campo Psíquico",
-        "internal_name": "Psychic Terrain",
-        "type": "Psychic",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
-        "pp": "10",
-        "priority": "0",
-        "description": "Durante cinco turnos, se potencian los movimientos de tipo Psíquico y los Pokémon que están en el suelo quedan protegidos contra movimientos con prioridad."
     },
     "Recover": {
         "name": "Recuperación",
@@ -5653,17 +5862,6 @@
         "priority": "0",
         "description": "Tritura con afiladas hojas y puede bajar la Precisión  del objetivo."
     },
-    "Aurora Beam": {
-        "name": "Rayo Aurora",
-        "internal_name": "Aurora Beam",
-        "type": "Ice",
-        "category": "Special",
-        "power": "65",
-        "accuracy": "100",
-        "pp": "20",
-        "priority": "0",
-        "description": "Rayo multicolor que puede reducir el Ataque."
-    },
     "Constrict": {
         "name": "Restricción",
         "internal_name": "Constrict",
@@ -5708,17 +5906,6 @@
         "priority": "0",
         "description": "Cambia el tipo del Pokémon al mismo tipo que el del objetivo."
     },
-    "Rock Throw": {
-        "name": "Lanzarrocas",
-        "internal_name": "Rock Throw",
-        "type": "Rock",
-        "category": "Physical",
-        "power": "50",
-        "accuracy": "90",
-        "pp": "15",
-        "priority": "0",
-        "description": "Tira una pequeña roca al objetivo."
-    },
     "Explosion": {
         "name": "Explosión",
         "internal_name": "Explosion",
@@ -5729,17 +5916,6 @@
         "pp": "5",
         "priority": "0",
         "description": "El atacante causa una grandísima explosión y hiere a todos a su alrededor. El usuario se debilita de inmediato."
-    },
-    "Hammer Arm": {
-        "name": "Machada",
-        "internal_name": "Hammer Arm",
-        "type": "Fighting",
-        "category": "Physical",
-        "power": "100",
-        "accuracy": "90",
-        "pp": "10",
-        "priority": "0",
-        "description": "Gira con fuerza el puño y da un gran golpe. No obstante, baja la Velocidad."
     },
     "Rock Polish": {
         "name": "Pulimento",
@@ -5762,6 +5938,28 @@
         "pp": "15",
         "priority": "0",
         "description": "El usuario se sacude para hacerse más ligero y aumentar mucho su Velocidad."
+    },
+    "Supercell Slam": {
+        "name": "Plancha Voltaica",
+        "internal_name": "Supercell Slam",
+        "type": "Electric",
+        "category": "Physical",
+        "power": "100",
+        "accuracy": "95",
+        "pp": "15",
+        "priority": "0",
+        "description": "The user electrifies its body and drops onto the target to inflict damage. If this move misses, the user takes damage instead."
+    },
+    "Hammer Arm": {
+        "name": "Machada",
+        "internal_name": "Hammer Arm",
+        "type": "Fighting",
+        "category": "Physical",
+        "power": "100",
+        "accuracy": "90",
+        "pp": "10",
+        "priority": "0",
+        "description": "Gira con fuerza el puño y da un gran golpe. No obstante, baja la Velocidad."
     },
     "Hard Press": {
         "name": "Prensa Metálica",
@@ -5807,17 +6005,6 @@
         "priority": "0",
         "description": "El usuario se relaja y restaura la mitad de sus PS máximos."
     },
-    "Snowscape": {
-        "name": "Snowscape",
-        "internal_name": "Snowscape",
-        "type": "Ice",
-        "category": "Status",
-        "power": "0",
-        "accuracy": "-",
-        "pp": "10",
-        "priority": "0",
-        "description": "The user summons a snowstorm lasting five turns. This boosts the Defense stats of Ice types."
-    },
     "Razor Shell": {
         "name": "Concha Filo",
         "internal_name": "Razor Shell",
@@ -5828,6 +6015,17 @@
         "pp": "10",
         "priority": "0",
         "description": "Una afilada vieira ataca al objetivo. También puede hacer disminuir su Defensa."
+    },
+    "Shell Side Arm": {
+        "name": "Moluscañón",
+        "internal_name": "Shell Side Arm",
+        "type": "Poison",
+        "category": "Special",
+        "power": "90",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "0",
+        "description": "El usuario lanza un ataque físico o especial en función de cuál inflija más daño. Puede envenenar al objetivo."
     },
     "Sonic Boom": {
         "name": "Bomba Sónica",
@@ -5851,17 +6049,6 @@
         "priority": "0",
         "description": "Fija el blanco para que el siguiente ataque no falle. "
     },
-    "Metal Sound": {
-        "name": "Eco Metálico",
-        "internal_name": "Metal Sound",
-        "type": "Steel",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "85",
-        "pp": "40",
-        "priority": "0",
-        "description": "Horrible chirrido metálico que baja mucho la Defensa Especial del objetivo."
-    },
     "Mirror Shot": {
         "name": "Disparo Espejo",
         "internal_name": "Mirror Shot",
@@ -5883,17 +6070,6 @@
         "pp": "20",
         "priority": "0",
         "description": "Lanza unas bombas de hierro que se pegan al adversario. No se puede esquivar."
-    },
-    "Steel Beam": {
-        "name": "Metaláser",
-        "internal_name": "Steel Beam",
-        "type": "Steel",
-        "category": "Special",
-        "power": "140",
-        "accuracy": "95",
-        "pp": "5",
-        "priority": "0",
-        "description": "Utiliza el acero de su cuerpo para disparar un potente rayo. También hiere al agresor."
     },
     "Trump Card": {
         "name": "As Oculto",
@@ -5950,28 +6126,6 @@
         "priority": "0",
         "description": "Si un Pokémon escucha este canto y no es cambiado por otro en tres turnos, acaba debilitándose."
     },
-    "Icicle Spear": {
-        "name": "Carámbano",
-        "internal_name": "Icicle Spear",
-        "type": "Ice",
-        "category": "Physical",
-        "power": "25",
-        "accuracy": "100",
-        "pp": "30",
-        "priority": "0",
-        "description": "Ataca lanzando de dos a cinco ráfagas consecutivas de carámbanos."
-    },
-    "Ice Shard": {
-        "name": "Canto Helado",
-        "internal_name": "Ice Shard",
-        "type": "Ice",
-        "category": "Physical",
-        "power": "40",
-        "accuracy": "100",
-        "pp": "30",
-        "priority": "1",
-        "description": "Crea bolas de hielo y las lanza a gran velocidad. Este movimiento siempre va primero."
-    },
     "Entrainment": {
         "name": "Danza Amiga",
         "internal_name": "Entrainment",
@@ -5982,50 +6136,6 @@
         "pp": "15",
         "priority": "0",
         "description": "Una extraña danza que hace que el usuario y el objetivo tengan la misma habilidad."
-    },
-    "Triple Axel": {
-        "name": "Triple Axel",
-        "internal_name": "Triple Axel",
-        "type": "Ice",
-        "category": "Physical",
-        "power": "20",
-        "accuracy": "90",
-        "pp": "10",
-        "priority": "0",
-        "description": "Patea hasta tres veces seguidas y cada vez más fuerte."
-    },
-    "Sheer Cold": {
-        "name": "Frío Polar",
-        "internal_name": "Sheer Cold",
-        "type": "Ice",
-        "category": "Special",
-        "power": "-",
-        "accuracy": "30",
-        "pp": "5",
-        "priority": "0",
-        "description": "Ataque de frío polar que debilita al objetivo si le alcanza."
-    },
-    "Frost Breath": {
-        "name": "Vaho Gélido",
-        "internal_name": "Frost Breath",
-        "type": "Ice",
-        "category": "Special",
-        "power": "60",
-        "accuracy": "90",
-        "pp": "10",
-        "priority": "0",
-        "description": "Quien lo usa ataca lanzando un aliento gélido. Siempre resulta en un golpe crítico."
-    },
-    "Smog": {
-        "name": "Polución",
-        "internal_name": "Smog",
-        "type": "Poison",
-        "category": "Special",
-        "power": "30",
-        "accuracy": "70",
-        "pp": "20",
-        "priority": "0",
-        "description": "El objetivo es atacado con gases tóxicos que pueden llegar a envenenar."
     },
     "Poison Gas": {
         "name": "Gas Venenoso",
@@ -6038,17 +6148,6 @@
         "priority": "0",
         "description": "Lanza una nube de gas tóxico a los rivales. Produce envenenamiento."
     },
-    "Shadow Punch": {
-        "name": "Puño Sombra",
-        "internal_name": "Shadow Punch",
-        "type": "Ghost",
-        "category": "Physical",
-        "power": "60",
-        "accuracy": "-",
-        "pp": "20",
-        "priority": "0",
-        "description": "Puñetazo ineludible procedente de las sombras."
-    },
     "Shadow Sneak": {
         "name": "Sombra Vil",
         "internal_name": "Shadow Sneak",
@@ -6059,6 +6158,28 @@
         "pp": "30",
         "priority": "1",
         "description": "Extiende su sombra y ataca al objetivo por la espalda. Este movimiento siempre va primero."
+    },
+    "Smog": {
+        "name": "Polución",
+        "internal_name": "Smog",
+        "type": "Poison",
+        "category": "Special",
+        "power": "30",
+        "accuracy": "70",
+        "pp": "20",
+        "priority": "0",
+        "description": "El objetivo es atacado con gases tóxicos que pueden llegar a envenenar."
+    },
+    "Shadow Punch": {
+        "name": "Puño Sombra",
+        "internal_name": "Shadow Punch",
+        "type": "Ghost",
+        "category": "Physical",
+        "power": "60",
+        "accuracy": "-",
+        "pp": "20",
+        "priority": "0",
+        "description": "Puñetazo ineludible procedente de las sombras."
     },
     "Clamp": {
         "name": "Tenaza",
@@ -6081,17 +6202,6 @@
         "pp": "15",
         "priority": "0",
         "description": "Lanza finas púas que hieren de dos a cinco veces."
-    },
-    "Icicle Crash": {
-        "name": "Chuzos",
-        "internal_name": "Icicle Crash",
-        "type": "Ice",
-        "category": "Physical",
-        "power": "85",
-        "accuracy": "90",
-        "pp": "10",
-        "priority": "0",
-        "description": "Lanza grandes carámbanos. Puede hacer retroceder al objetivo."
     },
     "Destiny Bond": {
         "name": "Mismo Destino",
@@ -6170,6 +6280,17 @@
         "priority": "0",
         "description": "Golpea con fuerza con una pinza enorme. Suele ser crítico."
     },
+    "Chloroblast": {
+        "name": "Chloroblast",
+        "internal_name": "Chloroblast",
+        "type": "Grass",
+        "category": "Special",
+        "power": "150",
+        "accuracy": "95",
+        "pp": "5",
+        "priority": "0",
+        "description": "The user launches its amassed chlorophyll to inflict damage on the target. This also damages the user and lowers the user's action speed."
+    },
     "Magnetic Flux": {
         "name": "Aura Magnética",
         "internal_name": "Magnetic Flux",
@@ -6180,17 +6301,6 @@
         "pp": "20",
         "priority": "0",
         "description": "Manipula el campo magnético y logra aumentar la Defensa y la Def. Esp. de los Pokémon aliados que cuenten con las habilidades Más y Menos."
-    },
-    "Supercell Slam": {
-        "name": "Plancha Voltaica",
-        "internal_name": "Supercell Slam",
-        "type": "Electric",
-        "category": "Physical",
-        "power": "100",
-        "accuracy": "95",
-        "pp": "15",
-        "priority": "0",
-        "description": "The user electrifies its body and drops onto the target to inflict damage. If this move misses, the user takes damage instead."
     },
     "Egg Bomb": {
         "name": "Bomba Huevo",
@@ -6214,6 +6324,17 @@
         "priority": "0",
         "description": "Arroja esferas al objetivo entre dos y cinco veces seguidas."
     },
+    "Draco Meteor": {
+        "name": "Cometa Draco",
+        "internal_name": "Draco Meteor",
+        "type": "Dragon",
+        "category": "Special",
+        "power": "130",
+        "accuracy": "90",
+        "pp": "5",
+        "priority": "0",
+        "description": "Hace que grandes cometas caigan del cielo sobre el objetivo. Baja mucho el Ataque Especial del que lo usa."
+    },
     "Wood Hammer": {
         "name": "Mazazo",
         "internal_name": "Wood Hammer",
@@ -6224,6 +6345,17 @@
         "pp": "15",
         "priority": "0",
         "description": "Arremete contra el objetivo con su robusto cuerpo. El agresor también sufre bastante daño."
+    },
+    "Dragon Hammer": {
+        "name": "Martillo Dragón",
+        "internal_name": "Dragon Hammer",
+        "type": "Dragon",
+        "category": "Physical",
+        "power": "90",
+        "accuracy": "100",
+        "pp": "15",
+        "priority": "0",
+        "description": "Usa el cuerpo como un martillo para abalanzarse sobre su rival y causarle daño."
     },
     "Bone Club": {
         "name": "Hueso Palo",
@@ -6257,6 +6389,17 @@
         "pp": "10",
         "priority": "0",
         "description": "Hueso en ristre, aporrea al objetivo de dos a cinco veces."
+    },
+    "Shadow Bone": {
+        "name": "Hueso Sombrío",
+        "internal_name": "Shadow Bone",
+        "type": "Ghost",
+        "category": "Physical",
+        "power": "85",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "0",
+        "description": "Ataca al oponente golpeándole con un hueso poseído por un espíritu. Puede reducir la Defensa del objetivo."
     },
     "High Jump Kick": {
         "name": "Pat. Salto Alta",
@@ -6313,16 +6456,27 @@
         "priority": "0",
         "description": "Gancho ascendente de gran ímpetu."
     },
-    "Metal Burst": {
-        "name": "Represión Metal",
-        "internal_name": "Metal Burst",
-        "type": "Steel",
-        "category": "Physical",
+    "Aromatic Mist": {
+        "name": "Niebla Aromática",
+        "internal_name": "Aromatic Mist",
+        "type": "Fairy",
+        "category": "Status",
         "power": "-",
-        "accuracy": "100",
+        "accuracy": "-",
+        "pp": "20",
+        "priority": "0",
+        "description": "Consigue aumentar la Defensa Especial de un Pokémon de su equipo con una fragancia misteriosa."
+    },
+    "Strange Steam": {
+        "name": "Cautivapor",
+        "internal_name": "Strange Steam",
+        "type": "Fairy",
+        "category": "Special",
+        "power": "90",
+        "accuracy": "95",
         "pp": "10",
         "priority": "0",
-        "description": "Devuelve al objetivo el último ataque recibido, pero con mucha más fuerza."
+        "description": "Desprende un humo con el que ataca al objetivo, que puede acabar confundido."
     },
     "Octazooka": {
         "name": "Pulpocañón",
@@ -6357,17 +6511,6 @@
         "priority": "0",
         "description": "Con una cara que asusta, da un beso al objetivo y lo adormece."
     },
-    "Powder Snow": {
-        "name": "Nieve Polvo",
-        "internal_name": "Powder Snow",
-        "type": "Ice",
-        "category": "Special",
-        "power": "40",
-        "accuracy": "100",
-        "pp": "25",
-        "priority": "0",
-        "description": "Lanza nieve que puede llegar a congelar."
-    },
     "Heart Stamp": {
         "name": "Arrumaco",
         "internal_name": "Heart Stamp",
@@ -6378,17 +6521,6 @@
         "pp": "25",
         "priority": "0",
         "description": "Grácil gesto que asesta un golpe tremendo al objetivo y puede hacerlo retroceder."
-    },
-    "Aurora Veil": {
-        "name": "Velo Aurora",
-        "internal_name": "Aurora Veil",
-        "type": "Ice",
-        "category": "Status",
-        "power": "-",
-        "accuracy": "-",
-        "pp": "20",
-        "priority": "0",
-        "description": "Reduce el daño de los ataques físicos y especiales que ejecuta el rival durante cinco turnos. Solo puede usarse cuando está granizando."
     },
     "Lava Plume": {
         "name": "Humareda",
@@ -6423,17 +6555,6 @@
         "priority": "0",
         "description": "The user performs a tackle like a raging bull. This move's type depends on the user's form. It can also break barriers, such as Light Screen and Reflect."
     },
-    "Freeze Dry": {
-        "name": "Liofilización",
-        "internal_name": "Freeze Dry",
-        "type": "Ice",
-        "category": "Special",
-        "power": "70",
-        "accuracy": "100",
-        "pp": "20",
-        "priority": "0",
-        "description": "Enfría súbitamente al objetivo e incluso puede congelarlo. Es supereficaz contra Pokémon de tipo Agua."
-    },
     "Sparkling Aria": {
         "name": "Aria Burbuja",
         "internal_name": "Sparkling Aria",
@@ -6455,6 +6576,94 @@
         "pp": "10",
         "priority": "0",
         "description": "El usuario se transforma en una copia del objetivo, con los mismos movimientos."
+    },
+    "Bouncy Bubble": {
+        "name": "Vapodrenaje",
+        "internal_name": "Bouncy Bubble",
+        "type": "Water",
+        "category": "Special",
+        "power": "60",
+        "accuracy": "100",
+        "pp": "20",
+        "priority": "0",
+        "description": "Ataca lanzando proyectiles de agua y recupera una cantidad de PS equivalente a la mitad del daño causado."
+    },
+    "Buzzy Buzz": {
+        "name": "Joltioparálisis",
+        "internal_name": "Buzzy Buzz",
+        "type": "Electric",
+        "category": "Special",
+        "power": "60",
+        "accuracy": "100",
+        "pp": "20",
+        "priority": "0",
+        "description": "Lanza una potente descarga eléctrica sobre el rival y lo deja paralizado."
+    },
+    "Sizzly Slide": {
+        "name": "Flarembestida",
+        "internal_name": "Sizzly Slide",
+        "type": "Fire",
+        "category": "Physical",
+        "power": "60",
+        "accuracy": "100",
+        "pp": "20",
+        "priority": "0",
+        "description": "Tras envolver su cuerpo en llamas, el usuario arrolla con fuerza al rival y le provoca quemaduras."
+    },
+    "Glitzy Glow": {
+        "name": "Espeaura",
+        "internal_name": "Glitzy Glow",
+        "type": "Psychic",
+        "category": "Special",
+        "power": "80",
+        "accuracy": "95",
+        "pp": "15",
+        "priority": "0",
+        "description": "Envuelve al rival con ondas psíquicas y alza un extraño muro que debilita los ataques especiales del adversario."
+    },
+    "Baddy Bad": {
+        "name": "Umbreozona",
+        "internal_name": "Baddy Bad",
+        "type": "Dark",
+        "category": "Special",
+        "power": "80",
+        "accuracy": "95",
+        "pp": "15",
+        "priority": "0",
+        "description": "Lanza un ataque haciendo gala de su faceta más umbría y alza un extraño muro que mitiga los ataques físicos del adversario."
+    },
+    "Sappy Seed": {
+        "name": "Leafitobombas",
+        "internal_name": "Sappy Seed",
+        "type": "Grass",
+        "category": "Physical",
+        "power": "100",
+        "accuracy": "90",
+        "pp": "10",
+        "priority": "0",
+        "description": "Hace brotar un tallo gigante que bombardea al rival con unas semillas que le drenan PS en cada turno."
+    },
+    "Freezy Frost": {
+        "name": "Glaceoprisma",
+        "internal_name": "Freezy Frost",
+        "type": "Ice",
+        "category": "Special",
+        "power": "100",
+        "accuracy": "90",
+        "pp": "10",
+        "priority": "0",
+        "description": "Ataca al rival con negros cristales de niebla congelada. Revierte los cambios en las características de todos los Pokémon presentes."
+    },
+    "Sparkly Swirl": {
+        "name": "Sylveotornado",
+        "internal_name": "Sparkly Swirl",
+        "type": "Fairy",
+        "category": "Special",
+        "power": "120",
+        "accuracy": "85",
+        "pp": "5",
+        "priority": "0",
+        "description": "Ataca al rival envolviéndolo en un remolino de aroma asfixiante. Cura a los aliados de cualquier problema de estado."
     },
     "Sharpen": {
         "name": "Afilar",
@@ -6489,16 +6698,38 @@
         "priority": "0",
         "description": "El usuario cambia de tipo para hacerse resistente al último tipo de movimiento usado por el objetivo."
     },
-    "Draco Meteor": {
-        "name": "Cometa Draco",
-        "internal_name": "Draco Meteor",
-        "type": "Dragon",
+    "Freezing Glare": {
+        "name": "Mirada Heladora",
+        "internal_name": "Freezing Glare",
+        "type": "Psychic",
         "category": "Special",
-        "power": "130",
-        "accuracy": "90",
-        "pp": "5",
+        "power": "90",
+        "accuracy": "100",
+        "pp": "10",
         "priority": "0",
-        "description": "Hace que grandes cometas caigan del cielo sobre el objetivo. Baja mucho el Ataque Especial del que lo usa."
+        "description": "A través de sus ojos emite poderes psíquicos con los que ataca al objetivo, al que puede llegar a congelar."
+    },
+    "Thunderous Kick": {
+        "name": "Patada Relámpago",
+        "internal_name": "Thunderous Kick",
+        "type": "Fighting",
+        "category": "Physical",
+        "power": "90",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "0",
+        "description": "El usuario desconcierta al rival con movimientos centelleantes y le propina una patada. Baja la Defensa del objetivo."
+    },
+    "Fiery Wrath": {
+        "name": "Furia Candente",
+        "internal_name": "Fiery Wrath",
+        "type": "Dark",
+        "category": "Special",
+        "power": "90",
+        "accuracy": "100",
+        "pp": "10",
+        "priority": "0",
+        "description": "El usuario convierte su ira en un aura flamígera para lanzar su ataque. Puede amedrentar al objetivo."
     },
     "Psystrike": {
         "name": "Onda Mental",

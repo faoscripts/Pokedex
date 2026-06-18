@@ -6,14 +6,22 @@ import requests
 
 BASE_URL = "https://pokeapi.co/api/v2"
 OUTPUT_DIR = "data/generated"
+json_cache = {}
 
 POKEMON_NAMES = list(range(1, 151))
 
 
 def get_json(url):
+    if url in json_cache:
+        return json_cache[url]
+
     response = requests.get(url, timeout=20)
     response.raise_for_status()
-    return response.json()
+
+    data = response.json()
+    json_cache[url] = data
+
+    return data
 
 
 def get_text_by_language(entries, key= "effect", language= "es"):
@@ -95,10 +103,93 @@ def download_move(move_name):
         
     }
 
+def get_basic_comparison_data(pokemon_api_data):
+    return {
+        "types": [
+            type_slot["type"]["name"]
+            for type_slot in pokemon_api_data["types"]
+        ],
+        "stats": {
+            stat_slot["stat"]["name"]: stat_slot["base_stat"]
+            for stat_slot in pokemon_api_data["stats"]
+        },
+        "abilities": [
+            ability_slot["ability"]["name"]
+            for ability_slot in pokemon_api_data["abilities"]
+        ],
+        "height": pokemon_api_data["height"],
+        "weight": pokemon_api_data["weight"]
+    }
 
-def download_pokemon(pokemon_name):
+
+def is_gameplay_form(base_data, variety_data):
+    return get_basic_comparison_data(base_data) != get_basic_comparison_data(variety_data)
+
+
+def get_form_label(base_name, form_name):
+    clean_base = base_name.replace("-", " ")
+    clean_form = form_name.replace("-", " ")
+
+    label = clean_form.replace(clean_base, "").strip()
+
+    if label == "":
+        return "Normal"
+
+    return label.title()
+
+
+def get_forms_and_variants(base_pokemon_name, base_data, species_data):
+    forms = []
+    variants = []
+    form_names_to_download = []
+
+    varieties = species_data.get("varieties", [])
+
+    for variety in varieties:
+        variety_name = variety["pokemon"]["name"]
+
+        if variety_name == base_pokemon_name:
+            continue
+
+        variety_data = get_json(f"{BASE_URL}/pokemon/{variety_name}")
+        label = get_form_label(base_pokemon_name, variety_name)
+
+        if is_gameplay_form(base_data, variety_data):
+            forms.append({
+                "label": label,
+                "pokemon_key": format_name(variety_name)
+            })
+
+            form_names_to_download.append(variety_name)
+
+        else:
+            sprite_url = variety_data["sprites"]["front_default"]
+            sprite_path = download_sprite(sprite_url, format_name(variety_name))
+
+            variants.append({
+                "label": label,
+                "sprite_path": sprite_path
+            })
+
+    return forms, variants, form_names_to_download
+
+def download_pokemon(pokemon_name, include_forms=True):
     data = get_json(f"{BASE_URL}/pokemon/{pokemon_name}")
     species_data = get_json(data["species"]["url"])
+
+    base_pokemon_name = data["name"]
+
+    forms = []
+    variants = []
+    form_names_to_download = []
+
+    if include_forms:
+        forms, variants, form_names_to_download = get_forms_and_variants(
+            base_pokemon_name,
+            data,
+            species_data
+        )
+
     category = "Unknown Pokemon"
 
     for genus in species_data["genera"]:
@@ -145,10 +236,13 @@ def download_pokemon(pokemon_name):
             format_name(ability_name)
             for ability_name in abilities
         ],
+        "is_form_entry": False,
+        "forms": forms,
+        "variants": variants,
         "sprite_url": data["sprites"]["front_default"]
     }
 
-    return pokemon, moves, abilities
+    return pokemon, moves, abilities, form_names_to_download
 
 def download_sprite(sprite_url, pokemon_name):
     if sprite_url is None:
@@ -181,7 +275,7 @@ def main():
     for pokemon_name in POKEMON_NAMES:
         print("Downloading Pokemon:", pokemon_name)
 
-        pokemon, move_names, ability_names = download_pokemon(pokemon_name)
+        pokemon, move_names, ability_names, form_names = download_pokemon(pokemon_name)
 
         sprite_path = download_sprite(
             pokemon["sprite_url"],
@@ -191,6 +285,39 @@ def main():
         pokemon["sprite_path"] = sprite_path
 
         pokemon_data[pokemon["name"]] = pokemon
+
+        for form_name in form_names:
+            print("  Downloading Form:", form_name)
+
+            form_pokemon, form_move_names, form_ability_names, _ = download_pokemon(
+                form_name,
+                include_forms=False
+            )
+
+            sprite_path = download_sprite(
+                form_pokemon["sprite_url"],
+                form_pokemon["name"]
+            )
+
+            form_pokemon["sprite_path"] = sprite_path
+            form_pokemon["is_form_entry"] = True
+            pokemon_data[form_pokemon["name"]] = form_pokemon
+
+            for move_name in form_move_names:
+                formatted_move_name = format_name(move_name)
+
+                if formatted_move_name not in move_data:
+                    print("    Downloading Move:", move_name)
+                    move_data[formatted_move_name] = download_move(move_name)
+                    time.sleep(0.05)
+
+            for ability_name in form_ability_names:
+                formatted_ability_name = format_name(ability_name)
+
+                if formatted_ability_name not in ability_data:
+                    print("    Downloading Ability:", ability_name)
+                    ability_data[formatted_ability_name] = download_ability(ability_name)
+                    time.sleep(0.05)
 
         for move_name in move_names:
             formatted_move_name = format_name(move_name)
@@ -224,3 +351,39 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def get_basic_comparison_data(pokemon_api_data):
+    return {
+        "types": [
+            type_slot["type"]["name"]
+            for type_slot in pokemon_api_data["types"]
+        ],
+        "stats": {
+            stat_slot["stat"]["name"]: stat_slot["base_stat"]
+            for stat_slot in pokemon_api_data["stats"]
+        },
+        "abilities": [
+            ability_slot["ability"]["name"]
+            for ability_slot in pokemon_api_data["abilities"]
+        ],
+        "height": pokemon_api_data["height"],
+        "weight": pokemon_api_data["weight"]
+    }
+
+
+def is_gameplay_form(base_data, variety_data):
+    base_compare = get_basic_comparison_data(base_data)
+    variety_compare = get_basic_comparison_data(variety_data)
+
+    return base_compare != variety_compare
+
+def get_form_label(base_name, form_name):
+    clean_base = base_name.replace("-", " ")
+    clean_form = form_name.replace("-", " ")
+
+    label = clean_form.replace(clean_base, "").strip()
+
+    if label == "":
+        return "Normal"
+
+    return label.title()

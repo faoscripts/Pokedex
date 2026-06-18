@@ -1,3 +1,4 @@
+import platform
 import pygame
 import sys
 
@@ -14,7 +15,16 @@ class App:
     def __init__(self):
         pygame.init()
 
-        self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREEN)
+        if platform.system() == "Windows":
+            flags = 0  # ventana normal
+        else:
+            flags = pygame.FULLSCREEN  # Linux / Raspberry fullscreen
+
+        self.screen = pygame.display.set_mode(
+            (SCREEN_WIDTH, SCREEN_HEIGHT),
+            flags
+        )
+
         pygame.display.set_caption("Pokedex UI")
 
         self.clock = pygame.time.Clock()

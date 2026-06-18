@@ -32,6 +32,15 @@ class PokemonDetailScreen:
             "ABILITIES",
             "SIZE"
         ]
+
+        if len(self.pokemon.get("forms", [])) > 0:
+            self.tabs.append("FORMS")
+
+        if len(self.pokemon.get("variants", [])) > 0:
+            self.tabs.append("VARIANTS")
+
+        self.selected_form_index = 0
+        self.selected_variant_index = 0
         self.selected_tab_index = 0
         self.selected_move_index = 0
         self.selected_ability_index = 0
@@ -95,6 +104,14 @@ class PokemonDetailScreen:
                     if self.selected_ability_index >= len(self.pokemon["abilities"]):
                         self.selected_ability_index = 0
 
+                elif current_tab == "FORMS":
+                    forms = self.pokemon.get("forms", [])
+
+                    self.selected_form_index += 1
+
+                    if self.selected_form_index >= len(forms):
+                        self.selected_form_index = 0
+
             elif event.key == pygame.K_UP:
                 current_tab = self.tabs[self.selected_tab_index]
 
@@ -113,6 +130,14 @@ class PokemonDetailScreen:
 
                     if self.selected_ability_index < 0:
                         self.selected_ability_index = len(self.pokemon["abilities"]) - 1
+
+                elif current_tab == "FORMS":
+                    forms = self.pokemon.get("forms", [])
+
+                    self.selected_form_index -= 1
+
+                    if self.selected_form_index < 0:
+                        self.selected_form_index = len(forms) - 1
 
             elif event.key == pygame.K_RIGHT:
                 self.selected_tab_index += 1
@@ -143,6 +168,15 @@ class PokemonDetailScreen:
                     selected_ability = self.pokemon["abilities"][self.selected_ability_index]
                     self.app.open_ability_detail(selected_ability, self.pokemon_name)
 
+                elif current_tab == "FORMS":
+                    forms = self.pokemon.get("forms", [])
+
+                    if len(forms) > 0:
+                        selected_form = forms[self.selected_form_index]
+                        pokemon_key = selected_form["pokemon_key"]
+
+                        self.app.open_pokemon_detail(pokemon_key)
+
 
     def update(self):
         pass
@@ -170,6 +204,12 @@ class PokemonDetailScreen:
 
         elif current_tab == "SIZE":
             self.draw_size_tab(screen)
+
+        elif current_tab == "FORMS":
+            self.draw_forms_tab(screen)
+
+        elif current_tab == "VARIANTS":
+            self.draw_variants_tab(screen)
 
         hint_font = pygame.font.Font(None, 20)
         hint = hint_font.render("ESC: Volver", True, (60, 60, 60))
@@ -538,6 +578,71 @@ class PokemonDetailScreen:
         screen.blit(human_text, (175, 158))
         screen.blit(human_height_text, (175, 173))
 
+    def draw_forms_tab(self, screen):
+        forms = self.pokemon.get("forms", [])
+
+        y = 80
+
+        for i, form in enumerate(forms):
+            label = form.get("label", "Forma")
+
+            row_x = 35
+            row_y = y
+            row_width = 250
+            row_height = 24
+
+            pygame.draw.rect(
+                screen,
+                (235, 235, 245),
+                (row_x, row_y, row_width, row_height),
+                border_radius=6
+            )
+
+            pygame.draw.rect(
+                screen,
+                (180, 20, 30),
+                (row_x, row_y, 28, row_height),
+                border_top_left_radius=6,
+                border_bottom_left_radius=6
+            )
+
+            if i == self.selected_form_index:
+                pygame.draw.rect(
+                    screen,
+                    COLOR_SELECTED,
+                    (row_x - 2, row_y - 2, row_width + 4, row_height + 4),
+                    2,
+                    border_radius=8
+                )
+
+            icon_text = pygame.font.Font(None, 20).render(
+                "F",
+                True,
+                (255, 255, 255)
+            )
+            screen.blit(icon_text, (row_x + 9, row_y + 4))
+
+            text = pygame.font.Font(None, 22).render(
+                label,
+                True,
+                (20, 40, 80)
+            )
+            screen.blit(text, (row_x + 40, row_y + 4))
+
+            y += 30
+
+    def draw_variants_tab(self, screen):
+        dark_text = self.get_dark_text_color()
+        font = pygame.font.Font(None, 22)
+
+        y = 80
+
+        for variant in self.pokemon.get("variants", []):
+            label = variant.get("label", "Variante")
+            text = font.render("- " + label, True, dark_text)
+            screen.blit(text, (35, y))
+            y += 24
+
     def trim_transparent_pixels(self, surface):
         rect = surface.get_bounding_rect()
 
@@ -652,7 +757,9 @@ class PokemonDetailScreen:
             "STATS": "DATOS",
             "MOVES": "MOVS",
             "ABILITIES": "HABS",
-            "SIZE": "TAMANO"
+            "SIZE": "TAMANO",
+            "FORMS": "FORMAS",
+            "VARIANTS": "VAR"
         }
 
         return tab_names.get(tab_name, tab_name)

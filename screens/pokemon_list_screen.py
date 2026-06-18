@@ -20,7 +20,11 @@ class PokemonListScreen:
         self.list_font = pygame.font.Font(None, 20)
         self.small_font = pygame.font.Font(None, 18)
 
-        self.pokemon_list = list(POKEMON_DATA.keys())
+        self.pokemon_list = [
+            pokemon_name
+            for pokemon_name, pokemon in POKEMON_DATA.items()
+            if not pokemon.get("is_form_entry", False)
+        ]
 
         self.selected_index = 0
         self.scroll_offset = 0
