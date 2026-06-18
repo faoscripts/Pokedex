@@ -343,12 +343,12 @@ class PokemonDetailScreen:
     def draw_stats_tab(self, screen):
         dark_text = self.get_dark_text_color()
 
-        y = 78
+        y = 92
         max_stat_value = 255
-        bar_max_width = 105
+        bar_max_width = 190
 
-        stat_font = pygame.font.Font(None, 18)
-        value_font = pygame.font.Font(None, 18)
+        stat_font = pygame.font.Font(None, 23)
+        value_font = pygame.font.Font(None, 23)
 
         for stat_name, stat_value in self.pokemon["stats"].items():
             label = self.get_stat_label(stat_name)
@@ -356,8 +356,8 @@ class PokemonDetailScreen:
             stat_text = stat_font.render(label, True, dark_text)
             value_text = value_font.render(str(stat_value), True, dark_text)
 
-            screen.blit(stat_text, (35, y))
-            screen.blit(value_text, (112, y))
+            screen.blit(stat_text, (45, y))
+            screen.blit(value_text, (165, y))
 
             bar_width = int((stat_value / max_stat_value) * bar_max_width)
             bar_width = min(bar_width, bar_max_width)
@@ -365,21 +365,22 @@ class PokemonDetailScreen:
             pygame.draw.rect(
                 screen,
                 (160, 160, 160),
-                (145, y + 4, bar_max_width, 8),
+                (220, y + 5, bar_max_width, 10),
                 1
             )
 
             pygame.draw.rect(
                 screen,
                 (180, 20, 30),
-                (145, y + 4, bar_width, 8)
+                (220, y + 5, bar_width, 10)
             )
 
-            y += 20
+            y += 28
 
     def draw_moves_tab(self, screen):
-        dark_text = self.get_dark_text_color()
-        y = 85
+        y = 88
+
+        self.max_visible_moves = 6
 
         visible_moves = self.pokemon["moves"][
             self.move_scroll_offset:
@@ -397,24 +398,24 @@ class PokemonDetailScreen:
 
             type_color = TYPE_COLORS.get(move_type, (120, 120, 120))
 
-            row_x = 35
+            row_x = 40
             row_y = y
-            row_width = 250
-            row_height = 22
+            row_width = 380
+            row_height = 26
 
             pygame.draw.rect(
                 screen,
                 (235, 235, 245),
                 (row_x, row_y, row_width, row_height),
-                border_radius=6
+                border_radius=7
             )
 
             pygame.draw.rect(
                 screen,
                 type_color,
-                (row_x, row_y, 32, row_height),
-                border_top_left_radius=6,
-                border_bottom_left_radius=6
+                (row_x, row_y, 38, row_height),
+                border_top_left_radius=7,
+                border_bottom_left_radius=7
             )
 
             if i == self.selected_move_index:
@@ -423,7 +424,7 @@ class PokemonDetailScreen:
                     COLOR_SELECTED,
                     (row_x - 2, row_y - 2, row_width + 4, row_height + 4),
                     2,
-                    border_radius=8
+                    border_radius=9
                 )
 
             if move_type not in self.type_icons:
@@ -432,8 +433,8 @@ class PokemonDetailScreen:
             icon = self.type_icons[move_type]
 
             if icon is not None:
-                icon_x = row_x + 8
-                icon_y = row_y + 3
+                icon_x = row_x + (38 - icon.get_width()) // 2
+                icon_y = row_y + (row_height - icon.get_height()) // 2
                 screen.blit(icon, (icon_x, icon_y))
 
             move_display_name = move
@@ -441,22 +442,23 @@ class PokemonDetailScreen:
             if move_data is not None:
                 move_display_name = move_data.get("name", move)
 
-            move_text = pygame.font.Font(None, 22).render(
+            move_text = pygame.font.Font(None, 25).render(
                 move_display_name,
                 True,
                 (20, 40, 80)
             )
-            screen.blit(move_text, (row_x + 42, row_y + 3))
 
-            y += 28
+            screen.blit(move_text, (row_x + 50, row_y + 4))
+
+            y += 32
 
         self.draw_moves_scrollbar(screen)
 
     def draw_moves_scrollbar(self, screen):
-        bar_x = 292
-        bar_y = 78
-        bar_w = 10
-        bar_h = 112
+        bar_x = 438
+        bar_y = 88
+        bar_w = 14
+        bar_h = 186
 
         pygame.draw.rect(screen, (230, 230, 230), (bar_x, bar_y, bar_w, bar_h))
         pygame.draw.rect(screen, (40, 40, 40), (bar_x, bar_y, bar_w, bar_h), 1)
@@ -468,7 +470,7 @@ class PokemonDetailScreen:
             handle_y = bar_y
         else:
             handle_h = max(
-                18,
+                20,
                 int((self.max_visible_moves / total_moves) * bar_h)
             )
 
@@ -481,32 +483,32 @@ class PokemonDetailScreen:
         pygame.draw.rect(
             screen,
             (70, 110, 230),
-            (bar_x + 2, handle_y + 2, bar_w - 4, handle_h - 4),
+            (bar_x + 3, handle_y + 3, bar_w - 6, handle_h - 6),
             border_radius=3
         )
 
     def draw_abilities_tab(self, screen):
-        y = 90
+        y = 95
 
         for i, ability in enumerate(self.pokemon["abilities"]):
-            row_x = 35
+            row_x = 40
             row_y = y
-            row_width = 250
-            row_height = 24
+            row_width = 380
+            row_height = 30
 
             pygame.draw.rect(
                 screen,
                 (235, 235, 245),
                 (row_x, row_y, row_width, row_height),
-                border_radius=6
+                border_radius=8
             )
 
             pygame.draw.rect(
                 screen,
                 (90, 90, 90),
-                (row_x, row_y, 28, row_height),
-                border_top_left_radius=6,
-                border_bottom_left_radius=6
+                (row_x, row_y, 40, row_height),
+                border_top_left_radius=8,
+                border_bottom_left_radius=8
             )
 
             if i == self.selected_ability_index:
@@ -515,16 +517,16 @@ class PokemonDetailScreen:
                     COLOR_SELECTED,
                     (row_x - 2, row_y - 2, row_width + 4, row_height + 4),
                     2,
-                    border_radius=8
+                    border_radius=10
                 )
 
-            icon_text = pygame.font.Font(None, 20).render(
+            icon_text = pygame.font.Font(None, 22).render(
                 "A",
                 True,
                 (255, 255, 255)
             )
 
-            screen.blit(icon_text, (row_x + 9, row_y + 4))
+            screen.blit(icon_text, (row_x + 15, row_y + 6))
 
             ability_data = ABILITY_DATA.get(ability, None)
             ability_display_name = ability
@@ -532,15 +534,15 @@ class PokemonDetailScreen:
             if ability_data is not None:
                 ability_display_name = ability_data.get("name", ability)
 
-            ability_text = pygame.font.Font(None, 22).render(
+            ability_text = pygame.font.Font(None, 26).render(
                 ability_display_name,
                 True,
                 (20, 40, 80)
             )
 
-            screen.blit(ability_text, (row_x + 40, row_y + 4))
+            screen.blit(ability_text, (row_x + 55, row_y + 5))
 
-            y += 30
+            y += 40
 
     def get_height_value(self):
         height_text = self.pokemon["height"]
@@ -549,11 +551,11 @@ class PokemonDetailScreen:
 
     def draw_size_tab(self, screen):
         dark_text = self.get_dark_text_color()
+
         pokemon_height = self.get_height_value()
         human_height = 1.55
 
-        max_draw_height = 80
-
+        max_draw_height = 120
         tallest = max(pokemon_height, human_height)
 
         pokemon_draw_height = int((pokemon_height / tallest) * max_draw_height)
@@ -561,23 +563,23 @@ class PokemonDetailScreen:
 
         pokemon_sprite = self.scale_sprite_keep_aspect(
             self.sprite,
-            90,
+            130,
             pokemon_draw_height
         )
 
         if self.human_sprite is not None:
             human_sprite = self.scale_sprite_keep_aspect(
                 self.human_sprite,
-                60,
+                80,
                 human_draw_height
             )
         else:
             human_sprite = None
 
-        base_y = 150
+        base_y = 210
 
-        pokemon_x = 55
-        human_x = 190
+        pokemon_x = 105
+        human_x = 300
 
         pokemon_y = base_y - pokemon_sprite.get_height()
         screen.blit(pokemon_sprite, (pokemon_x, pokemon_y))
@@ -588,11 +590,11 @@ class PokemonDetailScreen:
         else:
             pygame.draw.rect(
                 screen,
-                COLOR_TEXT,
-                (human_x + 15, base_y - human_draw_height, 20, human_draw_height)
+                (30, 30, 30),
+                (human_x + 20, base_y - human_draw_height, 25, human_draw_height)
             )
 
-        small_font = pygame.font.Font(None, 16)
+        small_font = pygame.font.Font(None, 22)
 
         pokemon_name_text = small_font.render(self.pokemon_name, True, dark_text)
         pokemon_height_text = small_font.render(
@@ -609,39 +611,41 @@ class PokemonDetailScreen:
         human_text = small_font.render("Humano", True, dark_text)
         human_height_text = small_font.render("Altura: 1.55 m", True, dark_text)
 
-        screen.blit(pokemon_name_text, (35, 158))
-        screen.blit(pokemon_height_text, (35, 173))
-        screen.blit(pokemon_weight_text, (35, 188))
+        screen.blit(pokemon_name_text, (55, 225))
+        screen.blit(pokemon_height_text, (55, 250))
+        screen.blit(pokemon_weight_text, (55, 272))
 
-        screen.blit(human_text, (175, 158))
-        screen.blit(human_height_text, (175, 173))
+        screen.blit(human_text, (260, 225))
+        screen.blit(human_height_text, (260, 250))
+
+        pygame.draw.line(screen, (120, 120, 120), (45, base_y), (420, base_y), 2)
 
     def draw_forms_tab(self, screen):
         forms = self.pokemon.get("forms", [])
 
-        y = 80
+        y = 95
 
         for i, form in enumerate(forms):
             label = form.get("label", "Forma")
 
-            row_x = 35
+            row_x = 40
             row_y = y
-            row_width = 250
-            row_height = 24
+            row_width = 380
+            row_height = 30
 
             pygame.draw.rect(
                 screen,
                 (235, 235, 245),
                 (row_x, row_y, row_width, row_height),
-                border_radius=6
+                border_radius=8
             )
 
             pygame.draw.rect(
                 screen,
                 (180, 20, 30),
-                (row_x, row_y, 28, row_height),
-                border_top_left_radius=6,
-                border_bottom_left_radius=6
+                (row_x, row_y, 40, row_height),
+                border_top_left_radius=8,
+                border_bottom_left_radius=8
             )
 
             if i == self.selected_form_index:
@@ -650,36 +654,77 @@ class PokemonDetailScreen:
                     COLOR_SELECTED,
                     (row_x - 2, row_y - 2, row_width + 4, row_height + 4),
                     2,
-                    border_radius=8
+                    border_radius=10
                 )
 
-            icon_text = pygame.font.Font(None, 20).render(
+            icon_text = pygame.font.Font(None, 22).render(
                 "F",
                 True,
                 (255, 255, 255)
             )
-            screen.blit(icon_text, (row_x + 9, row_y + 4))
+            screen.blit(icon_text, (row_x + 15, row_y + 6))
 
-            text = pygame.font.Font(None, 22).render(
+            text = pygame.font.Font(None, 26).render(
                 label,
                 True,
                 (20, 40, 80)
             )
-            screen.blit(text, (row_x + 40, row_y + 4))
+            screen.blit(text, (row_x + 55, row_y + 5))
 
-            y += 30
+            y += 40
 
     def draw_variants_tab(self, screen):
-        dark_text = self.get_dark_text_color()
-        font = pygame.font.Font(None, 22)
+        variants = self.pokemon.get("variants", [])
 
-        y = 80
+        y = 95
 
-        for variant in self.pokemon.get("variants", []):
+        for i, variant in enumerate(variants):
             label = variant.get("label", "Variante")
-            text = font.render("- " + label, True, dark_text)
-            screen.blit(text, (35, y))
-            y += 24
+
+            row_x = 40
+            row_y = y
+            row_width = 380
+            row_height = 30
+
+            pygame.draw.rect(
+                screen,
+                (235, 235, 245),
+                (row_x, row_y, row_width, row_height),
+                border_radius=8
+            )
+
+            pygame.draw.rect(
+                screen,
+                (70, 110, 230),
+                (row_x, row_y, 40, row_height),
+                border_top_left_radius=8,
+                border_bottom_left_radius=8
+            )
+
+            if i == self.selected_variant_index:
+                pygame.draw.rect(
+                    screen,
+                    COLOR_SELECTED,
+                    (row_x - 2, row_y - 2, row_width + 4, row_height + 4),
+                    2,
+                    border_radius=10
+                )
+
+            icon_text = pygame.font.Font(None, 22).render(
+                "V",
+                True,
+                (255, 255, 255)
+            )
+            screen.blit(icon_text, (row_x + 15, row_y + 6))
+
+            text = pygame.font.Font(None, 26).render(
+                label,
+                True,
+                (20, 40, 80)
+            )
+            screen.blit(text, (row_x + 55, row_y + 5))
+
+            y += 40
 
     def trim_transparent_pixels(self, surface):
         rect = surface.get_bounding_rect()

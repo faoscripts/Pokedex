@@ -2,10 +2,6 @@ import pygame
 import os
 
 from settings import (
-    COLOR_BACKGROUND,
-    COLOR_PANEL,
-    COLOR_BORDER,
-    COLOR_TEXT,
     TYPE_COLORS,
     CATEGORY_COLORS
 )
@@ -20,9 +16,10 @@ class MoveDetailScreen:
         self.pokemon_name = pokemon_name
         self.move = MOVE_DATA.get(move_name, None)
 
+        self.title_font = pygame.font.Font(None, 34)
         self.font = pygame.font.Font(None, 26)
-        self.small_font = pygame.font.Font(None, 19)
-        self.tiny_font = pygame.font.Font(None, 17)
+        self.small_font = pygame.font.Font(None, 22)
+        self.tiny_font = pygame.font.Font(None, 19)
 
     def handle_events(self, events):
         for event in events:
@@ -39,94 +36,129 @@ class MoveDetailScreen:
         pass
 
     def draw(self, screen):
-        screen.fill(COLOR_BACKGROUND)
+        screen.fill((230, 230, 230))
 
+        self.draw_top_bar(screen)
+        self.draw_main_panel(screen)
+
+        if self.move is None:
+            self.draw_missing_move(screen)
+        else:
+            self.draw_move_data(screen)
+
+        hint = self.small_font.render("ESC: Volver", True, (60, 60, 60))
+        screen.blit(hint, (365, 292))
+
+    def draw_top_bar(self, screen):
         title_name = self.move_name
 
         if self.move is not None:
             title_name = self.move.get("name", self.move_name)
 
-        title = self.font.render(title_name.upper(), True, COLOR_TEXT)
-        screen.blit(title, (25, 20))
+        pygame.draw.rect(screen, (180, 20, 30), (0, 0, 480, 38))
+        pygame.draw.rect(screen, (90, 0, 0), (0, 35, 480, 4))
 
-        pygame.draw.rect(screen, COLOR_PANEL, (20, 55, 280, 150))
-        pygame.draw.rect(screen, COLOR_BORDER, (20, 55, 280, 150), 2)
+        title = self.title_font.render(title_name.upper(), True, (255, 255, 255))
+        screen.blit(title, (18, 8))
 
-        if self.move is None:
-            text = self.small_font.render("No move data found.", True, COLOR_TEXT)
-            screen.blit(text, (40, 110))
-        else:
-            move_type = self.move["type"]
-            category = self.move["category"]
+    def draw_main_panel(self, screen):
+        pygame.draw.rect(screen, (245, 245, 245), (14, 52, 452, 230))
+        pygame.draw.rect(screen, (60, 60, 60), (14, 52, 452, 230), 2)
 
-            type_color = TYPE_COLORS.get(move_type, (120, 120, 120))
-            category_color = CATEGORY_COLORS.get(category, (90, 90, 90))
+    def draw_missing_move(self, screen):
+        text = self.font.render("No hay datos del movimiento.", True, (60, 60, 60))
+        screen.blit(text, (55, 140))
 
-            type_icon_path = "assets/type_icons/" + move_type.lower() + ".png"
-            category_icon_path = "assets/category_icons/" + category.lower() + ".png"
+    def draw_move_data(self, screen):
+        dark_text = (60, 60, 60)
 
-            type_icon = self.load_icon(type_icon_path, (16, 16))
-            category_icon = self.load_icon(category_icon_path, (16, 16))
+        move_type = self.move["type"]
+        category = self.move["category"]
 
-            self.draw_icon_badge(screen, type_icon, type_color, 35, 75, 28, 22)
-            self.draw_icon_badge(screen, category_icon, category_color, 35, 102, 28, 22)
+        type_color = TYPE_COLORS.get(move_type, (120, 120, 120))
+        category_color = CATEGORY_COLORS.get(category, (90, 90, 90))
 
-            type_display_name = self.get_type_display_name(move_type)
-            type_text = self.small_font.render("Tipo: " + type_display_name, True, COLOR_TEXT)
-            category_display_name = self.get_category_display_name(category)
-            category_text = self.small_font.render("Clase: " + category_display_name, True, COLOR_TEXT)
+        type_icon = self.load_icon(
+            "assets/type_icons/" + move_type.lower() + ".png",
+            (22, 22)
+        )
 
-            screen.blit(type_text, (75, 78))
-            screen.blit(category_text, (75, 105))
+        category_icon = self.load_icon(
+            "assets/category_icons/" + category.lower() + ".png",
+            (22, 22)
+        )
 
-            power_text = self.small_font.render("Pot: " + self.move["power"], True, COLOR_TEXT)
-            accuracy_text = self.small_font.render("Prec: " + self.move["accuracy"], True, COLOR_TEXT)
-            pp_text = self.small_font.render("PP: " + self.move["pp"], True, COLOR_TEXT)
-            priority_text = self.small_font.render("Prio: " + self.move["priority"], True, COLOR_TEXT)
+        self.draw_icon_badge(screen, type_icon, type_color, 45, 78, 42, 34)
+        self.draw_icon_badge(screen, category_icon, category_color, 45, 125, 42, 34)
 
-            screen.blit(power_text, (35, 130))
-            screen.blit(accuracy_text, (105, 130))
-            screen.blit(pp_text, (180, 130))
-            screen.blit(priority_text, (230, 130))
+        type_display_name = self.get_type_display_name(move_type)
+        category_display_name = self.get_category_display_name(category)
 
-            self.draw_wrapped_text(
-                screen,
-                self.move["description"],
-                self.tiny_font,
-                COLOR_TEXT,
-                35,
-                158,
-                250,
-                14,
-                2
-            )
+        type_text = self.font.render("Tipo: " + type_display_name, True, dark_text)
+        category_text = self.font.render("Clase: " + category_display_name, True, dark_text)
 
-        hint = pygame.font.Font(None, 20).render("ESC: Volver", True, COLOR_TEXT)
-        screen.blit(hint, (220, 215))
+        screen.blit(type_text, (105, 84))
+        screen.blit(category_text, (105, 131))
+
+        self.draw_stat_box(screen, "Pot", self.move["power"], 45, 180)
+        self.draw_stat_box(screen, "Prec", self.move["accuracy"], 150, 180)
+        self.draw_stat_box(screen, "PP", self.move["pp"], 255, 180)
+        self.draw_stat_box(screen, "Prio", self.move["priority"], 360, 180)
+
+        self.draw_wrapped_text(
+            screen,
+            self.move["description"],
+            self.tiny_font,
+            dark_text,
+            45,
+            230,
+            385,
+            18,
+            2
+        )
+
+    def draw_stat_box(self, screen, label, value, x, y):
+        pygame.draw.rect(screen, (235, 235, 245), (x, y, 85, 34), border_radius=7)
+        pygame.draw.rect(screen, (120, 120, 120), (x, y, 85, 34), 1, border_radius=7)
+
+        label_text = self.tiny_font.render(label, True, (80, 80, 80))
+        value_text = self.small_font.render(str(value), True, (20, 40, 80))
+
+        screen.blit(label_text, (x + 8, y + 4))
+        screen.blit(value_text, (x + 44, y + 8))
 
     def load_icon(self, path, size):
         if not os.path.exists(path):
             return None
 
         icon = pygame.image.load(path).convert_alpha()
-        icon = pygame.transform.scale(icon, size)
+        icon = self.scale_icon_keep_aspect(icon, size[0], size[1])
 
         return icon
 
+    def scale_icon_keep_aspect(self, surface, max_width, max_height):
+        width = surface.get_width()
+        height = surface.get_height()
+
+        scale = min(max_width / width, max_height / height)
+
+        new_width = int(width * scale)
+        new_height = int(height * scale)
+
+        return pygame.transform.scale(surface, (new_width, new_height))
 
     def draw_icon_badge(self, screen, icon, color, x, y, width, height):
         pygame.draw.rect(
             screen,
             color,
             (x, y, width, height),
-            border_radius=5
+            border_radius=7
         )
 
         if icon is not None:
             icon_x = x + (width - icon.get_width()) // 2
             icon_y = y + (height - icon.get_height()) // 2
             screen.blit(icon, (icon_x, icon_y))
-
 
     def draw_wrapped_text(self, screen, text, font, color, x, y, max_width, line_height, max_lines):
         words = text.split(" ")

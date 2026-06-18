@@ -1,12 +1,5 @@
 import pygame
 
-from settings import (
-    COLOR_BACKGROUND,
-    COLOR_PANEL,
-    COLOR_BORDER,
-    COLOR_TEXT
-)
-
 
 class DescriptionScreen:
     def __init__(self, app, pokemon_name, description):
@@ -14,8 +7,8 @@ class DescriptionScreen:
         self.pokemon_name = pokemon_name
         self.description = description
 
-        self.font = pygame.font.Font(None, 26)
-        self.text_font = pygame.font.Font(None, 20)
+        self.title_font = pygame.font.Font(None, 34)
+        self.text_font = pygame.font.Font(None, 22)
 
     def handle_events(self, events):
         for event in events:
@@ -29,27 +22,35 @@ class DescriptionScreen:
         pass
 
     def draw(self, screen):
-        screen.fill(COLOR_BACKGROUND)
+        screen.fill((230, 230, 230))
 
-        title = self.font.render("DESCRIPTION", True, COLOR_TEXT)
-        screen.blit(title, (80, 20))
-
-        pygame.draw.rect(screen, COLOR_PANEL, (20, 55, 280, 150))
-        pygame.draw.rect(screen, COLOR_BORDER, (20, 55, 280, 150), 2)
+        self.draw_top_bar(screen)
+        self.draw_main_panel(screen)
 
         self.draw_wrapped_text(
             screen,
             self.description,
             self.text_font,
-            COLOR_TEXT,
-            35,
-            70,
-            250,
-            18
+            (60, 60, 60),
+            45,
+            85,
+            385,
+            22
         )
 
-        hint = pygame.font.Font(None, 20).render("ESC: Back", True, COLOR_TEXT)
-        screen.blit(hint, (220, 215))
+        hint = self.text_font.render("ESC: Volver", True, (60, 60, 60))
+        screen.blit(hint, (365, 292))
+
+    def draw_top_bar(self, screen):
+        pygame.draw.rect(screen, (180, 20, 30), (0, 0, 480, 38))
+        pygame.draw.rect(screen, (90, 0, 0), (0, 35, 480, 4))
+
+        title = self.title_font.render("DESCRIPCION", True, (255, 255, 255))
+        screen.blit(title, (18, 8))
+
+    def draw_main_panel(self, screen):
+        pygame.draw.rect(screen, (245, 245, 245), (14, 52, 452, 230))
+        pygame.draw.rect(screen, (60, 60, 60), (14, 52, 452, 230), 2)
 
     def draw_wrapped_text(self, screen, text, font, color, x, y, max_width, line_height):
         words = text.split(" ")

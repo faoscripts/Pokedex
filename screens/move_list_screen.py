@@ -1,10 +1,6 @@
 import pygame
 
 from settings import (
-    COLOR_BACKGROUND,
-    COLOR_PANEL,
-    COLOR_BORDER,
-    COLOR_TEXT,
     COLOR_SELECTED,
     TYPE_COLORS,
     CATEGORY_COLORS
@@ -17,15 +13,15 @@ class MoveListScreen:
     def __init__(self, app):
         self.app = app
 
-        self.title_font = pygame.font.Font(None, 26)
-        self.font = pygame.font.Font(None, 21)
-        self.small_font = pygame.font.Font(None, 18)
+        self.title_font = pygame.font.Font(None, 34)
+        self.font = pygame.font.Font(None, 25)
+        self.small_font = pygame.font.Font(None, 20)
 
         self.move_list = list(MOVE_DATA.keys())
 
         self.selected_index = 0
         self.scroll_offset = 0
-        self.max_visible_moves = 7
+        self.max_visible_moves = 10
 
         self.type_icons = {}
         self.category_icons = {}
@@ -73,20 +69,20 @@ class MoveListScreen:
         self.draw_scrollbar(screen)
 
         hint = self.small_font.render("ESC: Volver", True, (60, 60, 60))
-        screen.blit(hint, (220, 218))
+        screen.blit(hint, (365, 292))
 
     def draw_top_bar(self, screen):
-        pygame.draw.rect(screen, (180, 20, 30), (0, 0, 320, 28))
-        pygame.draw.rect(screen, (90, 0, 0), (0, 25, 320, 3))
+        pygame.draw.rect(screen, (180, 20, 30), (0, 0, 480, 38))
+        pygame.draw.rect(screen, (90, 0, 0), (0, 35, 480, 4))
 
         title = self.title_font.render("MOVIMIENTOS", True, (255, 255, 255))
-        screen.blit(title, (90, 5))
+        screen.blit(title, (160, 8))
 
     def draw_move_list(self, screen):
-        list_x = 20
-        list_y = 40
-        list_w = 280
-        list_h = 165
+        list_x = 18
+        list_y = 52
+        list_w = 420
+        list_h = 230
 
         pygame.draw.rect(screen, (245, 245, 245), (list_x, list_y, list_w, list_h))
         pygame.draw.rect(screen, (60, 60, 60), (list_x, list_y, list_w, list_h), 2)
@@ -102,9 +98,9 @@ class MoveListScreen:
             real_index = self.scroll_offset + visible_index
             move = MOVE_DATA[move_name]
 
-            row_x = list_x + 8
+            row_x = list_x + 10
             row_y = list_y + 8 + visible_index * row_height
-            row_w = list_w - 16
+            row_w = list_w - 20
             row_h = 19
 
             move_type = move["type"]
@@ -135,64 +131,62 @@ class MoveListScreen:
             pygame.draw.rect(
                 screen,
                 type_color,
-                (row_x, row_y, 28, row_h),
+                (row_x, row_y, 34, row_h),
                 border_top_left_radius=5,
                 border_bottom_left_radius=5
             )
 
-            icon = self.get_type_icon(move_type)
+            type_icon = self.get_type_icon(move_type)
 
-            if icon is not None:
-                icon_x = row_x + (28 - icon.get_width()) // 2
-                icon_y = row_y + (row_h - icon.get_height()) // 2
-                screen.blit(icon, (icon_x, icon_y))
+            if type_icon is not None:
+                icon_x = row_x + (34 - type_icon.get_width()) // 2
+                icon_y = row_y + (row_h - type_icon.get_height()) // 2
+                screen.blit(type_icon, (icon_x, icon_y))
 
             display_name = move.get("name", move_name)
-
             move_text = self.font.render(display_name, True, (20, 40, 80))
-            screen.blit(move_text, (row_x + 38, row_y + 2))
+            screen.blit(move_text, (row_x + 45, row_y + 1))
 
             category = move["category"]
             category_color = CATEGORY_COLORS.get(category, (90, 90, 90))
             category_icon = self.get_category_icon(category)
 
-            category_x = row_x + row_w - 28
-            category_y = row_y
+            category_x = row_x + row_w - 34
 
             pygame.draw.rect(
                 screen,
                 category_color,
-                (category_x, category_y, 28, row_h),
+                (category_x, row_y, 34, row_h),
                 border_top_right_radius=5,
                 border_bottom_right_radius=5
             )
 
             if category_icon is not None:
-                icon_x = category_x + (28 - category_icon.get_width()) // 2
-                icon_y = category_y + (row_h - category_icon.get_height()) // 2
+                icon_x = category_x + (34 - category_icon.get_width()) // 2
+                icon_y = row_y + (row_h - category_icon.get_height()) // 2
                 screen.blit(category_icon, (icon_x, icon_y))
 
     def draw_scrollbar(self, screen):
-        bar_x = 305
-        bar_y = 42
-        bar_w = 10
-        bar_h = 160
+        bar_x = 448
+        bar_y = 55
+        bar_w = 16
+        bar_h = 224
 
         pygame.draw.rect(screen, (230, 230, 230), (bar_x, bar_y, bar_w, bar_h))
-        pygame.draw.rect(screen, (40, 40, 40), (bar_x, bar_y, bar_w, bar_h), 1)
+        pygame.draw.rect(screen, (40, 40, 40), (bar_x, bar_y, bar_w, bar_h), 2)
 
         if len(self.move_list) <= self.max_visible_moves:
             handle_h = bar_h
             handle_y = bar_y
         else:
-            handle_h = max(18, int((self.max_visible_moves / len(self.move_list)) * bar_h))
+            handle_h = max(24, int((self.max_visible_moves / len(self.move_list)) * bar_h))
             max_scroll = len(self.move_list) - self.max_visible_moves
             handle_y = bar_y + int((self.scroll_offset / max_scroll) * (bar_h - handle_h))
 
         pygame.draw.rect(
             screen,
             (70, 110, 230),
-            (bar_x + 2, handle_y + 2, bar_w - 4, handle_h - 4),
+            (bar_x + 3, handle_y + 3, bar_w - 6, handle_h - 6),
             border_radius=3
         )
 
@@ -204,7 +198,7 @@ class MoveListScreen:
 
         try:
             icon = pygame.image.load(path).convert_alpha()
-            icon = pygame.transform.scale(icon, (14, 14))
+            icon = pygame.transform.scale(icon, (15, 15))
             self.type_icons[type_name] = icon
             return icon
         except:
@@ -219,7 +213,7 @@ class MoveListScreen:
 
         try:
             icon = pygame.image.load(path).convert_alpha()
-            icon = pygame.transform.scale(icon, (14, 14))
+            icon = pygame.transform.scale(icon, (15, 15))
             self.category_icons[category] = icon
             return icon
         except:
