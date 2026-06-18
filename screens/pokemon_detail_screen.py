@@ -212,28 +212,34 @@ class PokemonDetailScreen:
             self.draw_variants_tab(screen)
 
         hint_font = pygame.font.Font(None, 20)
-        hint = hint_font.render("ESC: Volver", True, (60, 60, 60))
-        screen.blit(hint, (220, 218))
+
+        if self.tabs[self.selected_tab_index] == "INFO":
+            hint_text = "ENTER: Leer   ESC: Volver"
+        else:
+            hint_text = "ESC: Volver"
+
+        hint = hint_font.render(hint_text, True, (60, 60, 60))
+        screen.blit(hint, (285, 292))
 
     def draw_top_bar(self, screen):
-        pygame.draw.rect(screen, (180, 20, 30), (0, 0, 320, 28))
-        pygame.draw.rect(screen, (90, 0, 0), (0, 25, 320, 3))
+        pygame.draw.rect(screen, (180, 20, 30), (0, 0, 480, 38))
+        pygame.draw.rect(screen, (90, 0, 0), (0, 35, 480, 4))
 
         title_text = "No." + self.pokemon["number"] + " " + self.pokemon_name.upper()
-        title = pygame.font.Font(None, 24).render(title_text, True, (255, 255, 255))
-        screen.blit(title, (18, 6))
+        title = pygame.font.Font(None, 30).render(title_text, True, (255, 255, 255))
+        screen.blit(title, (18, 7))
 
 
     def draw_main_panel(self, screen):
-        pygame.draw.rect(screen, (245, 245, 245), (10, 38, 300, 172))
-        pygame.draw.rect(screen, (60, 60, 60), (10, 38, 300, 172), 2)
+        pygame.draw.rect(screen, (245, 245, 245), (14, 52, 452, 230))
+        pygame.draw.rect(screen, (60, 60, 60), (14, 52, 452, 230), 2)
 
         current_tab = self.tabs[self.selected_tab_index]
         tab_display_name = self.get_tab_display_name(current_tab)
 
-        tab_font = pygame.font.Font(None, 22)
+        tab_font = pygame.font.Font(None, 26)
         tab = tab_font.render("< " + tab_display_name + " >", True, (180, 20, 30))
-        screen.blit(tab, (125, 43))
+        screen.blit(tab, (200, 58))
 
     def get_dark_text_color(self):
         return (60, 60, 60)
@@ -246,39 +252,71 @@ class PokemonDetailScreen:
         dark_text = self.get_dark_text_color()
 
         # Sprite panel
-        pygame.draw.rect(screen, (235, 235, 235), (25, 70, 85, 85))
-        pygame.draw.rect(screen, (120, 120, 120), (25, 70, 85, 85), 2)
+        sprite_panel_x = 35
+        sprite_panel_y = 90
+        sprite_panel_w = 145
+        sprite_panel_h = 145
 
-        for x in range(25, 110, 12):
-            pygame.draw.line(screen, (210, 210, 210), (x, 70), (x, 155))
+        pygame.draw.rect(
+            screen,
+            (235, 235, 235),
+            (sprite_panel_x, sprite_panel_y, sprite_panel_w, sprite_panel_h)
+        )
+        pygame.draw.rect(
+            screen,
+            (120, 120, 120),
+            (sprite_panel_x, sprite_panel_y, sprite_panel_w, sprite_panel_h),
+            2
+        )
 
-        for y in range(70, 155, 12):
-            pygame.draw.line(screen, (210, 210, 210), (25, y), (110, y))
+        for x in range(sprite_panel_x, sprite_panel_x + sprite_panel_w, 18):
+            pygame.draw.line(
+                screen,
+                (210, 210, 210),
+                (x, sprite_panel_y),
+                (x, sprite_panel_y + sprite_panel_h)
+            )
 
-        sprite_x = 67 - self.sprite.get_width() // 2
-        sprite_y = 112 - self.sprite.get_height() // 2
-        screen.blit(self.sprite, (sprite_x, sprite_y))
+        for y in range(sprite_panel_y, sprite_panel_y + sprite_panel_h, 18):
+            pygame.draw.line(
+                screen,
+                (210, 210, 210),
+                (sprite_panel_x, y),
+                (sprite_panel_x + sprite_panel_w, y)
+            )
 
-        # Type badges
-        self.draw_type_badges(screen, self.pokemon["type"], 125, 75)
+        big_sprite = self.scale_sprite_keep_aspect(self.sprite, 115, 115)
 
-        small_font = pygame.font.Font(None, 20)
+        sprite_x = sprite_panel_x + sprite_panel_w // 2 - big_sprite.get_width() // 2
+        sprite_y = sprite_panel_y + sprite_panel_h // 2 - big_sprite.get_height() // 2
 
+        screen.blit(big_sprite, (sprite_x, sprite_y))
+
+        # Info right panel
+        info_x = 205
+        info_y = 92
+
+        self.draw_type_badges(screen, self.pokemon["type"], info_x, info_y)
+
+        small_font = pygame.font.Font(None, 24)
         category = self.pokemon.get("category", "Pokemon")
         category_text = small_font.render(category, True, dark_text)
-        screen.blit(category_text, (125, 108))
+        screen.blit(category_text, (info_x, info_y + 42))
 
-        desc_font = pygame.font.Font(None, 17)
+        number_text = small_font.render("No. " + self.pokemon["number"], True, dark_text)
+        screen.blit(number_text, (info_x, info_y + 72))
+
+        desc_font = pygame.font.Font(None, 20)
 
         self.draw_wrapped_text(
             screen,
             self.pokemon["description"],
             desc_font,
             dark_text,
-            25,
-            165,
-            265,
-            14,
+            35,
+            245,
+            390,
+            17,
             2
         )
 

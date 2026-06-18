@@ -1,24 +1,17 @@
 import pygame
 import os
 
-from settings import (
-    COLOR_BACKGROUND,
-    COLOR_PANEL,
-    COLOR_BORDER,
-    COLOR_TEXT,
-    COLOR_SELECTED
-)
-
 from data.data_loader import POKEMON_DATA
 
 
 class PokemonListScreen:
     def __init__(self, app):
         self.app = app
-        self.font = pygame.font.Font(None, 22)
-        self.title_font = pygame.font.Font(None, 26)
-        self.list_font = pygame.font.Font(None, 20)
-        self.small_font = pygame.font.Font(None, 18)
+
+        self.title_font = pygame.font.Font(None, 34)
+        self.font = pygame.font.Font(None, 26)
+        self.list_font = pygame.font.Font(None, 23)
+        self.small_font = pygame.font.Font(None, 20)
 
         self.pokemon_list = [
             pokemon_name
@@ -28,7 +21,7 @@ class PokemonListScreen:
 
         self.selected_index = 0
         self.scroll_offset = 0
-        self.max_visible_pokemon = 7
+        self.max_visible_pokemon = 10
 
     def handle_events(self, events):
         for event in events:
@@ -74,58 +67,67 @@ class PokemonListScreen:
         self.draw_scrollbar(screen)
 
     def draw_top_bar(self, screen):
-        pygame.draw.rect(screen, (180, 20, 30), (0, 0, 320, 28))
-        pygame.draw.rect(screen, (90, 0, 0), (0, 25, 320, 3))
+        pygame.draw.rect(screen, (180, 20, 30), (0, 0, 480, 38))
+        pygame.draw.rect(screen, (90, 0, 0), (0, 35, 480, 4))
 
         title = self.title_font.render("POKEDEX NACIONAL", True, (255, 255, 255))
-        screen.blit(title, (82, 5))
+        screen.blit(title, (140, 8))
 
     def draw_left_panel(self, screen):
         selected_name = self.pokemon_list[self.selected_index]
         pokemon = POKEMON_DATA[selected_name]
 
-        pygame.draw.rect(screen, (245, 245, 245), (5, 35, 125, 130))
-        pygame.draw.rect(screen, (60, 60, 60), (5, 35, 125, 130), 2)
+        panel_x = 14
+        panel_y = 52
+        panel_w = 180
+        panel_h = 180
 
-        # Grid background
-        for x in range(5, 130, 16):
-            pygame.draw.line(screen, (210, 210, 210), (x, 35), (x, 165))
+        pygame.draw.rect(screen, (245, 245, 245), (panel_x, panel_y, panel_w, panel_h))
+        pygame.draw.rect(screen, (60, 60, 60), (panel_x, panel_y, panel_w, panel_h), 2)
 
-        for y in range(35, 165, 16):
-            pygame.draw.line(screen, (210, 210, 210), (5, y), (130, y))
+        for x in range(panel_x, panel_x + panel_w, 18):
+            pygame.draw.line(screen, (210, 210, 210), (x, panel_y), (x, panel_y + panel_h))
 
-        # Soft circle
-        pygame.draw.circle(screen, (225, 225, 225), (67, 100), 45, 2)
+        for y in range(panel_y, panel_y + panel_h, 18):
+            pygame.draw.line(screen, (210, 210, 210), (panel_x, y), (panel_x + panel_w, y))
+
+        pygame.draw.circle(screen, (225, 225, 225), (104, 142), 65, 2)
 
         sprite = self.load_sprite(pokemon)
+
         if sprite is not None:
             sprite = self.trim_transparent_pixels(sprite)
-            sprite = self.scale_sprite_keep_aspect(sprite, 70, 70)
+            sprite = self.scale_sprite_keep_aspect(sprite, 110, 110)
 
-            sprite_x = 67 - sprite.get_width() // 2
-            sprite_y = 100 - sprite.get_height() // 2
+            sprite_x = 104 - sprite.get_width() // 2
+            sprite_y = 142 - sprite.get_height() // 2
 
             screen.blit(sprite, (sprite_x, sprite_y))
 
-        pygame.draw.rect(screen, (245, 245, 245), (5, 175, 125, 50))
-        pygame.draw.rect(screen, (180, 20, 30), (5, 175, 14, 50))
-        pygame.draw.rect(screen, (60, 60, 60), (5, 175, 125, 50), 2)
+        info_x = 14
+        info_y = 248
+        info_w = 180
+        info_h = 54
+
+        pygame.draw.rect(screen, (245, 245, 245), (info_x, info_y, info_w, info_h))
+        pygame.draw.rect(screen, (180, 20, 30), (info_x, info_y, 18, info_h))
+        pygame.draw.rect(screen, (60, 60, 60), (info_x, info_y, info_w, info_h), 2)
 
         seen_text = self.small_font.render("Vistos", True, (80, 80, 80))
         owned_text = self.small_font.render("Capturados", True, (80, 80, 80))
         seen_number = self.small_font.render(str(len(self.pokemon_list)), True, (80, 80, 80))
         owned_number = self.small_font.render(str(len(self.pokemon_list)), True, (80, 80, 80))
 
-        screen.blit(seen_text, (25, 185))
-        screen.blit(owned_text, (25, 205))
-        screen.blit(seen_number, (95, 185))
-        screen.blit(owned_number, (95, 205))
+        screen.blit(seen_text, (45, 258))
+        screen.blit(owned_text, (45, 280))
+        screen.blit(seen_number, (145, 258))
+        screen.blit(owned_number, (145, 280))
 
     def draw_right_list(self, screen):
-        list_x = 138
-        list_y = 35
-        list_w = 155
-        list_h = 190
+        list_x = 210
+        list_y = 52
+        list_w = 230
+        list_h = 250
 
         pygame.draw.rect(screen, (245, 245, 245), (list_x, list_y, list_w, list_h))
         pygame.draw.rect(screen, (60, 60, 60), (list_x, list_y, list_w, list_h), 2)
@@ -141,9 +143,9 @@ class PokemonListScreen:
             real_index = self.scroll_offset + visible_index
             pokemon = POKEMON_DATA[pokemon_name]
 
-            row_x = list_x + 4
-            row_y = list_y + 5 + visible_index * row_height
-            row_w = list_w - 8
+            row_x = list_x + 8
+            row_y = list_y + 7 + visible_index * row_height
+            row_w = list_w - 16
             row_h = 21
 
             if real_index == self.selected_index:
@@ -155,14 +157,14 @@ class PokemonListScreen:
             number_text = self.list_font.render(pokemon["number"], True, (80, 80, 80))
             name_text = self.list_font.render(pokemon_name, True, (80, 80, 80))
 
-            screen.blit(number_text, (row_x + 24, row_y + 4))
-            screen.blit(name_text, (row_x + 58, row_y + 4))
+            screen.blit(number_text, (row_x + 28, row_y + 3))
+            screen.blit(name_text, (row_x + 75, row_y + 3))
 
     def draw_scrollbar(self, screen):
-        bar_x = 298
-        bar_y = 38
-        bar_w = 14
-        bar_h = 178
+        bar_x = 450
+        bar_y = 55
+        bar_w = 16
+        bar_h = 244
 
         pygame.draw.rect(screen, (230, 230, 230), (bar_x, bar_y, bar_w, bar_h))
         pygame.draw.rect(screen, (40, 40, 40), (bar_x, bar_y, bar_w, bar_h), 2)
@@ -171,11 +173,16 @@ class PokemonListScreen:
             handle_h = bar_h
             handle_y = bar_y
         else:
-            handle_h = max(20, int((self.max_visible_pokemon / len(self.pokemon_list)) * bar_h))
+            handle_h = max(24, int((self.max_visible_pokemon / len(self.pokemon_list)) * bar_h))
             max_scroll = len(self.pokemon_list) - self.max_visible_pokemon
             handle_y = bar_y + int((self.scroll_offset / max_scroll) * (bar_h - handle_h))
 
-        pygame.draw.rect(screen, (70, 110, 230), (bar_x + 3, handle_y + 3, bar_w - 6, handle_h - 6), border_radius=3)
+        pygame.draw.rect(
+            screen,
+            (70, 110, 230),
+            (bar_x + 3, handle_y + 3, bar_w - 6, handle_h - 6),
+            border_radius=3
+        )
 
     def draw_pokeball_icon(self, screen, x, y):
         pygame.draw.circle(screen, (220, 20, 40), (x + 8, y + 8), 8)
