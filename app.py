@@ -1,3 +1,4 @@
+import os
 import platform
 import pygame
 import sys
@@ -11,21 +12,46 @@ from screens.ability_detail_screen import AbilityDetailScreen
 from screens.description_screen import DescriptionScreen
 from screens.move_list_screen import MoveListScreen
 
+
+FB_PATH = "/dev/fb1"
+
+
+def draw_to_framebuffer(surface):
+    data = pygame.image.tostring(surface, "RGB")
+    width, height = surface.get_size()
+    out = bytearray(width * height * 2)
+
+    j = 0
+
+    for i in range(0, len(data), 3):
+        r = data[i]
+        g = data[i + 1]
+        b = data[i + 2]
+
+        value = ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3)
+
+        out[j] = value & 0xFF
+        out[j + 1] = (value >> 8) & 0xFF
+        j += 2
+
+    with open(FB_PATH, "wb") as fb:
+        fb.write(out)
+
+
 class App:
     def __init__(self):
+        self.use_framebuffer = platform.system() != "Windows"
+
+        if self.use_framebuffer:
+            os.environ["SDL_VIDEODRIVER"] = "dummy"
+
         pygame.init()
 
-        if platform.system() == "Windows":
-            flags = 0  # ventana normal
+        if self.use_framebuffer:
+            self.screen = pygame.Surface((SCREEN_WIDTH, SCREEN_HEIGHT))
         else:
-            flags = pygame.FULLSCREEN  # Linux / Raspberry fullscreen
-
-        self.screen = pygame.display.set_mode(
-            (SCREEN_WIDTH, SCREEN_HEIGHT),
-            flags
-        )
-
-        pygame.display.set_caption("Pokedex UI")
+            self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+            pygame.display.set_caption("Pokedex UI")
 
         self.clock = pygame.time.Clock()
         self.running = True
@@ -54,7 +80,7 @@ class App:
 
     def open_ability_detail(self, ability_name, pokemon_name):
         self.change_screen(AbilityDetailScreen(self, ability_name, pokemon_name))
-    
+
     def open_description(self, pokemon_name, description):
         self.change_screen(DescriptionScreen(self, pokemon_name, description))
 
@@ -70,7 +96,11 @@ class App:
             self.current_screen.update()
             self.current_screen.draw(self.screen)
 
-            pygame.display.flip()
+            if self.use_framebuffer:
+                draw_to_framebuffer(self.screen)
+            else:
+                pygame.display.flip()
+
             self.clock.tick(FPS)
 
         pygame.quit()
