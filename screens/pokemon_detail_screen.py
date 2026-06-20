@@ -25,13 +25,31 @@ class PokemonDetailScreen:
         self.app = app
         self.pokemon_name = pokemon_name
         self.pokemon = POKEMON_DATA[pokemon_name]
-        self.tabs = [
-            "INFO",
-            "STATS",
-            "MOVES",
-            "ABILITIES",
-            "SIZE"
-        ]
+        self.tabs = []
+
+        if self.pokemon.get("description", "") != "":
+            self.tabs.append("INFO")
+
+        if len(self.pokemon.get("stats", {})) > 0:
+            self.tabs.append("STATS")
+
+        if len(self.pokemon.get("moves", [])) > 0:
+            self.tabs.append("MOVES")
+
+        if len(self.pokemon.get("abilities", [])) > 0:
+            self.tabs.append("ABILITIES")
+
+        if self.pokemon.get("height", "") != "" and self.pokemon.get("weight", "") != "":
+            self.tabs.append("SIZE")
+
+        if len(self.pokemon.get("forms", [])) > 0:
+            self.tabs.append("FORMS")
+
+        if len(self.pokemon.get("variants", [])) > 0:
+            self.tabs.append("VARIANTS")
+
+        if len(self.tabs) == 0:
+            self.tabs.append("INFO")
 
         if len(self.pokemon.get("forms", [])) > 0:
             self.tabs.append("FORMS")
@@ -46,6 +64,7 @@ class PokemonDetailScreen:
         self.selected_ability_index = 0
         self.font = pygame.font.Font(None, 28)
         self.type_icons = {}
+        self.form_icons = {}
 
         sprite_path = self.pokemon.get("sprite_path")
 
@@ -161,8 +180,11 @@ class PokemonDetailScreen:
                     )
 
                 elif current_tab == "MOVES":
-                    selected_move = self.pokemon["moves"][self.selected_move_index]
-                    self.app.open_move_detail(selected_move, self.pokemon_name)
+                    moves = self.pokemon.get("moves", [])
+
+                    if len(moves) > 0:
+                        selected_move = moves[self.selected_move_index]
+                        self.app.open_move_detail(selected_move, self.pokemon_name)
 
                 elif current_tab == "ABILITIES":
                     selected_ability = self.pokemon["abilities"][self.selected_ability_index]
@@ -627,17 +649,23 @@ class PokemonDetailScreen:
 
         for i, form in enumerate(forms):
             label = form.get("label", "Forma")
+            icon_name = form.get("form_icon", "other")
+            icon = self.get_form_icon(icon_name)
 
             row_x = 40
             row_y = y
             row_width = 380
             row_height = 30
 
+            form_type = form.get("form_type", "other")
+            icon_color = self.get_form_icon_color(form_type)
+
             pygame.draw.rect(
                 screen,
-                (235, 235, 245),
-                (row_x, row_y, row_width, row_height),
-                border_radius=8
+                icon_color,
+                (row_x, row_y, 40, row_height),
+                border_top_left_radius=8,
+                border_bottom_left_radius=8
             )
 
             pygame.draw.rect(
@@ -657,12 +685,18 @@ class PokemonDetailScreen:
                     border_radius=10
                 )
 
-            icon_text = pygame.font.Font(None, 22).render(
-                "F",
-                True,
-                (255, 255, 255)
+            pygame.draw.rect(
+                screen,
+                (180, 20, 30),
+                (row_x, row_y, 40, row_height),
+                border_top_left_radius=8,
+                border_bottom_left_radius=8
             )
-            screen.blit(icon_text, (row_x + 15, row_y + 6))
+
+            if icon is not None:
+                icon_x = row_x + (40 - icon.get_width()) // 2
+                icon_y = row_y + (row_height - icon.get_height()) // 2
+                screen.blit(icon, (icon_x, icon_y))
 
             text = pygame.font.Font(None, 26).render(
                 label,
@@ -846,3 +880,40 @@ class PokemonDetailScreen:
         }
 
         return tab_names.get(tab_name, tab_name)
+
+    def get_form_icon_text(self, form_type):
+        icon_texts = {
+            "mega": "M",
+            "gmax": "G",
+            "regional": "R",
+            "other": "F"
+        }
+
+        return icon_texts.get(form_type, "F")
+
+
+    def get_form_icon_color(self, form_type):
+        icon_colors = {
+            "mega": (180, 20, 180),
+            "gmax": (220, 70, 40),
+            "regional": (70, 140, 220),
+            "other": (180, 20, 30)
+        }
+
+        return icon_colors.get(form_type, (180, 20, 30))
+
+    def get_form_icon(self, icon_name):
+        if icon_name in self.form_icons:
+            return self.form_icons[icon_name]
+
+        path = "assets/form_icons/" + icon_name + ".png"
+
+        if not os.path.exists(path):
+            self.form_icons[icon_name] = None
+            return None
+
+        icon = pygame.image.load(path).convert_alpha()
+        icon = pygame.transform.scale(icon, (22, 22))
+
+        self.form_icons[icon_name] = icon
+        return icon

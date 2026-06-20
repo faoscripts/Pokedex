@@ -157,7 +157,9 @@ def get_forms_and_variants(base_pokemon_name, base_data, species_data):
         if is_gameplay_form(base_data, variety_data):
             forms.append({
                 "label": label,
-                "pokemon_key": format_name(variety_name)
+                "pokemon_key": format_name(variety_name),
+                "form_type": get_form_type(variety_name),
+                "form_icon": get_form_icon(variety_name)
             })
 
             form_names_to_download.append(variety_name)
@@ -172,6 +174,48 @@ def get_forms_and_variants(base_pokemon_name, base_data, species_data):
             })
 
     return forms, variants, form_names_to_download
+
+def get_form_type(form_name):
+    if "mega" in form_name:
+        return "mega"
+
+    if "gmax" in form_name:
+        return "gmax"
+
+    regional_keywords = [
+        "alola",
+        "galar",
+        "hisui",
+        "paldea"
+    ]
+
+    for keyword in regional_keywords:
+        if keyword in form_name:
+            return "regional"
+
+    return "other"
+
+
+def get_form_icon(form_name):
+    if "mega" in form_name:
+        return "mega"
+
+    if "gmax" in form_name:
+        return "dynamax"
+
+    if "alola" in form_name:
+        return "alola"
+
+    if "galar" in form_name:
+        return "galar"
+
+    if "hisui" in form_name:
+        return "hisui"
+
+    if "paldea" in form_name:
+        return "paldea"
+
+    return "other"
 
 def download_pokemon(pokemon_name, include_forms=True):
     data = get_json(f"{BASE_URL}/pokemon/{pokemon_name}")
@@ -214,7 +258,7 @@ def download_pokemon(pokemon_name, include_forms=True):
     ]
 
     pokemon = {
-        "number": str(data["id"]).zfill(3),
+        "number": str(species_data["id"]).zfill(3),
         "name": format_name(data["name"]),
         "type": " / ".join([
             format_name(type_slot["type"]["name"])
@@ -228,17 +272,11 @@ def download_pokemon(pokemon_name, include_forms=True):
             format_name(stat_slot["stat"]["name"]): stat_slot["base_stat"]
             for stat_slot in data["stats"]
         },
-        "moves": [
-            format_name(move_name)
-            for move_name in moves
-        ],
-        "abilities": [
-            format_name(ability_name)
-            for ability_name in abilities
-        ],
-        "is_form_entry": False,
+        "moves": [format_name(move_name) for move_name in moves],
+        "abilities": [format_name(ability_name) for ability_name in abilities],
         "forms": forms,
         "variants": variants,
+        "is_form_entry": False,
         "sprite_url": data["sprites"]["front_default"]
     }
 

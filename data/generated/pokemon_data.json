@@ -107,9 +107,9 @@
             "Overgrow",
             "Chlorophyll"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
         "sprite_path": "assets/sprites\\bulbasaur.png"
     },
@@ -218,9 +218,9 @@
             "Overgrow",
             "Chlorophyll"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
         "sprite_path": "assets/sprites\\ivysaur.png"
     },
@@ -342,23 +342,27 @@
             "Overgrow",
             "Chlorophyll"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega",
-                "pokemon_key": "Venusaur Mega"
+                "pokemon_key": "Venusaur Mega",
+                "form_type": "mega",
+                "form_icon": "mega"
             },
             {
                 "label": "Gmax",
-                "pokemon_key": "Venusaur Gmax"
+                "pokemon_key": "Venusaur Gmax",
+                "form_type": "gmax",
+                "form_icon": "dynamax"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
         "sprite_path": "assets/sprites\\venusaur.png"
     },
     "Venusaur Mega": {
-        "number": "10033",
+        "number": "003",
         "name": "Venusaur Mega",
         "type": "Grass / Poison",
         "category": "Pokémon Semilla",
@@ -444,14 +448,14 @@
         "abilities": [
             "Thick Fat"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10033.png",
         "sprite_path": "assets/sprites\\venusaur-mega.png"
     },
     "Venusaur Gmax": {
-        "number": "10195",
+        "number": "003",
         "name": "Venusaur Gmax",
         "type": "Grass / Poison",
         "category": "Pokémon Semilla",
@@ -471,9 +475,9 @@
             "Overgrow",
             "Chlorophyll"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10195.png",
         "sprite_path": "assets/sprites\\venusaur-gmax.png"
     },
@@ -604,9 +608,9 @@
             "Blaze",
             "Solar Power"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
         "sprite_path": "assets/sprites\\charmander.png"
     },
@@ -735,9 +739,9 @@
             "Blaze",
             "Solar Power"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
         "sprite_path": "assets/sprites\\charmeleon.png"
     },
@@ -894,27 +898,33 @@
             "Blaze",
             "Solar Power"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega X",
-                "pokemon_key": "Charizard Mega X"
+                "pokemon_key": "Charizard Mega X",
+                "form_type": "mega",
+                "form_icon": "mega"
             },
             {
                 "label": "Mega Y",
-                "pokemon_key": "Charizard Mega Y"
+                "pokemon_key": "Charizard Mega Y",
+                "form_type": "mega",
+                "form_icon": "mega"
             },
             {
                 "label": "Gmax",
-                "pokemon_key": "Charizard Gmax"
+                "pokemon_key": "Charizard Gmax",
+                "form_type": "gmax",
+                "form_icon": "dynamax"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
         "sprite_path": "assets/sprites\\charizard.png"
     },
     "Charizard Mega X": {
-        "number": "10034",
+        "number": "006",
         "name": "Charizard Mega X",
         "type": "Fire / Dragon",
         "category": "Pokémon Llama",
@@ -1017,14 +1027,14 @@
         "abilities": [
             "Tough Claws"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10034.png",
         "sprite_path": "assets/sprites\\charizard-mega-x.png"
     },
     "Charizard Mega Y": {
-        "number": "10035",
+        "number": "006",
         "name": "Charizard Mega Y",
         "type": "Fire / Flying",
         "category": "Pokémon Llama",
@@ -1127,14 +1137,14 @@
         "abilities": [
             "Drought"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10035.png",
         "sprite_path": "assets/sprites\\charizard-mega-y.png"
     },
     "Charizard Gmax": {
-        "number": "10196",
+        "number": "006",
         "name": "Charizard Gmax",
         "type": "Fire / Flying",
         "category": "Pokémon Llama",
@@ -1154,9 +1164,9 @@
             "Blaze",
             "Solar Power"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10196.png",
         "sprite_path": "assets/sprites\\charizard-gmax.png"
     },
@@ -1287,9 +1297,9 @@
             "Torrent",
             "Rain Dish"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
         "sprite_path": "assets/sprites\\squirtle.png"
     },
@@ -1416,9 +1426,9 @@
             "Torrent",
             "Rain Dish"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
         "sprite_path": "assets/sprites\\wartortle.png"
     },
@@ -1564,23 +1574,27 @@
             "Torrent",
             "Rain Dish"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega",
-                "pokemon_key": "Blastoise Mega"
+                "pokemon_key": "Blastoise Mega",
+                "form_type": "mega",
+                "form_icon": "mega"
             },
             {
                 "label": "Gmax",
-                "pokemon_key": "Blastoise Gmax"
+                "pokemon_key": "Blastoise Gmax",
+                "form_type": "gmax",
+                "form_icon": "dynamax"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
         "sprite_path": "assets/sprites\\blastoise.png"
     },
     "Blastoise Mega": {
-        "number": "10036",
+        "number": "009",
         "name": "Blastoise Mega",
         "type": "Water",
         "category": "Pokémon Armazón",
@@ -1673,14 +1687,14 @@
         "abilities": [
             "Mega Launcher"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10036.png",
         "sprite_path": "assets/sprites\\blastoise-mega.png"
     },
     "Blastoise Gmax": {
-        "number": "10197",
+        "number": "009",
         "name": "Blastoise Gmax",
         "type": "Water",
         "category": "Pokémon Armazón",
@@ -1700,9 +1714,9 @@
             "Torrent",
             "Rain Dish"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10197.png",
         "sprite_path": "assets/sprites\\blastoise-gmax.png"
     },
@@ -1733,9 +1747,9 @@
             "Shield Dust",
             "Run Away"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
         "sprite_path": "assets/sprites\\caterpie.png"
     },
@@ -1765,9 +1779,9 @@
         "abilities": [
             "Shed Skin"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
         "sprite_path": "assets/sprites\\metapod.png"
     },
@@ -1880,19 +1894,21 @@
             "Compound Eyes",
             "Tinted Lens"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Gmax",
-                "pokemon_key": "Butterfree Gmax"
+                "pokemon_key": "Butterfree Gmax",
+                "form_type": "gmax",
+                "form_icon": "dynamax"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
         "sprite_path": "assets/sprites\\butterfree.png"
     },
     "Butterfree Gmax": {
-        "number": "10198",
+        "number": "012",
         "name": "Butterfree Gmax",
         "type": "Bug / Flying",
         "category": "Pokémon Mariposa",
@@ -1912,9 +1928,9 @@
             "Compound Eyes",
             "Tinted Lens"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10198.png",
         "sprite_path": "assets/sprites\\butterfree-gmax.png"
     },
@@ -1944,9 +1960,9 @@
             "Shield Dust",
             "Run Away"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png",
         "sprite_path": "assets/sprites\\weedle.png"
     },
@@ -1976,9 +1992,9 @@
         "abilities": [
             "Shed Skin"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
         "sprite_path": "assets/sprites\\kakuna.png"
     },
@@ -2087,19 +2103,21 @@
             "Swarm",
             "Sniper"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega",
-                "pokemon_key": "Beedrill Mega"
+                "pokemon_key": "Beedrill Mega",
+                "form_type": "mega",
+                "form_icon": "mega"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png",
         "sprite_path": "assets/sprites\\beedrill.png"
     },
     "Beedrill Mega": {
-        "number": "10090",
+        "number": "015",
         "name": "Beedrill Mega",
         "type": "Bug / Poison",
         "category": "Pokémon Abeja Veneno",
@@ -2183,9 +2201,9 @@
         "abilities": [
             "Adaptability"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10090.png",
         "sprite_path": "assets/sprites\\beedrill-mega.png"
     },
@@ -2276,9 +2294,9 @@
             "Tangled Feet",
             "Big Pecks"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
         "sprite_path": "assets/sprites\\pidgey.png"
     },
@@ -2366,9 +2384,9 @@
             "Tangled Feet",
             "Big Pecks"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
         "sprite_path": "assets/sprites\\pidgeotto.png"
     },
@@ -2458,19 +2476,21 @@
             "Tangled Feet",
             "Big Pecks"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega",
-                "pokemon_key": "Pidgeot Mega"
+                "pokemon_key": "Pidgeot Mega",
+                "form_type": "mega",
+                "form_icon": "mega"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png",
         "sprite_path": "assets/sprites\\pidgeot.png"
     },
     "Pidgeot Mega": {
-        "number": "10073",
+        "number": "018",
         "name": "Pidgeot Mega",
         "type": "Normal / Flying",
         "category": "Pokémon Pájaro",
@@ -2538,9 +2558,9 @@
         "abilities": [
             "No Guard"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10073.png",
         "sprite_path": "assets/sprites\\pidgeot-mega.png"
     },
@@ -2649,19 +2669,21 @@
             "Guts",
             "Hustle"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Rattata Alola"
+                "pokemon_key": "Rattata Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
         "sprite_path": "assets/sprites\\rattata.png"
     },
     "Rattata Alola": {
-        "number": "10091",
+        "number": "019",
         "name": "Rattata Alola",
         "type": "Dark / Normal",
         "category": "Pokémon Ratón",
@@ -2746,9 +2768,9 @@
             "Hustle",
             "Thick Fat"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10091.png",
         "sprite_path": "assets/sprites\\rattata-alola.png"
     },
@@ -2860,23 +2882,27 @@
             "Guts",
             "Hustle"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Raticate Alola"
+                "pokemon_key": "Raticate Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             },
             {
                 "label": "Totem Alola",
-                "pokemon_key": "Raticate Totem Alola"
+                "pokemon_key": "Raticate Totem Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",
         "sprite_path": "assets/sprites\\raticate.png"
     },
     "Raticate Alola": {
-        "number": "10092",
+        "number": "020",
         "name": "Raticate Alola",
         "type": "Dark / Normal",
         "category": "Pokémon Ratón",
@@ -2965,14 +2991,14 @@
             "Hustle",
             "Thick Fat"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10092.png",
         "sprite_path": "assets/sprites\\raticate-alola.png"
     },
     "Raticate Totem Alola": {
-        "number": "10093",
+        "number": "020",
         "name": "Raticate Totem Alola",
         "type": "Dark / Normal",
         "category": "Pokémon Ratón",
@@ -3057,9 +3083,9 @@
             "Hustle",
             "Thick Fat"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10093.png",
         "sprite_path": "assets/sprites\\raticate-totem-alola.png"
     },
@@ -3155,9 +3181,9 @@
             "Keen Eye",
             "Sniper"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png",
         "sprite_path": "assets/sprites\\spearow.png"
     },
@@ -3252,9 +3278,9 @@
             "Keen Eye",
             "Sniper"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png",
         "sprite_path": "assets/sprites\\fearow.png"
     },
@@ -3376,9 +3402,9 @@
             "Shed Skin",
             "Unnerve"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
         "sprite_path": "assets/sprites\\ekans.png"
     },
@@ -3507,9 +3533,9 @@
             "Shed Skin",
             "Unnerve"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png",
         "sprite_path": "assets/sprites\\arbok.png"
     },
@@ -3640,15 +3666,18 @@
             "Static",
             "Lightning Rod"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Starter",
-                "pokemon_key": "Pikachu Starter"
+                "pokemon_key": "Pikachu Starter",
+                "form_type": "other",
+                "form_icon": "other"
             },
             {
                 "label": "Gmax",
-                "pokemon_key": "Pikachu Gmax"
+                "pokemon_key": "Pikachu Gmax",
+                "form_type": "gmax",
+                "form_icon": "dynamax"
             }
         ],
         "variants": [
@@ -3709,11 +3738,12 @@
                 "sprite_path": "assets/sprites\\pikachu-world-cap.png"
             }
         ],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
         "sprite_path": "assets/sprites\\pikachu.png"
     },
     "Pikachu Starter": {
-        "number": "10158",
+        "number": "025",
         "name": "Pikachu Starter",
         "type": "Electric",
         "category": "Pokémon Ratón",
@@ -3764,14 +3794,14 @@
             "Static",
             "Lightning Rod"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": null,
         "sprite_path": null
     },
     "Pikachu Gmax": {
-        "number": "10199",
+        "number": "025",
         "name": "Pikachu Gmax",
         "type": "Electric",
         "category": "Pokémon Ratón",
@@ -3791,9 +3821,9 @@
             "Static",
             "Lightning Rod"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10199.png",
         "sprite_path": "assets/sprites\\pikachu-gmax.png"
     },
@@ -3928,27 +3958,33 @@
             "Static",
             "Lightning Rod"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Raichu Alola"
+                "pokemon_key": "Raichu Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             },
             {
                 "label": "Mega X",
-                "pokemon_key": "Raichu Mega X"
+                "pokemon_key": "Raichu Mega X",
+                "form_type": "mega",
+                "form_icon": "mega"
             },
             {
                 "label": "Mega Y",
-                "pokemon_key": "Raichu Mega Y"
+                "pokemon_key": "Raichu Mega Y",
+                "form_type": "mega",
+                "form_icon": "mega"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
         "sprite_path": "assets/sprites\\raichu.png"
     },
     "Raichu Alola": {
-        "number": "10100",
+        "number": "026",
         "name": "Raichu Alola",
         "type": "Electric / Psychic",
         "category": "Pokémon Ratón",
@@ -4069,14 +4105,14 @@
         "abilities": [
             "Surge Surfer"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10100.png",
         "sprite_path": "assets/sprites\\raichu-alola.png"
     },
     "Raichu Mega X": {
-        "number": "10304",
+        "number": "026",
         "name": "Raichu Mega X",
         "type": "Electric",
         "category": "Pokémon Ratón",
@@ -4095,14 +4131,14 @@
         "abilities": [
             "Electric Surge"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": null,
         "sprite_path": null
     },
     "Raichu Mega Y": {
-        "number": "10305",
+        "number": "026",
         "name": "Raichu Mega Y",
         "type": "Electric",
         "category": "Pokémon Ratón",
@@ -4121,9 +4157,9 @@
         "abilities": [
             "No Guard"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": null,
         "sprite_path": null
     },
@@ -4248,19 +4284,21 @@
             "Sand Veil",
             "Sand Rush"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Sandshrew Alola"
+                "pokemon_key": "Sandshrew Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png",
         "sprite_path": "assets/sprites\\sandshrew.png"
     },
     "Sandshrew Alola": {
-        "number": "10101",
+        "number": "027",
         "name": "Sandshrew Alola",
         "type": "Ice / Steel",
         "category": "Pokémon Ratón",
@@ -4372,9 +4410,9 @@
             "Snow Cloak",
             "Slush Rush"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10101.png",
         "sprite_path": "assets/sprites\\sandshrew-alola.png"
     },
@@ -4503,19 +4541,21 @@
             "Sand Veil",
             "Sand Rush"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Sandslash Alola"
+                "pokemon_key": "Sandslash Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png",
         "sprite_path": "assets/sprites\\sandslash.png"
     },
     "Sandslash Alola": {
-        "number": "10102",
+        "number": "028",
         "name": "Sandslash Alola",
         "type": "Ice / Steel",
         "category": "Pokémon Ratón",
@@ -4635,9 +4675,9 @@
             "Snow Cloak",
             "Slush Rush"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10102.png",
         "sprite_path": "assets/sprites\\sandslash-alola.png"
     },
@@ -4742,9 +4782,9 @@
             "Rivalry",
             "Hustle"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png",
         "sprite_path": "assets/sprites\\nidoran-f.png"
     },
@@ -4848,9 +4888,9 @@
             "Rivalry",
             "Hustle"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png",
         "sprite_path": "assets/sprites\\nidorina.png"
     },
@@ -5010,9 +5050,9 @@
             "Rivalry",
             "Sheer Force"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
         "sprite_path": "assets/sprites\\nidoqueen.png"
     },
@@ -5119,9 +5159,9 @@
             "Rivalry",
             "Hustle"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png",
         "sprite_path": "assets/sprites\\nidoran-m.png"
     },
@@ -5224,9 +5264,9 @@
             "Rivalry",
             "Hustle"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png",
         "sprite_path": "assets/sprites\\nidorino.png"
     },
@@ -5387,9 +5427,9 @@
             "Rivalry",
             "Sheer Force"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png",
         "sprite_path": "assets/sprites\\nidoking.png"
     },
@@ -5577,9 +5617,9 @@
             "Magic Guard",
             "Friend Guard"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
         "sprite_path": "assets/sprites\\clefairy.png"
     },
@@ -5769,19 +5809,21 @@
             "Magic Guard",
             "Unaware"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega",
-                "pokemon_key": "Clefable Mega"
+                "pokemon_key": "Clefable Mega",
+                "form_type": "mega",
+                "form_icon": "mega"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png",
         "sprite_path": "assets/sprites\\clefable.png"
     },
     "Clefable Mega": {
-        "number": "10278",
+        "number": "036",
         "name": "Clefable Mega",
         "type": "Fairy / Flying",
         "category": "Pokémon Hada",
@@ -5800,9 +5842,9 @@
         "abilities": [
             "Magic Bounce"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": null,
         "sprite_path": null
     },
@@ -5916,19 +5958,21 @@
             "Flash Fire",
             "Drought"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Vulpix Alola"
+                "pokemon_key": "Vulpix Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png",
         "sprite_path": "assets/sprites\\vulpix.png"
     },
     "Vulpix Alola": {
-        "number": "10103",
+        "number": "037",
         "name": "Vulpix Alola",
         "type": "Ice",
         "category": "Pokémon Zorro",
@@ -6037,9 +6081,9 @@
             "Snow Cloak",
             "Snow Warning"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10103.png",
         "sprite_path": "assets/sprites\\vulpix-alola.png"
     },
@@ -6163,19 +6207,21 @@
             "Flash Fire",
             "Drought"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Ninetales Alola"
+                "pokemon_key": "Ninetales Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png",
         "sprite_path": "assets/sprites\\ninetales.png"
     },
     "Ninetales Alola": {
-        "number": "10104",
+        "number": "038",
         "name": "Ninetales Alola",
         "type": "Ice / Fairy",
         "category": "Pokémon Zorro",
@@ -6290,9 +6336,9 @@
             "Snow Cloak",
             "Snow Warning"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10104.png",
         "sprite_path": "assets/sprites\\ninetales-alola.png"
     },
@@ -6467,9 +6513,9 @@
             "Competitive",
             "Friend Guard"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
         "sprite_path": "assets/sprites\\jigglypuff.png"
     },
@@ -6649,9 +6695,9 @@
             "Competitive",
             "Frisk"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png",
         "sprite_path": "assets/sprites\\wigglytuff.png"
     },
@@ -6760,9 +6806,9 @@
             "Inner Focus",
             "Infiltrator"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png",
         "sprite_path": "assets/sprites\\zubat.png"
     },
@@ -6872,9 +6918,9 @@
             "Inner Focus",
             "Infiltrator"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png",
         "sprite_path": "assets/sprites\\golbat.png"
     },
@@ -6974,9 +7020,9 @@
             "Chlorophyll",
             "Run Away"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png",
         "sprite_path": "assets/sprites\\oddish.png"
     },
@@ -7080,9 +7126,9 @@
             "Chlorophyll",
             "Stench"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png",
         "sprite_path": "assets/sprites\\gloom.png"
     },
@@ -7194,9 +7240,9 @@
             "Chlorophyll",
             "Effect Spore"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png",
         "sprite_path": "assets/sprites\\vileplume.png"
     },
@@ -7310,9 +7356,9 @@
             "Dry Skin",
             "Damp"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png",
         "sprite_path": "assets/sprites\\paras.png"
     },
@@ -7419,9 +7465,9 @@
             "Dry Skin",
             "Damp"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png",
         "sprite_path": "assets/sprites\\parasect.png"
     },
@@ -7522,9 +7568,9 @@
             "Tinted Lens",
             "Run Away"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png",
         "sprite_path": "assets/sprites\\venonat.png"
     },
@@ -7644,9 +7690,9 @@
             "Tinted Lens",
             "Wonder Skin"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png",
         "sprite_path": "assets/sprites\\venomoth.png"
     },
@@ -7755,19 +7801,21 @@
             "Arena Trap",
             "Sand Force"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Diglett Alola"
+                "pokemon_key": "Diglett Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png",
         "sprite_path": "assets/sprites\\diglett.png"
     },
     "Diglett Alola": {
-        "number": "10105",
+        "number": "050",
         "name": "Diglett Alola",
         "type": "Ground / Steel",
         "category": "Pokémon Topo",
@@ -7867,9 +7915,9 @@
             "Tangling Hair",
             "Sand Force"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10105.png",
         "sprite_path": "assets/sprites\\diglett-alola.png"
     },
@@ -7979,19 +8027,21 @@
             "Arena Trap",
             "Sand Force"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Dugtrio Alola"
+                "pokemon_key": "Dugtrio Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png",
         "sprite_path": "assets/sprites\\dugtrio.png"
     },
     "Dugtrio Alola": {
-        "number": "10106",
+        "number": "051",
         "name": "Dugtrio Alola",
         "type": "Ground / Steel",
         "category": "Pokémon Topo",
@@ -8095,9 +8145,9 @@
             "Tangling Hair",
             "Sand Force"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10106.png",
         "sprite_path": "assets/sprites\\dugtrio-alola.png"
     },
@@ -8234,27 +8284,33 @@
             "Technician",
             "Unnerve"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Meowth Alola"
+                "pokemon_key": "Meowth Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             },
             {
                 "label": "Galar",
-                "pokemon_key": "Meowth Galar"
+                "pokemon_key": "Meowth Galar",
+                "form_type": "regional",
+                "form_icon": "galar"
             },
             {
                 "label": "Gmax",
-                "pokemon_key": "Meowth Gmax"
+                "pokemon_key": "Meowth Gmax",
+                "form_type": "gmax",
+                "form_icon": "dynamax"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png",
         "sprite_path": "assets/sprites\\meowth.png"
     },
     "Meowth Alola": {
-        "number": "10107",
+        "number": "052",
         "name": "Meowth Alola",
         "type": "Dark",
         "category": "Pokémon Gato Araña",
@@ -8370,14 +8426,14 @@
             "Technician",
             "Rattled"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10107.png",
         "sprite_path": "assets/sprites\\meowth-alola.png"
     },
     "Meowth Galar": {
-        "number": "10161",
+        "number": "052",
         "name": "Meowth Galar",
         "type": "Steel",
         "category": "Pokémon Gato Araña",
@@ -8475,14 +8531,14 @@
             "Tough Claws",
             "Unnerve"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10161.png",
         "sprite_path": "assets/sprites\\meowth-galar.png"
     },
     "Meowth Gmax": {
-        "number": "10200",
+        "number": "052",
         "name": "Meowth Gmax",
         "type": "Normal",
         "category": "Pokémon Gato Araña",
@@ -8503,9 +8559,9 @@
             "Technician",
             "Unnerve"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10200.png",
         "sprite_path": "assets/sprites\\meowth-gmax.png"
     },
@@ -8642,19 +8698,21 @@
             "Technician",
             "Unnerve"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Persian Alola"
+                "pokemon_key": "Persian Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png",
         "sprite_path": "assets/sprites\\persian.png"
     },
     "Persian Alola": {
-        "number": "10108",
+        "number": "053",
         "name": "Persian Alola",
         "type": "Dark",
         "category": "Pokémon Gato Fino",
@@ -8773,9 +8831,9 @@
             "Technician",
             "Rattled"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10108.png",
         "sprite_path": "assets/sprites\\persian-alola.png"
     },
@@ -8922,9 +8980,9 @@
             "Cloud Nine",
             "Swift Swim"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png",
         "sprite_path": "assets/sprites\\psyduck.png"
     },
@@ -9075,9 +9133,9 @@
             "Cloud Nine",
             "Swift Swim"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png",
         "sprite_path": "assets/sprites\\golduck.png"
     },
@@ -9222,9 +9280,9 @@
             "Anger Point",
             "Defiant"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png",
         "sprite_path": "assets/sprites\\mankey.png"
     },
@@ -9366,9 +9424,9 @@
             "Anger Point",
             "Defiant"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png",
         "sprite_path": "assets/sprites\\primeape.png"
     },
@@ -9476,19 +9534,21 @@
             "Flash Fire",
             "Justified"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Hisui",
-                "pokemon_key": "Growlithe Hisui"
+                "pokemon_key": "Growlithe Hisui",
+                "form_type": "regional",
+                "form_icon": "hisui"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png",
         "sprite_path": "assets/sprites\\growlithe.png"
     },
     "Growlithe Hisui": {
-        "number": "10229",
+        "number": "058",
         "name": "Growlithe Hisui",
         "type": "Fire / Rock",
         "category": "Pokémon Perrito",
@@ -9571,9 +9631,9 @@
             "Flash Fire",
             "Rock Head"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10229.png",
         "sprite_path": "assets/sprites\\growlithe-hisui.png"
     },
@@ -9690,19 +9750,21 @@
             "Flash Fire",
             "Justified"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Hisui",
-                "pokemon_key": "Arcanine Hisui"
+                "pokemon_key": "Arcanine Hisui",
+                "form_type": "regional",
+                "form_icon": "hisui"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
         "sprite_path": "assets/sprites\\arcanine.png"
     },
     "Arcanine Hisui": {
-        "number": "10230",
+        "number": "059",
         "name": "Arcanine Hisui",
         "type": "Fire / Rock",
         "category": "Pokémon Leyenda",
@@ -9792,9 +9854,9 @@
             "Flash Fire",
             "Rock Head"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10230.png",
         "sprite_path": "assets/sprites\\arcanine-hisui.png"
     },
@@ -9898,9 +9960,9 @@
             "Damp",
             "Swift Swim"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png",
         "sprite_path": "assets/sprites\\poliwag.png"
     },
@@ -10018,9 +10080,9 @@
             "Damp",
             "Swift Swim"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png",
         "sprite_path": "assets/sprites\\poliwhirl.png"
     },
@@ -10163,9 +10225,9 @@
             "Damp",
             "Swift Swim"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png",
         "sprite_path": "assets/sprites\\poliwrath.png"
     },
@@ -10288,9 +10350,9 @@
             "Inner Focus",
             "Magic Guard"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png",
         "sprite_path": "assets/sprites\\abra.png"
     },
@@ -10420,9 +10482,9 @@
             "Inner Focus",
             "Magic Guard"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png",
         "sprite_path": "assets/sprites\\kadabra.png"
     },
@@ -10560,19 +10622,21 @@
             "Inner Focus",
             "Magic Guard"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega",
-                "pokemon_key": "Alakazam Mega"
+                "pokemon_key": "Alakazam Mega",
+                "form_type": "mega",
+                "form_icon": "mega"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png",
         "sprite_path": "assets/sprites\\alakazam.png"
     },
     "Alakazam Mega": {
-        "number": "10037",
+        "number": "065",
         "name": "Alakazam Mega",
         "type": "Psychic",
         "category": "Pokémon Psi",
@@ -10673,9 +10737,9 @@
         "abilities": [
             "Trace"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10037.png",
         "sprite_path": "assets/sprites\\alakazam-mega.png"
     },
@@ -10801,9 +10865,9 @@
             "No Guard",
             "Steadfast"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png",
         "sprite_path": "assets/sprites\\machop.png"
     },
@@ -10924,9 +10988,9 @@
             "No Guard",
             "Steadfast"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/67.png",
         "sprite_path": "assets/sprites\\machoke.png"
     },
@@ -11058,19 +11122,21 @@
             "No Guard",
             "Steadfast"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Gmax",
-                "pokemon_key": "Machamp Gmax"
+                "pokemon_key": "Machamp Gmax",
+                "form_type": "gmax",
+                "form_icon": "dynamax"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png",
         "sprite_path": "assets/sprites\\machamp.png"
     },
     "Machamp Gmax": {
-        "number": "10201",
+        "number": "068",
         "name": "Machamp Gmax",
         "type": "Fighting",
         "category": "Pokémon Superpoder",
@@ -11091,9 +11157,9 @@
             "No Guard",
             "Steadfast"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10201.png",
         "sprite_path": "assets/sprites\\machamp-gmax.png"
     },
@@ -11199,9 +11265,9 @@
             "Chlorophyll",
             "Gluttony"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png",
         "sprite_path": "assets/sprites\\bellsprout.png"
     },
@@ -11310,9 +11376,9 @@
             "Chlorophyll",
             "Gluttony"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png",
         "sprite_path": "assets/sprites\\weepinbell.png"
     },
@@ -11427,19 +11493,21 @@
             "Chlorophyll",
             "Gluttony"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega",
-                "pokemon_key": "Victreebel Mega"
+                "pokemon_key": "Victreebel Mega",
+                "form_type": "mega",
+                "form_icon": "mega"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png",
         "sprite_path": "assets/sprites\\victreebel.png"
     },
     "Victreebel Mega": {
-        "number": "10279",
+        "number": "071",
         "name": "Victreebel Mega",
         "type": "Grass / Poison",
         "category": "Pokémon Matamoscas",
@@ -11458,9 +11526,9 @@
         "abilities": [
             "Innards Out"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10279.png",
         "sprite_path": "assets/sprites\\victreebel-mega.png"
     },
@@ -11579,9 +11647,9 @@
             "Liquid Ooze",
             "Rain Dish"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/72.png",
         "sprite_path": "assets/sprites\\tentacool.png"
     },
@@ -11708,9 +11776,9 @@
             "Liquid Ooze",
             "Rain Dish"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png",
         "sprite_path": "assets/sprites\\tentacruel.png"
     },
@@ -11823,19 +11891,21 @@
             "Sturdy",
             "Sand Veil"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Geodude Alola"
+                "pokemon_key": "Geodude Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png",
         "sprite_path": "assets/sprites\\geodude.png"
     },
     "Geodude Alola": {
-        "number": "10109",
+        "number": "074",
         "name": "Geodude Alola",
         "type": "Rock / Electric",
         "category": "Pokémon Roca",
@@ -11936,9 +12006,9 @@
             "Sturdy",
             "Galvanize"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10109.png",
         "sprite_path": "assets/sprites\\geodude-alola.png"
     },
@@ -12055,19 +12125,21 @@
             "Sturdy",
             "Sand Veil"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Graveler Alola"
+                "pokemon_key": "Graveler Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/75.png",
         "sprite_path": "assets/sprites\\graveler.png"
     },
     "Graveler Alola": {
-        "number": "10110",
+        "number": "075",
         "name": "Graveler Alola",
         "type": "Rock / Electric",
         "category": "Pokémon Roca",
@@ -12174,9 +12246,9 @@
             "Sturdy",
             "Galvanize"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10110.png",
         "sprite_path": "assets/sprites\\graveler-alola.png"
     },
@@ -12299,19 +12371,21 @@
             "Sturdy",
             "Sand Veil"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Golem Alola"
+                "pokemon_key": "Golem Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png",
         "sprite_path": "assets/sprites\\golem.png"
     },
     "Golem Alola": {
-        "number": "10111",
+        "number": "076",
         "name": "Golem Alola",
         "type": "Rock / Electric",
         "category": "Pokémon Megatón",
@@ -12426,9 +12500,9 @@
             "Sturdy",
             "Galvanize"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10111.png",
         "sprite_path": "assets/sprites\\golem-alola.png"
     },
@@ -12523,19 +12597,21 @@
             "Flash Fire",
             "Flame Body"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Galar",
-                "pokemon_key": "Ponyta Galar"
+                "pokemon_key": "Ponyta Galar",
+                "form_type": "regional",
+                "form_icon": "galar"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
         "sprite_path": "assets/sprites\\ponyta.png"
     },
     "Ponyta Galar": {
-        "number": "10162",
+        "number": "077",
         "name": "Ponyta Galar",
         "type": "Psychic",
         "category": "Pokémon Caballo Fuego",
@@ -12602,9 +12678,9 @@
             "Pastel Veil",
             "Anticipation"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10162.png",
         "sprite_path": "assets/sprites\\ponyta-galar.png"
     },
@@ -12709,19 +12785,21 @@
             "Flash Fire",
             "Flame Body"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Galar",
-                "pokemon_key": "Rapidash Galar"
+                "pokemon_key": "Rapidash Galar",
+                "form_type": "regional",
+                "form_icon": "galar"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png",
         "sprite_path": "assets/sprites\\rapidash.png"
     },
     "Rapidash Galar": {
-        "number": "10163",
+        "number": "078",
         "name": "Rapidash Galar",
         "type": "Psychic / Fairy",
         "category": "Pokémon Caballo Fuego",
@@ -12798,9 +12876,9 @@
             "Pastel Veil",
             "Anticipation"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10163.png",
         "sprite_path": "assets/sprites\\rapidash-galar.png"
     },
@@ -12941,19 +13019,21 @@
             "Own Tempo",
             "Regenerator"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Galar",
-                "pokemon_key": "Slowpoke Galar"
+                "pokemon_key": "Slowpoke Galar",
+                "form_type": "regional",
+                "form_icon": "galar"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/79.png",
         "sprite_path": "assets/sprites\\slowpoke.png"
     },
     "Slowpoke Galar": {
-        "number": "10164",
+        "number": "079",
         "name": "Slowpoke Galar",
         "type": "Psychic",
         "category": "Pokémon Atontado",
@@ -13053,9 +13133,9 @@
             "Own Tempo",
             "Regenerator"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10164.png",
         "sprite_path": "assets/sprites\\slowpoke-galar.png"
     },
@@ -13217,23 +13297,27 @@
             "Own Tempo",
             "Regenerator"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega",
-                "pokemon_key": "Slowbro Mega"
+                "pokemon_key": "Slowbro Mega",
+                "form_type": "mega",
+                "form_icon": "mega"
             },
             {
                 "label": "Galar",
-                "pokemon_key": "Slowbro Galar"
+                "pokemon_key": "Slowbro Galar",
+                "form_type": "regional",
+                "form_icon": "galar"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png",
         "sprite_path": "assets/sprites\\slowbro.png"
     },
     "Slowbro Mega": {
-        "number": "10071",
+        "number": "080",
         "name": "Slowbro Mega",
         "type": "Water / Psychic",
         "category": "Pokémon Ermitaño",
@@ -13341,14 +13425,14 @@
         "abilities": [
             "Shell Armor"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10071.png",
         "sprite_path": "assets/sprites\\slowbro-mega.png"
     },
     "Slowbro Galar": {
-        "number": "10165",
+        "number": "080",
         "name": "Slowbro Galar",
         "type": "Poison / Psychic",
         "category": "Pokémon Ermitaño",
@@ -13477,9 +13561,9 @@
             "Own Tempo",
             "Regenerator"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10165.png",
         "sprite_path": "assets/sprites\\slowbro-galar.png"
     },
@@ -13580,9 +13664,9 @@
             "Sturdy",
             "Analytic"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png",
         "sprite_path": "assets/sprites\\magnemite.png"
     },
@@ -13687,9 +13771,9 @@
             "Sturdy",
             "Analytic"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png",
         "sprite_path": "assets/sprites\\magneton.png"
     },
@@ -13811,19 +13895,21 @@
             "Inner Focus",
             "Defiant"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Galar",
-                "pokemon_key": "Farfetchd Galar"
+                "pokemon_key": "Farfetchd Galar",
+                "form_type": "regional",
+                "form_icon": "galar"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/83.png",
         "sprite_path": "assets/sprites\\farfetchd.png"
     },
     "Farfetchd Galar": {
-        "number": "10166",
+        "number": "083",
         "name": "Farfetchd Galar",
         "type": "Fighting",
         "category": "Pokémon Pato Salvaje",
@@ -13894,9 +13980,9 @@
             "Steadfast",
             "Scrappy"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10166.png",
         "sprite_path": "assets/sprites\\farfetchd-galar.png"
     },
@@ -14001,9 +14087,9 @@
             "Early Bird",
             "Tangled Feet"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/84.png",
         "sprite_path": "assets/sprites\\doduo.png"
     },
@@ -14116,9 +14202,9 @@
             "Early Bird",
             "Tangled Feet"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png",
         "sprite_path": "assets/sprites\\dodrio.png"
     },
@@ -14232,9 +14318,9 @@
             "Hydration",
             "Ice Body"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png",
         "sprite_path": "assets/sprites\\seel.png"
     },
@@ -14354,9 +14440,9 @@
             "Hydration",
             "Ice Body"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png",
         "sprite_path": "assets/sprites\\dewgong.png"
     },
@@ -14477,19 +14563,21 @@
             "Sticky Hold",
             "Poison Touch"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Grimer Alola"
+                "pokemon_key": "Grimer Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png",
         "sprite_path": "assets/sprites\\grimer.png"
     },
     "Grimer Alola": {
-        "number": "10112",
+        "number": "088",
         "name": "Grimer Alola",
         "type": "Poison / Dark",
         "category": "Pokémon Lodo",
@@ -14609,9 +14697,9 @@
             "Gluttony",
             "Power Of Alchemy"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10112.png",
         "sprite_path": "assets/sprites\\grimer-alola.png"
     },
@@ -14741,19 +14829,21 @@
             "Sticky Hold",
             "Poison Touch"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Muk Alola"
+                "pokemon_key": "Muk Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png",
         "sprite_path": "assets/sprites\\muk.png"
     },
     "Muk Alola": {
-        "number": "10113",
+        "number": "089",
         "name": "Muk Alola",
         "type": "Poison / Dark",
         "category": "Pokémon Lodo",
@@ -14872,9 +14962,9 @@
             "Gluttony",
             "Power Of Alchemy"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10113.png",
         "sprite_path": "assets/sprites\\muk-alola.png"
     },
@@ -14977,9 +15067,9 @@
             "Skill Link",
             "Overcoat"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png",
         "sprite_path": "assets/sprites\\shellder.png"
     },
@@ -15094,9 +15184,9 @@
             "Skill Link",
             "Overcoat"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png",
         "sprite_path": "assets/sprites\\cloyster.png"
     },
@@ -15217,9 +15307,9 @@
         "abilities": [
             "Levitate"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png",
         "sprite_path": "assets/sprites\\gastly.png"
     },
@@ -15343,9 +15433,9 @@
         "abilities": [
             "Levitate"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png",
         "sprite_path": "assets/sprites\\haunter.png"
     },
@@ -15494,23 +15584,27 @@
         "abilities": [
             "Cursed Body"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega",
-                "pokemon_key": "Gengar Mega"
+                "pokemon_key": "Gengar Mega",
+                "form_type": "mega",
+                "form_icon": "mega"
             },
             {
                 "label": "Gmax",
-                "pokemon_key": "Gengar Gmax"
+                "pokemon_key": "Gengar Gmax",
+                "form_type": "gmax",
+                "form_icon": "dynamax"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
         "sprite_path": "assets/sprites\\gengar.png"
     },
     "Gengar Mega": {
-        "number": "10038",
+        "number": "094",
         "name": "Gengar Mega",
         "type": "Ghost / Poison",
         "category": "Pokémon Sombra",
@@ -15617,14 +15711,14 @@
         "abilities": [
             "Shadow Tag"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10038.png",
         "sprite_path": "assets/sprites\\gengar-mega.png"
     },
     "Gengar Gmax": {
-        "number": "10202",
+        "number": "094",
         "name": "Gengar Gmax",
         "type": "Ghost / Poison",
         "category": "Pokémon Sombra",
@@ -15643,9 +15737,9 @@
         "abilities": [
             "Cursed Body"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10202.png",
         "sprite_path": "assets/sprites\\gengar-gmax.png"
     },
@@ -15761,9 +15855,9 @@
             "Sturdy",
             "Weak Armor"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
         "sprite_path": "assets/sprites\\onix.png"
     },
@@ -15905,9 +15999,9 @@
             "Forewarn",
             "Inner Focus"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png",
         "sprite_path": "assets/sprites\\drowzee.png"
     },
@@ -16052,9 +16146,9 @@
             "Forewarn",
             "Inner Focus"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png",
         "sprite_path": "assets/sprites\\hypno.png"
     },
@@ -16163,9 +16257,9 @@
             "Shell Armor",
             "Sheer Force"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png",
         "sprite_path": "assets/sprites\\krabby.png"
     },
@@ -16277,19 +16371,21 @@
             "Shell Armor",
             "Sheer Force"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Gmax",
-                "pokemon_key": "Kingler Gmax"
+                "pokemon_key": "Kingler Gmax",
+                "form_type": "gmax",
+                "form_icon": "dynamax"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png",
         "sprite_path": "assets/sprites\\kingler.png"
     },
     "Kingler Gmax": {
-        "number": "10203",
+        "number": "099",
         "name": "Kingler Gmax",
         "type": "Water",
         "category": "Pokémon Tenaza",
@@ -16310,9 +16406,9 @@
             "Shell Armor",
             "Sheer Force"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10203.png",
         "sprite_path": "assets/sprites\\kingler-gmax.png"
     },
@@ -16407,19 +16503,21 @@
             "Static",
             "Aftermath"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Hisui",
-                "pokemon_key": "Voltorb Hisui"
+                "pokemon_key": "Voltorb Hisui",
+                "form_type": "regional",
+                "form_icon": "hisui"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png",
         "sprite_path": "assets/sprites\\voltorb.png"
     },
     "Voltorb Hisui": {
-        "number": "10231",
+        "number": "100",
         "name": "Voltorb Hisui",
         "type": "Electric / Grass",
         "category": "Pokémon Bola",
@@ -16491,9 +16589,9 @@
             "Static",
             "Aftermath"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10231.png",
         "sprite_path": "assets/sprites\\voltorb-hisui.png"
     },
@@ -16593,19 +16691,21 @@
             "Static",
             "Aftermath"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Hisui",
-                "pokemon_key": "Electrode Hisui"
+                "pokemon_key": "Electrode Hisui",
+                "form_type": "regional",
+                "form_icon": "hisui"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png",
         "sprite_path": "assets/sprites\\electrode.png"
     },
     "Electrode Hisui": {
-        "number": "10232",
+        "number": "101",
         "name": "Electrode Hisui",
         "type": "Electric / Grass",
         "category": "Pokémon Bola",
@@ -16680,9 +16780,9 @@
             "Static",
             "Aftermath"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10232.png",
         "sprite_path": "assets/sprites\\electrode-hisui.png"
     },
@@ -16796,9 +16896,9 @@
             "Chlorophyll",
             "Harvest"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png",
         "sprite_path": "assets/sprites\\exeggcute.png"
     },
@@ -16924,19 +17024,21 @@
             "Chlorophyll",
             "Harvest"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Exeggutor Alola"
+                "pokemon_key": "Exeggutor Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png",
         "sprite_path": "assets/sprites\\exeggutor.png"
     },
     "Exeggutor Alola": {
-        "number": "10114",
+        "number": "103",
         "name": "Exeggutor Alola",
         "type": "Grass / Dragon",
         "category": "Pokémon Coco",
@@ -17055,9 +17157,9 @@
             "Frisk",
             "Harvest"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10114.png",
         "sprite_path": "assets/sprites\\exeggutor-alola.png"
     },
@@ -17180,9 +17282,9 @@
             "Lightning Rod",
             "Battle Armor"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png",
         "sprite_path": "assets/sprites\\cubone.png"
     },
@@ -17308,23 +17410,27 @@
             "Lightning Rod",
             "Battle Armor"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Alola",
-                "pokemon_key": "Marowak Alola"
+                "pokemon_key": "Marowak Alola",
+                "form_type": "regional",
+                "form_icon": "alola"
             },
             {
                 "label": "Totem",
-                "pokemon_key": "Marowak Totem"
+                "pokemon_key": "Marowak Totem",
+                "form_type": "other",
+                "form_icon": "other"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png",
         "sprite_path": "assets/sprites\\marowak.png"
     },
     "Marowak Alola": {
-        "number": "10115",
+        "number": "105",
         "name": "Marowak Alola",
         "type": "Fire / Ghost",
         "category": "Pokémon Apilahueso",
@@ -17443,14 +17549,14 @@
             "Lightning Rod",
             "Rock Head"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10115.png",
         "sprite_path": "assets/sprites\\marowak-alola.png"
     },
     "Marowak Totem": {
-        "number": "10149",
+        "number": "105",
         "name": "Marowak Totem",
         "type": "Fire / Ghost",
         "category": "Pokémon Apilahueso",
@@ -17551,9 +17657,9 @@
             "Lightning Rod",
             "Rock Head"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10149.png",
         "sprite_path": "assets/sprites\\marowak-totem.png"
     },
@@ -17684,9 +17790,9 @@
             "Reckless",
             "Unburden"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png",
         "sprite_path": "assets/sprites\\hitmonlee.png"
     },
@@ -17816,9 +17922,9 @@
             "Iron Fist",
             "Inner Focus"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png",
         "sprite_path": "assets/sprites\\hitmonchan.png"
     },
@@ -17962,9 +18068,9 @@
             "Oblivious",
             "Cloud Nine"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png",
         "sprite_path": "assets/sprites\\lickitung.png"
     },
@@ -18070,9 +18176,9 @@
             "Neutralizing Gas",
             "Stench"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png",
         "sprite_path": "assets/sprites\\koffing.png"
     },
@@ -18177,19 +18283,21 @@
             "Neutralizing Gas",
             "Stench"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Galar",
-                "pokemon_key": "Weezing Galar"
+                "pokemon_key": "Weezing Galar",
+                "form_type": "regional",
+                "form_icon": "galar"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png",
         "sprite_path": "assets/sprites\\weezing.png"
     },
     "Weezing Galar": {
-        "number": "10167",
+        "number": "110",
         "name": "Weezing Galar",
         "type": "Poison / Fairy",
         "category": "Pokémon Gas Venenoso",
@@ -18282,9 +18390,9 @@
             "Neutralizing Gas",
             "Misty Surge"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10167.png",
         "sprite_path": "assets/sprites\\weezing-galar.png"
     },
@@ -18419,9 +18527,9 @@
             "Rock Head",
             "Reckless"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png",
         "sprite_path": "assets/sprites\\rhyhorn.png"
     },
@@ -18585,9 +18693,9 @@
             "Rock Head",
             "Reckless"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png",
         "sprite_path": "assets/sprites\\rhydon.png"
     },
@@ -18758,9 +18866,9 @@
             "Serene Grace",
             "Healer"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png",
         "sprite_path": "assets/sprites\\chansey.png"
     },
@@ -18869,9 +18977,9 @@
             "Leaf Guard",
             "Regenerator"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png",
         "sprite_path": "assets/sprites\\tangela.png"
     },
@@ -19020,19 +19128,21 @@
             "Scrappy",
             "Inner Focus"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega",
-                "pokemon_key": "Kangaskhan Mega"
+                "pokemon_key": "Kangaskhan Mega",
+                "form_type": "mega",
+                "form_icon": "mega"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png",
         "sprite_path": "assets/sprites\\kangaskhan.png"
     },
     "Kangaskhan Mega": {
-        "number": "10039",
+        "number": "115",
         "name": "Kangaskhan Mega",
         "type": "Normal",
         "category": "Pokémon Maternal",
@@ -19146,9 +19256,9 @@
         "abilities": [
             "Parental Bond"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10039.png",
         "sprite_path": "assets/sprites\\kangaskhan-mega.png"
     },
@@ -19247,9 +19357,9 @@
             "Sniper",
             "Damp"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png",
         "sprite_path": "assets/sprites\\horsea.png"
     },
@@ -19349,9 +19459,9 @@
             "Sniper",
             "Damp"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png",
         "sprite_path": "assets/sprites\\seadra.png"
     },
@@ -19453,9 +19563,9 @@
             "Water Veil",
             "Lightning Rod"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png",
         "sprite_path": "assets/sprites\\goldeen.png"
     },
@@ -19556,9 +19666,9 @@
             "Water Veil",
             "Lightning Rod"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png",
         "sprite_path": "assets/sprites\\seaking.png"
     },
@@ -19664,9 +19774,9 @@
             "Natural Cure",
             "Analytic"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png",
         "sprite_path": "assets/sprites\\staryu.png"
     },
@@ -19786,19 +19896,21 @@
             "Natural Cure",
             "Analytic"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega",
-                "pokemon_key": "Starmie Mega"
+                "pokemon_key": "Starmie Mega",
+                "form_type": "mega",
+                "form_icon": "mega"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
         "sprite_path": "assets/sprites\\starmie.png"
     },
     "Starmie Mega": {
-        "number": "10280",
+        "number": "121",
         "name": "Starmie Mega",
         "type": "Water / Psychic",
         "category": "Pokémon Misterioso",
@@ -19817,9 +19929,9 @@
         "abilities": [
             "Huge Power"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": null,
         "sprite_path": null
     },
@@ -19974,19 +20086,21 @@
             "Filter",
             "Technician"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Galar",
-                "pokemon_key": "Mr Mime Galar"
+                "pokemon_key": "Mr Mime Galar",
+                "form_type": "regional",
+                "form_icon": "galar"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
         "sprite_path": "assets/sprites\\mr-mime.png"
     },
     "Mr Mime Galar": {
-        "number": "10168",
+        "number": "122",
         "name": "Mr Mime Galar",
         "type": "Ice / Psychic",
         "category": "Pokémon Barrera",
@@ -20097,9 +20211,9 @@
             "Screen Cleaner",
             "Ice Body"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10168.png",
         "sprite_path": "assets/sprites\\mr-mime-galar.png"
     },
@@ -20215,9 +20329,9 @@
             "Technician",
             "Steadfast"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png",
         "sprite_path": "assets/sprites\\scyther.png"
     },
@@ -20365,9 +20479,9 @@
             "Forewarn",
             "Dry Skin"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png",
         "sprite_path": "assets/sprites\\jynx.png"
     },
@@ -20492,9 +20606,9 @@
             "Static",
             "Vital Spirit"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png",
         "sprite_path": "assets/sprites\\electabuzz.png"
     },
@@ -20621,9 +20735,9 @@
             "Flame Body",
             "Vital Spirit"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png",
         "sprite_path": "assets/sprites\\magmar.png"
     },
@@ -20735,19 +20849,21 @@
             "Mold Breaker",
             "Moxie"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega",
-                "pokemon_key": "Pinsir Mega"
+                "pokemon_key": "Pinsir Mega",
+                "form_type": "mega",
+                "form_icon": "mega"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png",
         "sprite_path": "assets/sprites\\pinsir.png"
     },
     "Pinsir Mega": {
-        "number": "10040",
+        "number": "127",
         "name": "Pinsir Mega",
         "type": "Bug / Flying",
         "category": "Pokémon Escarabajo",
@@ -20836,9 +20952,9 @@
         "abilities": [
             "Aerilate"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10040.png",
         "sprite_path": "assets/sprites\\pinsir-mega.png"
     },
@@ -20961,27 +21077,33 @@
             "Anger Point",
             "Sheer Force"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Paldea Combat Breed",
-                "pokemon_key": "Tauros Paldea Combat Breed"
+                "pokemon_key": "Tauros Paldea Combat Breed",
+                "form_type": "regional",
+                "form_icon": "paldea"
             },
             {
                 "label": "Paldea Blaze Breed",
-                "pokemon_key": "Tauros Paldea Blaze Breed"
+                "pokemon_key": "Tauros Paldea Blaze Breed",
+                "form_type": "regional",
+                "form_icon": "paldea"
             },
             {
                 "label": "Paldea Aqua Breed",
-                "pokemon_key": "Tauros Paldea Aqua Breed"
+                "pokemon_key": "Tauros Paldea Aqua Breed",
+                "form_type": "regional",
+                "form_icon": "paldea"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
         "sprite_path": "assets/sprites\\tauros.png"
     },
     "Tauros Paldea Combat Breed": {
-        "number": "10250",
+        "number": "128",
         "name": "Tauros Paldea Combat Breed",
         "type": "Fighting",
         "category": "Pokémon Toro Bravo",
@@ -21053,14 +21175,14 @@
             "Anger Point",
             "Cud Chew"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10250.png",
         "sprite_path": "assets/sprites\\tauros-paldea-combat-breed.png"
     },
     "Tauros Paldea Blaze Breed": {
-        "number": "10251",
+        "number": "128",
         "name": "Tauros Paldea Blaze Breed",
         "type": "Fighting / Fire",
         "category": "Pokémon Toro Bravo",
@@ -21137,14 +21259,14 @@
             "Anger Point",
             "Cud Chew"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10251.png",
         "sprite_path": "assets/sprites\\tauros-paldea-blaze-breed.png"
     },
     "Tauros Paldea Aqua Breed": {
-        "number": "10252",
+        "number": "128",
         "name": "Tauros Paldea Aqua Breed",
         "type": "Fighting / Water",
         "category": "Pokémon Toro Bravo",
@@ -21220,9 +21342,9 @@
             "Anger Point",
             "Cud Chew"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10252.png",
         "sprite_path": "assets/sprites\\tauros-paldea-aqua-breed.png"
     },
@@ -21253,9 +21375,9 @@
             "Swift Swim",
             "Rattled"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png",
         "sprite_path": "assets/sprites\\magikarp.png"
     },
@@ -21383,19 +21505,21 @@
             "Intimidate",
             "Moxie"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega",
-                "pokemon_key": "Gyarados Mega"
+                "pokemon_key": "Gyarados Mega",
+                "form_type": "mega",
+                "form_icon": "mega"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png",
         "sprite_path": "assets/sprites\\gyarados.png"
     },
     "Gyarados Mega": {
-        "number": "10041",
+        "number": "130",
         "name": "Gyarados Mega",
         "type": "Water / Dark",
         "category": "Pokémon Atrocidad",
@@ -21485,9 +21609,9 @@
         "abilities": [
             "Mold Breaker"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10041.png",
         "sprite_path": "assets/sprites\\gyarados-mega.png"
     },
@@ -21626,19 +21750,21 @@
             "Shell Armor",
             "Hydration"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Gmax",
-                "pokemon_key": "Lapras Gmax"
+                "pokemon_key": "Lapras Gmax",
+                "form_type": "gmax",
+                "form_icon": "dynamax"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png",
         "sprite_path": "assets/sprites\\lapras.png"
     },
     "Lapras Gmax": {
-        "number": "10204",
+        "number": "131",
         "name": "Lapras Gmax",
         "type": "Water / Ice",
         "category": "Pokémon Transporte",
@@ -21659,9 +21785,9 @@
             "Shell Armor",
             "Hydration"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10204.png",
         "sprite_path": "assets/sprites\\lapras-gmax.png"
     },
@@ -21688,9 +21814,9 @@
             "Limber",
             "Imposter"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
         "sprite_path": "assets/sprites\\ditto.png"
     },
@@ -21791,23 +21917,27 @@
             "Adaptability",
             "Anticipation"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Starter",
-                "pokemon_key": "Eevee Starter"
+                "pokemon_key": "Eevee Starter",
+                "form_type": "other",
+                "form_icon": "other"
             },
             {
                 "label": "Gmax",
-                "pokemon_key": "Eevee Gmax"
+                "pokemon_key": "Eevee Gmax",
+                "form_type": "gmax",
+                "form_icon": "dynamax"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
         "sprite_path": "assets/sprites\\eevee.png"
     },
     "Eevee Starter": {
-        "number": "10159",
+        "number": "133",
         "name": "Eevee Starter",
         "type": "Normal",
         "category": "Pokémon Evolución",
@@ -21859,14 +21989,14 @@
             "Adaptability",
             "Anticipation"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": null,
         "sprite_path": null
     },
     "Eevee Gmax": {
-        "number": "10205",
+        "number": "133",
         "name": "Eevee Gmax",
         "type": "Normal",
         "category": "Pokémon Evolución",
@@ -21887,9 +22017,9 @@
             "Adaptability",
             "Anticipation"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10205.png",
         "sprite_path": "assets/sprites\\eevee-gmax.png"
     },
@@ -22013,9 +22143,9 @@
             "Water Absorb",
             "Hydration"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png",
         "sprite_path": "assets/sprites\\vaporeon.png"
     },
@@ -22138,9 +22268,9 @@
             "Volt Absorb",
             "Quick Feet"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png",
         "sprite_path": "assets/sprites\\jolteon.png"
     },
@@ -22260,9 +22390,9 @@
             "Flash Fire",
             "Guts"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png",
         "sprite_path": "assets/sprites\\flareon.png"
     },
@@ -22376,9 +22506,9 @@
             "Download",
             "Analytic"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png",
         "sprite_path": "assets/sprites\\porygon.png"
     },
@@ -22485,9 +22615,9 @@
             "Shell Armor",
             "Weak Armor"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png",
         "sprite_path": "assets/sprites\\omanyte.png"
     },
@@ -22600,9 +22730,9 @@
             "Shell Armor",
             "Weak Armor"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png",
         "sprite_path": "assets/sprites\\omastar.png"
     },
@@ -22712,9 +22842,9 @@
             "Battle Armor",
             "Weak Armor"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png",
         "sprite_path": "assets/sprites\\kabuto.png"
     },
@@ -22844,9 +22974,9 @@
             "Battle Armor",
             "Weak Armor"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png",
         "sprite_path": "assets/sprites\\kabutops.png"
     },
@@ -22971,19 +23101,21 @@
             "Pressure",
             "Unnerve"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega",
-                "pokemon_key": "Aerodactyl Mega"
+                "pokemon_key": "Aerodactyl Mega",
+                "form_type": "mega",
+                "form_icon": "mega"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png",
         "sprite_path": "assets/sprites\\aerodactyl.png"
     },
     "Aerodactyl Mega": {
-        "number": "10042",
+        "number": "142",
         "name": "Aerodactyl Mega",
         "type": "Rock / Flying",
         "category": "Pokémon Fósil",
@@ -23081,9 +23213,9 @@
         "abilities": [
             "Tough Claws"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10042.png",
         "sprite_path": "assets/sprites\\aerodactyl-mega.png"
     },
@@ -23247,19 +23379,21 @@
             "Thick Fat",
             "Gluttony"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Gmax",
-                "pokemon_key": "Snorlax Gmax"
+                "pokemon_key": "Snorlax Gmax",
+                "form_type": "gmax",
+                "form_icon": "dynamax"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
         "sprite_path": "assets/sprites\\snorlax.png"
     },
     "Snorlax Gmax": {
-        "number": "10206",
+        "number": "143",
         "name": "Snorlax Gmax",
         "type": "Normal",
         "category": "Pokémon Dormir",
@@ -23280,9 +23414,9 @@
             "Thick Fat",
             "Gluttony"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10206.png",
         "sprite_path": "assets/sprites\\snorlax-gmax.png"
     },
@@ -23398,19 +23532,21 @@
             "Pressure",
             "Snow Cloak"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Galar",
-                "pokemon_key": "Articuno Galar"
+                "pokemon_key": "Articuno Galar",
+                "form_type": "regional",
+                "form_icon": "galar"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
         "sprite_path": "assets/sprites\\articuno.png"
     },
     "Articuno Galar": {
-        "number": "10169",
+        "number": "144",
         "name": "Articuno Galar",
         "type": "Psychic / Flying",
         "category": "Pokémon Congelar",
@@ -23488,9 +23624,9 @@
         "abilities": [
             "Competitive"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10169.png",
         "sprite_path": "assets/sprites\\articuno-galar.png"
     },
@@ -23604,19 +23740,21 @@
             "Pressure",
             "Static"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Galar",
-                "pokemon_key": "Zapdos Galar"
+                "pokemon_key": "Zapdos Galar",
+                "form_type": "regional",
+                "form_icon": "galar"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
         "sprite_path": "assets/sprites\\zapdos.png"
     },
     "Zapdos Galar": {
-        "number": "10170",
+        "number": "145",
         "name": "Zapdos Galar",
         "type": "Fighting / Flying",
         "category": "Pokémon Eléctrico",
@@ -23698,9 +23836,9 @@
         "abilities": [
             "Defiant"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10170.png",
         "sprite_path": "assets/sprites\\zapdos-galar.png"
     },
@@ -23810,19 +23948,21 @@
             "Pressure",
             "Flame Body"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Galar",
-                "pokemon_key": "Moltres Galar"
+                "pokemon_key": "Moltres Galar",
+                "form_type": "regional",
+                "form_icon": "galar"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png",
         "sprite_path": "assets/sprites\\moltres.png"
     },
     "Moltres Galar": {
-        "number": "10171",
+        "number": "146",
         "name": "Moltres Galar",
         "type": "Dark / Flying",
         "category": "Pokémon Llama",
@@ -23896,9 +24036,9 @@
         "abilities": [
             "Berserk"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10171.png",
         "sprite_path": "assets/sprites\\moltres-galar.png"
     },
@@ -24010,9 +24150,9 @@
             "Shed Skin",
             "Marvel Scale"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png",
         "sprite_path": "assets/sprites\\dratini.png"
     },
@@ -24122,9 +24262,9 @@
             "Shed Skin",
             "Marvel Scale"
         ],
-        "is_form_entry": false,
         "forms": [],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png",
         "sprite_path": "assets/sprites\\dragonair.png"
     },
@@ -24288,19 +24428,21 @@
             "Inner Focus",
             "Multiscale"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega",
-                "pokemon_key": "Dragonite Mega"
+                "pokemon_key": "Dragonite Mega",
+                "form_type": "mega",
+                "form_icon": "mega"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png",
         "sprite_path": "assets/sprites\\dragonite.png"
     },
     "Dragonite Mega": {
-        "number": "10281",
+        "number": "149",
         "name": "Dragonite Mega",
         "type": "Dragon / Flying",
         "category": "Pokémon Dragón",
@@ -24319,9 +24461,9 @@
         "abilities": [
             "Multiscale"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10281.png",
         "sprite_path": "assets/sprites\\dragonite-mega.png"
     },
@@ -24514,23 +24656,27 @@
             "Pressure",
             "Unnerve"
         ],
-        "is_form_entry": false,
         "forms": [
             {
                 "label": "Mega X",
-                "pokemon_key": "Mewtwo Mega X"
+                "pokemon_key": "Mewtwo Mega X",
+                "form_type": "mega",
+                "form_icon": "mega"
             },
             {
                 "label": "Mega Y",
-                "pokemon_key": "Mewtwo Mega Y"
+                "pokemon_key": "Mewtwo Mega Y",
+                "form_type": "mega",
+                "form_icon": "mega"
             }
         ],
         "variants": [],
+        "is_form_entry": false,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
         "sprite_path": "assets/sprites\\mewtwo.png"
     },
     "Mewtwo Mega X": {
-        "number": "10043",
+        "number": "150",
         "name": "Mewtwo Mega X",
         "type": "Psychic / Fighting",
         "category": "Pokémon Genético",
@@ -24665,14 +24811,14 @@
         "abilities": [
             "Steadfast"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10043.png",
         "sprite_path": "assets/sprites\\mewtwo-mega-x.png"
     },
     "Mewtwo Mega Y": {
-        "number": "10044",
+        "number": "150",
         "name": "Mewtwo Mega Y",
         "type": "Psychic",
         "category": "Pokémon Genético",
@@ -24807,9 +24953,9 @@
         "abilities": [
             "Insomnia"
         ],
-        "is_form_entry": true,
         "forms": [],
         "variants": [],
+        "is_form_entry": true,
         "sprite_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10044.png",
         "sprite_path": "assets/sprites\\mewtwo-mega-y.png"
     }
