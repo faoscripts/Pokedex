@@ -261,7 +261,9 @@ class PokemonDetailScreen:
 
         tab_font = pygame.font.Font(None, 26)
         tab = tab_font.render("< " + tab_display_name + " >", True, (180, 20, 30))
-        screen.blit(tab, (200, 58))
+
+        tab_x = 240 - tab.get_width() // 2
+        screen.blit(tab, (tab_x, 58))
 
     def get_dark_text_color(self):
         return (60, 60, 60)
@@ -577,7 +579,7 @@ class PokemonDetailScreen:
         pokemon_height = self.get_height_value()
         human_height = 1.55
 
-        max_draw_height = 120
+        max_draw_height = 95
         tallest = max(pokemon_height, human_height)
 
         pokemon_draw_height = int((pokemon_height / tallest) * max_draw_height)
@@ -598,7 +600,7 @@ class PokemonDetailScreen:
         else:
             human_sprite = None
 
-        base_y = 210
+        base_y = 190
 
         pokemon_x = 105
         human_x = 300
@@ -633,12 +635,12 @@ class PokemonDetailScreen:
         human_text = small_font.render("Humano", True, dark_text)
         human_height_text = small_font.render("Altura: 1.55 m", True, dark_text)
 
-        screen.blit(pokemon_name_text, (55, 225))
-        screen.blit(pokemon_height_text, (55, 250))
-        screen.blit(pokemon_weight_text, (55, 272))
+        screen.blit(pokemon_name_text, (55, 215))
+        screen.blit(pokemon_height_text, (55, 238))
+        screen.blit(pokemon_weight_text, (55, 260))
 
-        screen.blit(human_text, (260, 225))
-        screen.blit(human_height_text, (260, 250))
+        screen.blit(human_text, (255, 215))
+        screen.blit(human_height_text, (255, 238))
 
         pygame.draw.line(screen, (120, 120, 120), (45, base_y), (420, base_y), 2)
 
